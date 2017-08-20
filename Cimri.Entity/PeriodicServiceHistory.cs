@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cimri.Entity
 {
-    class PeriodicServiceHistory
+   public class PeriodicServiceHistory
     {
         public int PeriodicServiceHistoryId { get; set; }
         public DateTime ServiceDate { get; set; }

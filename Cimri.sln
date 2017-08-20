@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - UI", "3 - UI", "{7B3292
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.Entity", "Cimri.Entity\Cimri.Entity.csproj", "{9B215286-5E37-41EA-BCD0-80B3B340CFFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.Data", "Cimri.Data\Cimri.Data.csproj", "{4EE5C203-C446-4ABF-A091-8FBCC8553929}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,11 +25,16 @@ Global
 		{9B215286-5E37-41EA-BCD0-80B3B340CFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B215286-5E37-41EA-BCD0-80B3B340CFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B215286-5E37-41EA-BCD0-80B3B340CFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B215286-5E37-41EA-BCD0-80B3B340CFFE} = {AD55EED1-3F25-45C2-9ECC-9B98C12A19DE}
+		{4EE5C203-C446-4ABF-A091-8FBCC8553929} = {2E25A448-CCE2-4E05-92A2-84DCA8D86116}
 	EndGlobalSection
 EndGlobal

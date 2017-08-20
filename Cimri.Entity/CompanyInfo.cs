@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cimri.Entity
 {
-    class CompanyInfo
+    public class CompanyInfo
     {
         public int UserCompanyId { get; set; }
         public string Title { get; set; }

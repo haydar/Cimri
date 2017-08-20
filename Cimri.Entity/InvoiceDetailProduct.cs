@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cimri.Entity
 {
-    class InvoiceDetailProduct
+    public class InvoiceDetailProduct
     {
         public int InvoiceDetailProductId { get; set; }
         public double ProductFee  { get; set; }
         public int ProductNumber { get; set; }
-
-
-
     }
 }
