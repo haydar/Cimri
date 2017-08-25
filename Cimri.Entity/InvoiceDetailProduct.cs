@@ -11,5 +11,14 @@ namespace Cimri.Entity
         public int InvoiceDetailProductId { get; set; }
         public double ProductFee  { get; set; }
         public int ProductNumber { get; set; }
+
+        //Navigation Property 
+        public virtual Invoice Invoice { get; set; }
+        public virtual ICollection<Stock>  Product { get; set; }
+
+        public InvoiceDetailProduct()
+        {
+            Product = new HashSet<Stock>();
+        }
     }
 }

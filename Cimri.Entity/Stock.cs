@@ -15,5 +15,12 @@ namespace Cimri.Entity
         public int Price { get; set; }
         public string Description { get; set; }
 
+        //Navigation Property
+        public virtual UserCompany UserCompany { get; set; }
+
+        public Stock()
+        {
+
+        }
     }
 }

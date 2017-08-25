@@ -10,10 +10,11 @@ namespace Cimri.Data.Context
 {
     class CimriContext:DbContext
     {
-        public CimriContext():base("CimriContext")
+        public CimriContext() : base("CimriContext")
         {
 
         }
+        //Tables...
         public virtual DbSet<ProgramUser> ProgramUsers { get; set; }
         public virtual DbSet<CompanyInfo> CompanyInfos { get; set; }
         public virtual DbSet<FinancialTransaction> FinancialTransactions { get; set; }

@@ -13,5 +13,13 @@ namespace Cimri.Entity
         public string UserRealName{ get; set; }
         public string UserPassword { get; set; }
         public string UserMail { get; set; }
+
+        //Navigation Property
+        public virtual ICollection<UserCompany> UserCompanies { get; set; }
+
+        public ProgramUser()
+        {
+            UserCompanies = new HashSet<UserCompany>();
+        }
     }
 }

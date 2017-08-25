@@ -25,6 +25,24 @@ namespace Cimri.Entity
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
 
+        // Navigation Property
+        public virtual ICollection<ProgramUser> ProgramUsers { get; set; }
+        public virtual ICollection<CompanyInfo> CompanyInfos { get; set; }
+        public virtual ICollection<PeriodicService> PeriodicServices { get; set; }
+        public virtual ICollection<FinancialTransaction> FinancialTransactions { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual ICollection<Service> Services  { get; set; }
+        public virtual ICollection<Stock> Products { get; set; }
 
+        public UserCompany()
+        {
+            ProgramUsers = new HashSet<ProgramUser>();
+            CompanyInfos = new HashSet<CompanyInfo>();
+            PeriodicServices = new HashSet<PeriodicService>();
+            FinancialTransactions = new HashSet<FinancialTransaction>();
+            Invoices = new HashSet<Invoice>();
+            Services = new HashSet<Service>();
+            Products = new HashSet<Stock>();
+        }
     }
 }

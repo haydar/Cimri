@@ -11,9 +11,9 @@ namespace Cimri.Entity
         public int UserCompanyId { get; set; }
         public string Title { get; set; }
         public string AdressCity { get; set; }
-        public string AdressNeighborhood { get; set; }
-        public string AdressStreet { get; set; }
-        public string AdressNo { get; set; }
+        public string AddressNeighborhood { get; set; }
+        public string AddressStreet { get; set; }
+        public string AddressNo { get; set; }
         public string AdressFloor { get; set; }
         public string TaxNo { get; set; }
         public string TaxAdministration { get; set; }
@@ -25,5 +25,20 @@ namespace Cimri.Entity
         public string TradeRegistryNo { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
+
+
+        //Navigation Property
+        public virtual ICollection<UserCompany> UserCompanies { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual ICollection<PeriodicService> PeriodicServices{ get; set; }
+        public virtual ICollection<FinancialTransaction> FinancialTransactions { get; set; }
+
+        public CompanyInfo()
+        {
+            UserCompanies = new HashSet<UserCompany>();
+            Invoices = new HashSet<Invoice>();
+            PeriodicServices = new HashSet<PeriodicService>();
+            FinancialTransactions = new HashSet<FinancialTransaction>();
+        }
     }
 }

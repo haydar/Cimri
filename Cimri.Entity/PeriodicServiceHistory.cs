@@ -11,5 +11,14 @@ namespace Cimri.Entity
         public int PeriodicServiceHistoryId { get; set; }
         public DateTime ServiceDate { get; set; }
         public double ServiceFee { get; set; }
+
+        //Navigation Property
+
+        public virtual PeriodicService PeriodicService { get; set; }
+
+        public PeriodicServiceHistory()
+        {
+
+        }
     }
 }
