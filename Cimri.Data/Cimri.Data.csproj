@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\CimriContext.cs" />
+    <Compile Include="Migrations\201708262034000_CreateDB.cs" />
+    <Compile Include="Migrations\201708262034000_CreateDB.Designer.cs">
+      <DependentUpon>201708262034000_CreateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +67,11 @@
       <Project>{9b215286-5e37-41ea-bcd0-80b3b340cffe}</Project>
       <Name>Cimri.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708262034000_CreateDB.resx">
+      <DependentUpon>201708262034000_CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,7 @@ namespace Cimri.Entity
 
         //Navigation Property
         public virtual UserCompany UserCompany { get; set; }
-        public virtual PeriodicService PeriodicService { get; set; }
+        
 
         public Service()
         {

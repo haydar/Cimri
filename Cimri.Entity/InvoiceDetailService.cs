@@ -14,11 +14,12 @@ namespace Cimri.Entity
 
         //Navigation Property 
         public virtual Invoice Invoice { get; set; }
-        public virtual ICollection<Service> Service { get; set; }
+        public virtual Service Service { get; set; }
+        public int? InvoiceId { get; set; }
 
         public InvoiceDetailService()
         {
-            Service = new HashSet<Service>();
+            
         }
 
     }

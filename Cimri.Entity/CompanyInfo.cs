@@ -8,7 +8,7 @@ namespace Cimri.Entity
 {
     public class CompanyInfo
     {
-        public int UserCompanyId { get; set; }
+        public int CompanyInfoId { get; set; }
         public string Title { get; set; }
         public string AdressCity { get; set; }
         public string AddressNeighborhood { get; set; }
@@ -28,14 +28,13 @@ namespace Cimri.Entity
 
 
         //Navigation Property
-        public virtual ICollection<UserCompany> UserCompanies { get; set; }
+        public virtual UserCompany UserCompany{ get; set; }
         public virtual ICollection<Invoice> Invoices { get; set; }
         public virtual ICollection<PeriodicService> PeriodicServices{ get; set; }
         public virtual ICollection<FinancialTransaction> FinancialTransactions { get; set; }
 
         public CompanyInfo()
         {
-            UserCompanies = new HashSet<UserCompany>();
             Invoices = new HashSet<Invoice>();
             PeriodicServices = new HashSet<PeriodicService>();
             FinancialTransactions = new HashSet<FinancialTransaction>();

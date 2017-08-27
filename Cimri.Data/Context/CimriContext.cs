@@ -12,7 +12,7 @@ namespace Cimri.Data.Context
     {
         public CimriContext() : base("CimriContext")
         {
-
+            
         }
         //Tables...
         public virtual DbSet<ProgramUser> ProgramUsers { get; set; }
@@ -26,6 +26,8 @@ namespace Cimri.Data.Context
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
         public virtual DbSet<UserCompany> UserCompanies { get; set; }
-      
+
     }
+
+    
 }

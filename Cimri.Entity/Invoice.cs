@@ -12,21 +12,23 @@ namespace Cimri.Entity
         public int InvoiceId { get; set; }
         public string Description { get; set; }
         public DateTime InvoiceDate { get; set; }
-        [ForeignKey("InvoiceDetailProductsId")]
-        public int? InvoiceDetailProductsId { get; set; }
-        [ForeignKey("InvoiceDetailServicesId")]
-        public int? InvoiceDetailServicesId { get; set; }
+
+        [ForeignKey("InvoiceDetailProduct")]
+        public int? InvoiceDetailProductId{ get; set; }
+       
+        [ForeignKey("InvoiceDetailService")]
+        public int? InvoiceDetailServiceId { get; set; }
+        
 
         //Navigation Property
         public virtual UserCompany UserCompany { get; set; }
         public virtual CompanyInfo CompanyInfo { get; set; }
-        public virtual InvoiceDetailProduct InvoiceDetailProducts { get; set; }
-        public virtual InvoiceDetailService InvoiceDetailServices { get; set; }
+        public virtual ICollection< InvoiceDetailProduct> InvoiceDetailProduct { get; set; }
+        public virtual ICollection< InvoiceDetailService> InvoiceDetailService { get; set; }
 
         public Invoice()
         {
-            InvoiceDetailProducts = new InvoiceDetailProduct();
-            InvoiceDetailServices = new InvoiceDetailService();
+           
         }
 
     }
