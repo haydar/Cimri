@@ -1,6 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,11 +12,12 @@ namespace Cimri.Entity
     {
         public int CompanyInfoId { get; set; }
         public string Title { get; set; }
-        public string AdressCity { get; set; }
+        public string AddressCity { get; set; }
+        public string AddressDistrict { get; set; }
         public string AddressNeighborhood { get; set; }
         public string AddressStreet { get; set; }
         public string AddressNo { get; set; }
-        public string AdressFloor { get; set; }
+        public string AddressFloor { get; set; }
         public string TaxNo { get; set; }
         public string TaxAdministration { get; set; }
         public string AuthorizedPerson { get; set; }
@@ -25,7 +28,9 @@ namespace Cimri.Entity
         public string TradeRegistryNo { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
-
+        public string Iban { get; set; }
+        public bool IsSupplier { get; set; }
+        public bool IsCustomer  { get; set; }
 
         //Navigation Property
         public virtual UserCompany UserCompany{ get; set; }
@@ -35,6 +40,7 @@ namespace Cimri.Entity
 
         public CompanyInfo()
         {
+            UserCompany = new UserCompany();
             Invoices = new HashSet<Invoice>();
             PeriodicServices = new HashSet<PeriodicService>();
             FinancialTransactions = new HashSet<FinancialTransaction>();

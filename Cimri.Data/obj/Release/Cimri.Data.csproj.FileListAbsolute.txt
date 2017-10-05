@@ -1,0 +1,16 @@
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Data.dll.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Data.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Data.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Entity.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\EntityFramework.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Entity.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\Cimri.Entity.dll.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\EntityFramework.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.csprojResolveAssemblyReference.cache
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.CreateDB.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.Add_AdressDistrict.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.csproj.GenerateResource.Cache
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.pdb

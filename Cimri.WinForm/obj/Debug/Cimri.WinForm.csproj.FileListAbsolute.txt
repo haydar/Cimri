@@ -1,0 +1,55 @@
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.exe.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.exe
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.Design.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.LoginForm.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.Properties.Resources.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.csproj.GenerateResource.Cache
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.exe
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Business.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Business.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.dll.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.dll.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.MainForm.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.BaseForm.resources
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.AddCompanyForm.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.AddCompanyForm.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.BaseForm.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.LoginForm.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.MainForm.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.Properties.Resources.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.csproj.GenerateResource.Cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.csproj.CoreCompileInputs.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.exe
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.exe.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.exe
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.WinForm.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Business.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.Design.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Business.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Entity.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.dll.config

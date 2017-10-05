@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.Entity", "Cimri.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.Data", "Cimri.Data\Cimri.Data.csproj", "{4EE5C203-C446-4ABF-A091-8FBCC8553929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.Business", "Cimri.Business\Cimri.Business.csproj", "{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cimri.WinForm", "Cimri.WinForm\Cimri.WinForm.csproj", "{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EE5C203-C446-4ABF-A091-8FBCC8553929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9B215286-5E37-41EA-BCD0-80B3B340CFFE} = {AD55EED1-3F25-45C2-9ECC-9B98C12A19DE}
 		{4EE5C203-C446-4ABF-A091-8FBCC8553929} = {2E25A448-CCE2-4E05-92A2-84DCA8D86116}
+		{05FD2F22-96A5-4E9A-9C6A-7DB29B092B32} = {08960B54-3249-47F8-A387-D88EAAC1C5B5}
+		{EF5B8D2A-D443-4A57-9681-E7ECB375E7BA} = {7B329222-09BA-4596-B6D2-8CC8180671AA}
 	EndGlobalSection
 EndGlobal

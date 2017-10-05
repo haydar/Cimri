@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Cimri.Entity
 {
-  public  class UserCompany
+  public class UserCompany
     {
         public int UserCompanyId { get; set; }
         public string Title { get; set; }
         public string AdressCity { get; set; }
         public string AdressNeighborhood { get; set; }
+        public string AdressDistrict { get; set; }
         public string AdressStreet { get; set; }
         public string AdressNo { get; set; }
         public string AdressFloor { get; set; }
@@ -24,6 +25,7 @@ namespace Cimri.Entity
         public string TradeRegistryNo { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
+        public string Iban { get; set; }
 
         // Navigation Property
         public virtual ICollection<ProgramUser> ProgramUsers { get; set; }

@@ -1,0 +1,9 @@
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.dll.config
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.pdb
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\EntityFramework.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\EntityFramework.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.dll
+C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.pdb
