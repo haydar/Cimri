@@ -11,6 +11,8 @@ namespace Cimri.Entity
     {
         public int InvoiceId { get; set; }
         public string Description { get; set; }
+
+        [Column(TypeName = "datetime2")]
         public DateTime InvoiceDate { get; set; }
 
         [ForeignKey("InvoiceDetailProduct")]

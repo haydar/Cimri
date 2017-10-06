@@ -80,6 +80,10 @@
     <Compile Include="Migrations\201709151206205_fixFields.Designer.cs">
       <DependentUpon>201709151206205_fixFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710061538569_datetime2BugFixed.cs" />
+    <Compile Include="Migrations\201710061538569_datetime2BugFixed.Designer.cs">
+      <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709151206205_fixFields.resx">
       <DependentUpon>201709151206205_fixFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710061538569_datetime2BugFixed.resx">
+      <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

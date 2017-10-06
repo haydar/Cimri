@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace Cimri.Entity
         public string Fax { get; set; }
         public string Mail { get; set; }
         public string TradeRegistryNo { get; set; }
+        [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
         public string Iban { get; set; }
