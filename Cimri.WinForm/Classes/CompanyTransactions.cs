@@ -50,13 +50,13 @@ namespace Cimri.WinForm.Classes
                 newCompany.IsCustomer = addCompanyForm.mcboxDetailCustomer.Checked == true ? true : false;
                 newCompany.IsSupplier = addCompanyForm.mcboxDetailSupplier.Checked == true ? true: false;
 
-                newCompany.UserCompany.UserCompanyId = mainForm.userCompanyId;
+                newCompany.UserCompanyId = mainForm.userCompanyId;
+
                 bCompanyInfo.Add(newCompany);
                 
                 MessageBox.Show("Firma Ekleme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FillCompaniesToDataGrid(mainForm.userCompanyId);
             }
-
         }    
         public void FillCompaniesToDataGrid(int userCompanyId)
         {

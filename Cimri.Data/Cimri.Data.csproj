@@ -84,6 +84,14 @@
     <Compile Include="Migrations\201710061538569_datetime2BugFixed.Designer.cs">
       <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710112115595_keyFix.cs" />
+    <Compile Include="Migrations\201710112115595_keyFix.Designer.cs">
+      <DependentUpon>201710112115595_keyFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710112130476_keyFix2.cs" />
+    <Compile Include="Migrations\201710112130476_keyFix2.Designer.cs">
+      <DependentUpon>201710112130476_keyFix2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710061538569_datetime2BugFixed.resx">
       <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710112115595_keyFix.resx">
+      <DependentUpon>201710112115595_keyFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710112130476_keyFix2.resx">
+      <DependentUpon>201710112130476_keyFix2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

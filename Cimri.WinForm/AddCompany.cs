@@ -36,6 +36,7 @@ namespace Cimri.WinForm
         {
             CompanyTransactions company = new CompanyTransactions();
             company.AddCompany();
+            this.Hide();
         }
     }
 }

@@ -33,7 +33,9 @@ namespace Cimri.Entity
         public bool IsActive { get; set; }
         public string Iban { get; set; }
         public bool IsSupplier { get; set; }
-        public bool IsCustomer  { get; set; }
+        public bool IsCustomer { get; set; }
+        [ForeignKey("UserCompany")]
+        public int UserCompanyId { get; set; }
 
         //Navigation Property
         public virtual UserCompany UserCompany{ get; set; }
@@ -43,7 +45,6 @@ namespace Cimri.Entity
 
         public CompanyInfo()
         {
-            UserCompany = new UserCompany();
             Invoices = new HashSet<Invoice>();
             PeriodicServices = new HashSet<PeriodicService>();
             FinancialTransactions = new HashSet<FinancialTransaction>();

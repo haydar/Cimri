@@ -44,3 +44,5 @@ C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.cspro
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.dll
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.pdb
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.datetime2BugFixed.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.keyFix.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.keyFix2.resources
