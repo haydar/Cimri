@@ -70,8 +70,8 @@
             this.mrdbtnMale = new MetroFramework.Controls.MetroRadioButton();
             this.mlblAuthorizedPerson = new MetroFramework.Controls.MetroLabel();
             this.mtxtAuthorizedPerson = new MetroFramework.Controls.MetroTextBox();
-            this.imglAddCompany = new System.Windows.Forms.ImageList(this.components);
             this.btnAddCompany = new System.Windows.Forms.Button();
+            this.imglAddCompany = new System.Windows.Forms.ImageList(this.components);
             this.gbCompanyDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.mpDetailCompanyStatus.SuspendLayout();
@@ -492,6 +492,7 @@
             this.mtxtTaxNo.WaterMark = "Örn. 4780163831";
             this.mtxtTaxNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtTaxNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtxtTaxNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtTaxNo_KeyPress);
             // 
             // mtxtTaxAdministration
             // 
@@ -846,12 +847,6 @@
             this.mtxtAuthorizedPerson.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtAuthorizedPerson.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // imglAddCompany
-            // 
-            this.imglAddCompany.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglAddCompany.ImageStream")));
-            this.imglAddCompany.TransparentColor = System.Drawing.Color.Transparent;
-            this.imglAddCompany.Images.SetKeyName(0, "addcompany.png");
-            // 
             // btnAddCompany
             // 
             this.btnAddCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -866,6 +861,12 @@
             this.btnAddCompany.Text = "Firma Ekle";
             this.btnAddCompany.UseVisualStyleBackColor = true;
             this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
+            // 
+            // imglAddCompany
+            // 
+            this.imglAddCompany.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglAddCompany.ImageStream")));
+            this.imglAddCompany.TransparentColor = System.Drawing.Color.Transparent;
+            this.imglAddCompany.Images.SetKeyName(0, "addcompany.png");
             // 
             // AddCompanyForm
             // 
