@@ -8,15 +8,8 @@ namespace Cimri.Entity.DTO
 {
     public class ErrorDto
     {
-        public bool ProcessResult { get; set; } = false;
-        public string Description { get; set; } = "";
-        public string ErrorMessage { get; set; } = "";
-
-        public ErrorDto()
-        {
-            ProcessResult = false;
-            Description = "";
-            ErrorMessage = "";
-        }
+        public bool ProcessResult { get; set; } = true;
+        public string Description { get; set; }
+        public string ErrorMessage { get; set; }
     }
 }

@@ -36,7 +36,7 @@ namespace Cimri.WinForm
         {
             CompanyTransactions company = new CompanyTransactions();
             company.AddCompany();
-            this.Hide();
+            
         }
 
         private void mtxtTaxNo_KeyPress(object sender, KeyPressEventArgs e)

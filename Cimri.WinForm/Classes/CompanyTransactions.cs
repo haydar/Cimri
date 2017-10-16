@@ -54,7 +54,7 @@ namespace Cimri.WinForm.Classes
                 newCompany.UserCompanyId = mainForm.userCompanyId;
 
                 bCompanyInfo.Add(newCompany);
-                
+                addCompanyForm.Hide();
                 MessageBox.Show("Firma Ekleme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FillCompaniesToDataGrid(mainForm.userCompanyId);
             }

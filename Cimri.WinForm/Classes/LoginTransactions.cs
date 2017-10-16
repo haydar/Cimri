@@ -35,14 +35,16 @@ namespace Cimri.WinForm.Classes
 
                 bProgramUser.VerifyUser(ref loginRequestInfo, out ProgramUser loggedInUser, out ErrorDto error);
                 if (error.ProcessResult)
-                {
+                {                 
+                    MainForm mainForm = new MainForm();
+                    mainForm.Show();
                     mainForm.mlbl_Username.Text = loggedInUser.UserRealName;
-
-                    MainForm _MainForm = new MainForm();
-                    _MainForm.Show();
                     loginForm.Hide();
                 }
-                Error.Show(error);
+                else
+                {
+                    Error.Show(error);
+                }
             }
         }
 

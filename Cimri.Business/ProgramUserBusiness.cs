@@ -16,18 +16,20 @@ namespace Cimri.Business
         public void VerifyUser(ref VerifyUserDto loginRequestInfo, out ProgramUser loggedInUser, out ErrorDto error)
         {
             loggedInUser = null;
-            error = new ErrorDto { ErrorMessage = "" };
+            error = new ErrorDto();
             try
             {
                 loggedInUser = repo.VerifyUser(loginRequestInfo);
-                error.ProcessResult = true;
-                error.Description = "Seçili firmaya ait girilen kullanıcı adı ve şifreli bir hesap bulunamadı.";
-                error.ErrorMessage = "";
+                if (loggedInUser==null)
+                {
+                    error.ProcessResult = false;
+                    error.Description = "Seçili firmaya ait girilen kullanıcı adı ve şifreli bir hesap bulunamadı.";
+                }
             }
-            catch (ArgumentNullException ex)
+            catch (Exception ex)
             {
                 error.ProcessResult = false;
-                error.Description = "Seçili firmaya ait girilen kullanıcı adı ve şifreli bir hesap bulunamadı.";
+                error.Description = "Kullanıcı doğrulanırken nedeni bilinmeyen bir hatayla karşılaşıldı.";
                 error.ErrorMessage = ex.Message;
             }
         }
