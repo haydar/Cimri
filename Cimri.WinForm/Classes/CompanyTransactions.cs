@@ -24,6 +24,7 @@ namespace Cimri.WinForm.Classes
         CompanyInfoBusiness bCompanyInfo = new CompanyInfoBusiness();
         UserCompanyBusiness bUserCompany=new UserCompanyBusiness();
 
+
         public void AddCompany()
         {
             if (CheckRequiredAddCompanyFields())
@@ -166,6 +167,6 @@ namespace Cimri.WinForm.Classes
                 return false;
             }
         }
-
+        
     }
 }

@@ -74,6 +74,8 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\CompanyTransactions.cs" />
+    <Compile Include="Classes\Error.cs" />
+    <Compile Include="Classes\LoginTransactions.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

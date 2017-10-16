@@ -1,5 +1,6 @@
 ﻿using Cimri.Data.Context;
 using Cimri.Entity;
+using Cimri.Entity.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,12 @@ namespace Cimri.Data.Repository
 {
     public class ProgramUserRepository:BaseRepository<ProgramUser>
     {
-        public ProgramUser VerifyUser(string GivenUsername, string GivenPassword, int GivenUserCompmanyId)
+        public ProgramUser VerifyUser(VerifyUserDto loginInfo)
         {
             using (CimriContext context = new CimriContext())
             {
-                return context.ProgramUsers.FirstOrDefault(p => p.UserName == GivenUsername &&
-                p.UserPassword == GivenPassword && p.UserCompanies.Any(u => u.UserCompanyId.Equals(GivenUserCompmanyId)));
+                return context.ProgramUsers.FirstOrDefault(p => p.UserName == loginInfo.GivenUsername &&
+                p.UserPassword == loginInfo.GivenPassword && p.UserCompanies.Any(u => u.UserCompanyId.Equals(loginInfo.GivenUserCompanyId)));
             }
         }
     }

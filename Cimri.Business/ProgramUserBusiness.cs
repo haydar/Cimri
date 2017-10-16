@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cimri.Entity.DTO;
 
 namespace Cimri.Business
 {
@@ -12,44 +13,22 @@ namespace Cimri.Business
     {
         ProgramUserRepository repo = new ProgramUserRepository();
 
-        public void VerifyUser(ref string GivenUsername, ref string GivenPassword, ref int GivenUserCompmanyID,
-                               out string error, out ProgramUser LoggedInUser,out bool isThereError)
+        public void VerifyUser(ref VerifyUserDto loginRequestInfo, out ProgramUser loggedInUser, out ErrorDto error)
         {
-            LoggedInUser=null;
-            isThereError = false;
-            error = "Aşağıdaki alanlar boş geçilemez: \n\n";
-            
-            #region CheckFields
-            if (string.IsNullOrEmpty(GivenUsername))
+            loggedInUser = null;
+            error = new ErrorDto { ErrorMessage = "" };
+            try
             {
-                error += "- Kullanıcı Adı\n";
-                isThereError = true;
+                loggedInUser = repo.VerifyUser(loginRequestInfo);
+                error.ProcessResult = true;
+                error.Description = "Seçili firmaya ait girilen kullanıcı adı ve şifreli bir hesap bulunamadı.";
+                error.ErrorMessage = "";
             }
-
-            if (string.IsNullOrEmpty(GivenPassword))
+            catch (ArgumentNullException ex)
             {
-                error += "- Şifre\n";
-                isThereError = true;
-            }
-            #endregion
-
-            else
-            {
-                try
-                {
-                    LoggedInUser = repo.VerifyUser(GivenUsername, GivenPassword, GivenUserCompmanyID);
-                }
-                catch (Exception ex)
-                {
-                    error += "Kullanıcı yetki doğrulaması yaparken şu hata ile karşılaşıldı; \n" + ex.Message;
-                    isThereError = true;
-                }
-                if (LoggedInUser==null)
-                {
-                    error = string.Empty;
-                    error = "Girdiğiniz kullancı adı veya şifre seçili firma için geçerli değil.";
-                    isThereError = true;
-                }
+                error.ProcessResult = false;
+                error.Description = "Seçili firmaya ait girilen kullanıcı adı ve şifreli bir hesap bulunamadı.";
+                error.ErrorMessage = ex.Message;
             }
         }
     }

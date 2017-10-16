@@ -50,6 +50,7 @@
     <Compile Include="CompanyInfo.cs" />
     <Compile Include="DTO\CompanyInfoDto.cs" />
     <Compile Include="DTO\ErrorDto.cs" />
+    <Compile Include="DTO\VerifyUserDto.cs" />
     <Compile Include="FinancialTransaction.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoiceDetailProduct.cs" />

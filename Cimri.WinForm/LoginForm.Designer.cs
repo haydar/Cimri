@@ -39,8 +39,8 @@
             this.mtxtUsername = new MetroFramework.Controls.MetroTextBox();
             this.mtxtPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iListLogin = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,6 +154,7 @@
             this.mtxtUsername.MaxLength = 32767;
             this.mtxtUsername.Name = "mtxtUsername";
             this.mtxtUsername.PasswordChar = '\0';
+            this.mtxtUsername.PromptText = "Kullanıcı adı giriniz";
             this.mtxtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.mtxtUsername.SelectedText = "";
             this.mtxtUsername.SelectionLength = 0;
@@ -218,6 +219,12 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
+            // iListLogin
+            // 
+            this.iListLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iListLogin.ImageStream")));
+            this.iListLogin.TransparentColor = System.Drawing.Color.Transparent;
+            this.iListLogin.Images.SetKeyName(0, "login.png");
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -230,12 +237,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // iListLogin
-            // 
-            this.iListLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iListLogin.ImageStream")));
-            this.iListLogin.TransparentColor = System.Drawing.Color.Transparent;
-            this.iListLogin.Images.SetKeyName(0, "login.png");
             // 
             // LoginForm
             // 
@@ -257,17 +258,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel mlblUsername;
-        private MetroFramework.Controls.MetroLabel mlblPassword;
-        private MetroFramework.Controls.MetroLabel mlblUserCompany;
-        private MetroFramework.Controls.MetroComboBox mcbxUserCompany;
-        private MetroFramework.Controls.MetroTextBox mtxtUsername;
-        private MetroFramework.Controls.MetroTextBox mtxtPassword;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.ImageList iListLogin;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public MetroFramework.Controls.MetroLabel mlblUsername;
+        public MetroFramework.Controls.MetroLabel mlblPassword;
+        public MetroFramework.Controls.MetroLabel mlblUserCompany;
+        public MetroFramework.Controls.MetroComboBox mcbxUserCompany;
+        public MetroFramework.Controls.MetroTextBox mtxtUsername;
+        public MetroFramework.Controls.MetroTextBox mtxtPassword;
+        public System.Windows.Forms.Button btnLogin;
+        public System.Windows.Forms.ImageList iListLogin;
     }
 }
 

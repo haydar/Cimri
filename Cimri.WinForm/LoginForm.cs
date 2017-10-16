@@ -1,5 +1,7 @@
 ﻿using Cimri.Business;
 using Cimri.Entity;
+using Cimri.Entity.DTO;
+using Cimri.WinForm.Classes;
 using MetroFramework;
 using MetroFramework.Forms;
 using System;
@@ -21,15 +23,14 @@ namespace Cimri.WinForm
             InitializeComponent();
         }
 
-        public string userRealName;
         public int companyId;
 
-        UserCompanyBusiness UserCompany = new UserCompanyBusiness();
-        ProgramUserBusiness ProgramUser = new ProgramUserBusiness();
+        UserCompanyBusiness bUserCompany = new UserCompanyBusiness();
+        ProgramUserBusiness bProgramUser = new ProgramUserBusiness();
         private void LoginForm_Load(object sender, EventArgs e)
         {
             #region FillcomboBox_UserCompany
-            foreach (var item in UserCompany.BringAll())
+            foreach (var item in bUserCompany.BringAll())
             {
                 mcbxUserCompany.Items.Add(item.UserCompanyId + "- " + item.Title);
             }
@@ -40,23 +41,8 @@ namespace Cimri.WinForm
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string username = mtxtUsername.Text;
-            string userPassword = mtxtPassword.Text;
-            string[] splitCompanyName = mcbxUserCompany.SelectedItem.ToString().Split('-');
-            companyId = int.Parse(splitCompanyName[0]);
-
-                ProgramUser.VerifyUser(ref username, ref userPassword, ref companyId, out string error,
-                out ProgramUser loggedInUser, out bool isThereError);
-
-            if (isThereError)
-                MessageBox.Show(error, "Uyari", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-            {
-                userRealName = loggedInUser.UserRealName;
-                MainForm _MainForm = new MainForm();
-                _MainForm.Show();
-                this.Hide();
-            }
+            LoginTransactions login = new LoginTransactions();
+            login.VerifyUser();
         }
     }
 }
