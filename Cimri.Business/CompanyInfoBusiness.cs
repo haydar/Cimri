@@ -14,18 +14,20 @@ namespace Cimri.Business
     public class CompanyInfoBusiness:BaseBusiness<CompanyInfo>
     {
         CompanyInfoRepository repo = new CompanyInfoRepository();
-        public ICollection<CompanyInfoDto.CompanyHeader> FillDataGrid(int userCompanyId, out string error)
+        public ICollection<CompanyInfoDto.CompanyHeader> FillDataGrid(int userCompanyId, out ErrorDto error)
         {
-            error = null;
+            error = new ErrorDto();
             try
             {
                 return repo.FillDataGrid(userCompanyId);
             }
-            catch (Win32Exception)
+            catch (Win32Exception ex)
             {
-                error += "Veritabanına bağlanmaya çalışırken işlem zaman aşamına uğradı." +
+                error.ProcessResult = false;
+                error.Description="Veritabanına bağlanmaya çalışırken işlem zaman aşamına uğradı." +
                          "İşletim sistemi veya başka yazılımların sabit diskinizde aşırı " +
                          "işlem görmesi bu soruna neden olabilir.";
+                error.ErrorMessage = ex.Message;
                 return null;
             }
            

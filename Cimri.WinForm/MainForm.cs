@@ -31,6 +31,7 @@ namespace Cimri.WinForm
             CompanyTransactions company = new CompanyTransactions();
             company.FillCompaniesToDataGrid(userCompanyId);
             companyId=Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
+            company.ShowCompanyDetails();
             //mlbl_Username.Text ="Sayın, "+ Form.userRealName.ToString();
             
         }
@@ -47,7 +48,6 @@ namespace Cimri.WinForm
             CompanyTransactions company= new CompanyTransactions();
             company.ShowCompanyDetails();
         }
-
         private void btnAddCompany_Click(object sender, EventArgs e)
         {
             AddCompanyForm _addCompany=new AddCompanyForm();

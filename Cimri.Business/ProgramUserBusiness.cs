@@ -18,7 +18,7 @@ namespace Cimri.Business
             loggedInUser = null;
             error = new ErrorDto();
             try
-            {
+            { 
                 loggedInUser = repo.VerifyUser(loginRequestInfo);
                 if (loggedInUser==null)
                 {
