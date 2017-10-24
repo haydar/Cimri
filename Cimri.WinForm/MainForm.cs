@@ -54,5 +54,29 @@ namespace Cimri.WinForm
             AddCompanyForm _addCompany=new AddCompanyForm();
             _addCompany.ShowDialog();
         }
+
+        private void mtxtTaxNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void mtxtTradeRegistryNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void mdgCompanies_KeyUp(object sender, KeyEventArgs e)
+        {
+            companyId = Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
+            CompanyTransactions company = new CompanyTransactions();
+            company.ShowCompanyDetails();
+        }
+
+        private void mdgCompanies_KeyDown(object sender, KeyEventArgs e)
+        {
+            companyId = Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
+            CompanyTransactions company = new CompanyTransactions();
+            company.ShowCompanyDetails();
+        }
     }
 }

@@ -843,6 +843,7 @@
             this.mtxtTaxNo.WaterMark = "Örn. 4780163831";
             this.mtxtTaxNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtTaxNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtxtTaxNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtTaxNo_KeyPress);
             // 
             // mtxtTaxAdministration
             // 
@@ -975,6 +976,7 @@
             this.mtxtTradeRegistryNo.WaterMark = "Örn. 12345678912";
             this.mtxtTradeRegistryNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtTradeRegistryNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtxtTradeRegistryNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtTradeRegistryNo_KeyPress);
             // 
             // mtxtIban
             // 
@@ -1251,6 +1253,8 @@
             this.mdgCompanies.Size = new System.Drawing.Size(241, 315);
             this.mdgCompanies.TabIndex = 0;
             this.mdgCompanies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mgdCompanies_CellClick);
+            this.mdgCompanies.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mdgCompanies_KeyDown);
+            this.mdgCompanies.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mdgCompanies_KeyUp);
             // 
             // tlpButtons
             // 
@@ -1340,7 +1344,7 @@
             this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.92982F));
             this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.07018F));
             this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 292F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
             this.tlpSeachCompanyFields.Controls.Add(this.mlblTitle, 0, 0);
             this.tlpSeachCompanyFields.Controls.Add(this.mtlTel, 0, 1);
             this.tlpSeachCompanyFields.Controls.Add(this.mtxtTitle, 1, 0);
@@ -1369,7 +1373,7 @@
             this.mlblTitle.AutoSize = true;
             this.mlblTitle.Location = new System.Drawing.Point(3, 6);
             this.mlblTitle.Name = "mlblTitle";
-            this.mlblTitle.Size = new System.Drawing.Size(82, 19);
+            this.mlblTitle.Size = new System.Drawing.Size(80, 19);
             this.mlblTitle.TabIndex = 3;
             this.mlblTitle.Text = "Ünvan        :";
             // 
@@ -1379,7 +1383,7 @@
             this.mtlTel.AutoSize = true;
             this.mtlTel.Location = new System.Drawing.Point(3, 37);
             this.mtlTel.Name = "mtlTel";
-            this.mtlTel.Size = new System.Drawing.Size(82, 19);
+            this.mtlTel.Size = new System.Drawing.Size(80, 19);
             this.mtlTel.TabIndex = 3;
             this.mtlTel.Text = "Telefon       :";
             // 
@@ -1390,7 +1394,7 @@
             // 
             // 
             this.mtxtTitle.CustomButton.Image = null;
-            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(160, 1);
+            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.mtxtTitle.CustomButton.Name = "";
             this.mtxtTitle.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtTitle.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1400,7 +1404,7 @@
             this.mtxtTitle.CustomButton.Visible = false;
             this.mtxtTitle.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtTitle.Lines = new string[0];
-            this.mtxtTitle.Location = new System.Drawing.Point(91, 4);
+            this.mtxtTitle.Location = new System.Drawing.Point(89, 4);
             this.mtxtTitle.MaxLength = 32767;
             this.mtxtTitle.Name = "mtxtTitle";
             this.mtxtTitle.PasswordChar = '\0';
@@ -1409,7 +1413,7 @@
             this.mtxtTitle.SelectionLength = 0;
             this.mtxtTitle.SelectionStart = 0;
             this.mtxtTitle.ShortcutsEnabled = true;
-            this.mtxtTitle.Size = new System.Drawing.Size(182, 23);
+            this.mtxtTitle.Size = new System.Drawing.Size(177, 23);
             this.mtxtTitle.TabIndex = 4;
             this.mtxtTitle.UseSelectable = true;
             this.mtxtTitle.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1422,7 +1426,7 @@
             // 
             // 
             this.mtxtTel.CustomButton.Image = null;
-            this.mtxtTel.CustomButton.Location = new System.Drawing.Point(160, 1);
+            this.mtxtTel.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.mtxtTel.CustomButton.Name = "";
             this.mtxtTel.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtTel.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1432,7 +1436,7 @@
             this.mtxtTel.CustomButton.Visible = false;
             this.mtxtTel.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtTel.Lines = new string[0];
-            this.mtxtTel.Location = new System.Drawing.Point(91, 35);
+            this.mtxtTel.Location = new System.Drawing.Point(89, 35);
             this.mtxtTel.MaxLength = 32767;
             this.mtxtTel.Name = "mtxtTel";
             this.mtxtTel.PasswordChar = '\0';
@@ -1441,7 +1445,7 @@
             this.mtxtTel.SelectionLength = 0;
             this.mtxtTel.SelectionStart = 0;
             this.mtxtTel.ShortcutsEnabled = true;
-            this.mtxtTel.Size = new System.Drawing.Size(182, 23);
+            this.mtxtTel.Size = new System.Drawing.Size(177, 23);
             this.mtxtTel.TabIndex = 4;
             this.mtxtTel.UseSelectable = true;
             this.mtxtTel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1451,7 +1455,7 @@
             // 
             this.mlblBalanceStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblBalanceStatus.AutoSize = true;
-            this.mlblBalanceStatus.Location = new System.Drawing.Point(279, 6);
+            this.mlblBalanceStatus.Location = new System.Drawing.Point(272, 6);
             this.mlblBalanceStatus.Name = "mlblBalanceStatus";
             this.mlblBalanceStatus.Size = new System.Drawing.Size(104, 19);
             this.mlblBalanceStatus.TabIndex = 3;
@@ -1466,9 +1470,9 @@
             this.mpBalanceStatus.HorizontalScrollbarBarColor = true;
             this.mpBalanceStatus.HorizontalScrollbarHighlightOnWheel = false;
             this.mpBalanceStatus.HorizontalScrollbarSize = 10;
-            this.mpBalanceStatus.Location = new System.Drawing.Point(404, 3);
+            this.mpBalanceStatus.Location = new System.Drawing.Point(397, 3);
             this.mpBalanceStatus.Name = "mpBalanceStatus";
-            this.mpBalanceStatus.Size = new System.Drawing.Size(287, 25);
+            this.mpBalanceStatus.Size = new System.Drawing.Size(294, 25);
             this.mpBalanceStatus.TabIndex = 7;
             this.mpBalanceStatus.VerticalScrollbarBarColor = true;
             this.mpBalanceStatus.VerticalScrollbarHighlightOnWheel = false;
@@ -1479,7 +1483,7 @@
             this.mcboxPayee.Checked = true;
             this.mcboxPayee.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mcboxPayee.Dock = System.Windows.Forms.DockStyle.Right;
-            this.mcboxPayee.Location = new System.Drawing.Point(213, 0);
+            this.mcboxPayee.Location = new System.Drawing.Point(220, 0);
             this.mcboxPayee.Name = "mcboxPayee";
             this.mcboxPayee.Size = new System.Drawing.Size(74, 25);
             this.mcboxPayee.TabIndex = 8;
@@ -1494,7 +1498,7 @@
             this.mcboxBalance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mcboxBalance.Location = new System.Drawing.Point(82, 0);
             this.mcboxBalance.Name = "mcboxBalance";
-            this.mcboxBalance.Size = new System.Drawing.Size(205, 25);
+            this.mcboxBalance.Size = new System.Drawing.Size(212, 25);
             this.mcboxBalance.TabIndex = 7;
             this.mcboxBalance.Text = "Denge";
             this.mcboxBalance.UseSelectable = true;
@@ -1521,9 +1525,9 @@
             this.mpCompanyType.HorizontalScrollbarBarColor = true;
             this.mpCompanyType.HorizontalScrollbarHighlightOnWheel = false;
             this.mpCompanyType.HorizontalScrollbarSize = 10;
-            this.mpCompanyType.Location = new System.Drawing.Point(404, 34);
+            this.mpCompanyType.Location = new System.Drawing.Point(397, 34);
             this.mpCompanyType.Name = "mpCompanyType";
-            this.mpCompanyType.Size = new System.Drawing.Size(287, 25);
+            this.mpCompanyType.Size = new System.Drawing.Size(294, 25);
             this.mpCompanyType.TabIndex = 8;
             this.mpCompanyType.VerticalScrollbarBarColor = true;
             this.mpCompanyType.VerticalScrollbarHighlightOnWheel = false;
@@ -1557,7 +1561,7 @@
             // 
             this.mlblCompanyType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblCompanyType.AutoSize = true;
-            this.mlblCompanyType.Location = new System.Drawing.Point(279, 37);
+            this.mlblCompanyType.Location = new System.Drawing.Point(272, 37);
             this.mlblCompanyType.Name = "mlblCompanyType";
             this.mlblCompanyType.Size = new System.Drawing.Size(83, 19);
             this.mlblCompanyType.TabIndex = 9;
@@ -1567,7 +1571,7 @@
             // 
             this.mlblIsActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblIsActive.AutoSize = true;
-            this.mlblIsActive.Location = new System.Drawing.Point(279, 69);
+            this.mlblIsActive.Location = new System.Drawing.Point(272, 69);
             this.mlblIsActive.Name = "mlblIsActive";
             this.mlblIsActive.Size = new System.Drawing.Size(109, 19);
             this.mlblIsActive.TabIndex = 9;
@@ -1583,9 +1587,9 @@
             this.mpIsActive.HorizontalScrollbarBarColor = true;
             this.mpIsActive.HorizontalScrollbarHighlightOnWheel = false;
             this.mpIsActive.HorizontalScrollbarSize = 10;
-            this.mpIsActive.Location = new System.Drawing.Point(404, 65);
+            this.mpIsActive.Location = new System.Drawing.Point(397, 65);
             this.mpIsActive.Name = "mpIsActive";
-            this.mpIsActive.Size = new System.Drawing.Size(287, 27);
+            this.mpIsActive.Size = new System.Drawing.Size(294, 27);
             this.mpIsActive.TabIndex = 10;
             this.mpIsActive.VerticalScrollbarBarColor = true;
             this.mpIsActive.VerticalScrollbarHighlightOnWheel = false;
@@ -1621,7 +1625,7 @@
             this.mlblCompanyId.AutoSize = true;
             this.mlblCompanyId.Location = new System.Drawing.Point(3, 69);
             this.mlblCompanyId.Name = "mlblCompanyId";
-            this.mlblCompanyId.Size = new System.Drawing.Size(82, 19);
+            this.mlblCompanyId.Size = new System.Drawing.Size(80, 19);
             this.mlblCompanyId.TabIndex = 3;
             this.mlblCompanyId.Text = "Kurum No   :";
             // 
@@ -1632,7 +1636,7 @@
             // 
             // 
             this.mtxtCompanyId.CustomButton.Image = null;
-            this.mtxtCompanyId.CustomButton.Location = new System.Drawing.Point(160, 1);
+            this.mtxtCompanyId.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.mtxtCompanyId.CustomButton.Name = "";
             this.mtxtCompanyId.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtCompanyId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1642,7 +1646,7 @@
             this.mtxtCompanyId.CustomButton.Visible = false;
             this.mtxtCompanyId.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtCompanyId.Lines = new string[0];
-            this.mtxtCompanyId.Location = new System.Drawing.Point(91, 67);
+            this.mtxtCompanyId.Location = new System.Drawing.Point(89, 67);
             this.mtxtCompanyId.MaxLength = 32767;
             this.mtxtCompanyId.Name = "mtxtCompanyId";
             this.mtxtCompanyId.PasswordChar = '\0';
@@ -1651,7 +1655,7 @@
             this.mtxtCompanyId.SelectionLength = 0;
             this.mtxtCompanyId.SelectionStart = 0;
             this.mtxtCompanyId.ShortcutsEnabled = true;
-            this.mtxtCompanyId.Size = new System.Drawing.Size(182, 23);
+            this.mtxtCompanyId.Size = new System.Drawing.Size(177, 23);
             this.mtxtCompanyId.TabIndex = 4;
             this.mtxtCompanyId.UseSelectable = true;
             this.mtxtCompanyId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
