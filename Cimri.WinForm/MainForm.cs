@@ -21,19 +21,20 @@ namespace Cimri.WinForm
         {
             InitializeComponent();
         }
-     
+        CompanyTransactions company = new CompanyTransactions();
         LoginForm Form = (LoginForm)Application.OpenForms["LoginForm"];
         CompanyInfoBusiness BCompanyInfo = new CompanyInfoBusiness();
         public int companyId;
         public int userCompanyId=1;
+        public bool firstRunned=true;
         private void MainForm_Load(object sender, EventArgs e)
         {
             CompanyTransactions company = new CompanyTransactions();
             company.FillCompaniesToDataGrid(userCompanyId);
             companyId=Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
             company.ShowCompanyDetails();
-            //mlbl_Username.Text ="Sayın, "+ Form.userRealName.ToString();
-            
+            //mlbl_Username.Text ="Sayın, "+ Form.userRealName.ToString(); 
+            firstRunned = false;
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)

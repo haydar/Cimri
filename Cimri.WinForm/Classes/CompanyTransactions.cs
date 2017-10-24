@@ -23,8 +23,63 @@ namespace Cimri.WinForm.Classes
 
         CompanyInfoBusiness bCompanyInfo = new CompanyInfoBusiness();
         UserCompanyBusiness bUserCompany=new UserCompanyBusiness();
+        public static CompanyInfo cachedCurrentCompany = new CompanyInfo();
 
+        /*This variable is for permission of showing selected company's details for without change control*/
+        bool acceptWithoutUpdateChangesOfCompany=false;
 
+        public bool NoDataHasChangedinCompanyDetails()
+        {
+            CompanyInfo currentCompany = new CompanyInfo();
+            currentCompany.Title = mainForm.mtxtDetailTitle.Text;
+            currentCompany.AddressCity = mainForm.mtxtCity.Text;
+            currentCompany.AddressDistrict = mainForm.mtxtDistrict.Text;
+            currentCompany.AddressNeighborhood = mainForm.mtxtNeighborhood.Text;
+            currentCompany.AddressStreet = mainForm.mtxtStreet.Text;
+            currentCompany.AddressNo = mainForm.mtxtAdressNo.Text;
+            currentCompany.AddressFloor = mainForm.mtxtFloor.Text;
+            currentCompany.TaxNo = mainForm.mtxtTaxNo.Text;
+            currentCompany.TaxAdministration = mainForm.mtxtTaxAdministration.Text;
+            currentCompany.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
+            currentCompany.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
+            currentCompany.Tel = mainForm.mtxtDetailTel.Text;
+            currentCompany.Fax = mainForm.mtxtMail.Text;
+            currentCompany.Mail = mainForm.mtxtMail.Text;
+            currentCompany.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
+            currentCompany.CreateDate = mainForm.mdtimeCreateDate.Value;
+            currentCompany.IsActive = mainForm.mrdbtnActive.Checked ? true : false;
+            currentCompany.Iban = mainForm.mtxtIban.Text;
+            currentCompany.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
+            currentCompany.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
+                        
+
+            bool rs = currentCompany== cachedCurrentCompany;
+            return currentCompany.Equals(cachedCurrentCompany);
+            
+        }
+        public void cacheCompany()
+        {
+            cachedCurrentCompany.Title = mainForm.mtxtDetailTitle.Text;
+            cachedCurrentCompany.AddressCity = mainForm.mtxtCity.Text;
+            cachedCurrentCompany.AddressDistrict = mainForm.mtxtDistrict.Text;
+            cachedCurrentCompany.AddressNeighborhood = mainForm.mtxtNeighborhood.Text;
+            cachedCurrentCompany.AddressStreet = mainForm.mtxtStreet.Text;
+            cachedCurrentCompany.AddressNo = mainForm.mtxtAdressNo.Text;
+            cachedCurrentCompany.AddressFloor = mainForm.mtxtFloor.Text;
+            cachedCurrentCompany.TaxNo = mainForm.mtxtTaxNo.Text;
+            cachedCurrentCompany.TaxAdministration = mainForm.mtxtTaxAdministration.Text;
+            cachedCurrentCompany.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
+            cachedCurrentCompany.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
+            cachedCurrentCompany.Tel = mainForm.mtxtDetailTel.Text;
+            cachedCurrentCompany.Fax = mainForm.mtxtMail.Text;
+            cachedCurrentCompany.Mail = mainForm.mtxtDetailFax.Text;
+            cachedCurrentCompany.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
+            cachedCurrentCompany.CreateDate = mainForm.mdtimeCreateDate.Value;
+            cachedCurrentCompany.IsActive = mainForm.mrdbtnActive.Checked ? true : false;
+            cachedCurrentCompany.Iban = mainForm.mtxtIban.Text;
+            cachedCurrentCompany.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
+            cachedCurrentCompany.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
+        }
         public void AddCompany()
         {
             if (CheckRequiredAddCompanyFields())
@@ -66,6 +121,10 @@ namespace Cimri.WinForm.Classes
             {
                 mainForm.mdgCompanies.DataSource = companies;
             }
+            else
+            {
+                Error.Show(error);
+            }
         }
 
         public void UpdateCompany()
@@ -87,7 +146,7 @@ namespace Cimri.WinForm.Classes
                 company.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
                 company.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
                 company.Tel = mainForm.mtxtDetailTel.Text;
-                company.Fax = mainForm.mtxtMail.Text;
+                company.Fax = mainForm.mtxtDetailFax.Text;
                 company.Mail = mainForm.mtxtMail.Text;
                 company.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
                 company.CreateDate = mainForm.mdtimeCreateDate.Value;
@@ -98,34 +157,55 @@ namespace Cimri.WinForm.Classes
                 bCompanyInfo.Update(company);
                 FillCompaniesToDataGrid(mainForm.userCompanyId);
                 MessageBox.Show("Firma Güncelleştirme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cacheCompany();
             }            
         }
 
         public void ShowCompanyDetails()
-        {
-            CompanyInfo _companyInfo = bCompanyInfo.BringById(mainForm.companyId);
-            mainForm.mlblGivenCompanyId.Text = _companyInfo.CompanyInfoId.ToString();
-            mainForm.mtxtDetailTitle.Text = _companyInfo.Title;
-            mainForm.mtxtCity.Text = _companyInfo.AddressCity;
-            mainForm.mtxtDistrict.Text = _companyInfo.AddressDistrict;
-            mainForm.mtxtNeighborhood.Text = _companyInfo.AddressNeighborhood;
-            mainForm.mtxtStreet.Text = _companyInfo.AddressStreet;
-            mainForm.mtxtAdressNo.Text = _companyInfo.AddressNo;
-            mainForm.mtxtTaxNo.Text = _companyInfo.TaxNo;
-            mainForm.mtxtTaxAdministration.Text = _companyInfo.TaxAdministration;
-            mainForm.mtxtAuthorizedPerson.Text = _companyInfo.AuthorizedPerson;
-            mainForm.mrdbtnMale.Checked = _companyInfo.AuthorizedPersonGender ? true : false;
-            mainForm.mrdbtnFemale.Checked = _companyInfo.AuthorizedPersonGender ? false : true;
-            mainForm.mtxtDetailTel.Text = _companyInfo.Tel;
-            mainForm.mtxtDetailFax.Text = _companyInfo.Fax;
-            mainForm.mtxtMail.Text = _companyInfo.Mail;
-            mainForm.mtxtTradeRegistryNo.Text = _companyInfo.TradeRegistryNo;
-            mainForm.mdtimeCreateDate.Value = _companyInfo.CreateDate;
-            mainForm.mrdbtnActive.Checked = _companyInfo.IsActive ? true : false;
-            mainForm.mrdbtnPassive.Checked = _companyInfo.IsActive ? false : true;
-            mainForm.mtxtIban.Text = _companyInfo.Iban;
-            mainForm.mcboxSupplier.Checked = _companyInfo.IsSupplier ? true : false;
-            mainForm.mcboxCustomer.Checked = _companyInfo.IsActive ? true : false;        
+        {    
+            if (NoDataHasChangedinCompanyDetails()||acceptWithoutUpdateChangesOfCompany||mainForm.firstRunned)
+            {
+                CompanyInfo _companyInfo = bCompanyInfo.BringById(mainForm.companyId);
+                mainForm.mlblGivenCompanyId.Text = _companyInfo.CompanyInfoId.ToString();
+                mainForm.mtxtDetailTitle.Text = _companyInfo.Title;
+                mainForm.mtxtCity.Text = _companyInfo.AddressCity;
+                mainForm.mtxtDistrict.Text = _companyInfo.AddressDistrict;
+                mainForm.mtxtNeighborhood.Text = _companyInfo.AddressNeighborhood;
+                mainForm.mtxtStreet.Text = _companyInfo.AddressStreet;
+                mainForm.mtxtAdressNo.Text = _companyInfo.AddressNo;
+                mainForm.mtxtFloor.Text = _companyInfo.AddressFloor;
+                mainForm.mtxtTaxNo.Text = _companyInfo.TaxNo;
+                mainForm.mtxtTaxAdministration.Text = _companyInfo.TaxAdministration;
+                mainForm.mtxtAuthorizedPerson.Text = _companyInfo.AuthorizedPerson;
+                mainForm.mrdbtnMale.Checked = _companyInfo.AuthorizedPersonGender ? true : false;
+                mainForm.mrdbtnFemale.Checked = _companyInfo.AuthorizedPersonGender ? false : true;
+                mainForm.mtxtDetailTel.Text = _companyInfo.Tel;
+                mainForm.mtxtDetailFax.Text = _companyInfo.Fax;
+                mainForm.mtxtMail.Text = _companyInfo.Mail;
+                mainForm.mtxtTradeRegistryNo.Text = _companyInfo.TradeRegistryNo;
+                mainForm.mdtimeCreateDate.Value = _companyInfo.CreateDate;
+                mainForm.mrdbtnActive.Checked = _companyInfo.IsActive ? true : false;
+                mainForm.mrdbtnPassive.Checked = _companyInfo.IsActive ? false : true;
+                mainForm.mtxtIban.Text = _companyInfo.Iban;
+                mainForm.mcboxSupplier.Checked = _companyInfo.IsSupplier ? true : false;
+                mainForm.mcboxCustomer.Checked = _companyInfo.IsActive ? true : false;
+                cacheCompany();
+                acceptWithoutUpdateChangesOfCompany = false;
+                mainForm.firstRunned = false;
+            }
+            else
+            {
+                DialogResult dialog = MessageBox.Show("Değiştirilen firma bilgileri güncellenmedi. Değişiklikleri kaydetmeden  gitmek istiyor musunuz?",
+                    "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (dialog==DialogResult.Yes)
+                {
+                    acceptWithoutUpdateChangesOfCompany = true;
+                    ShowCompanyDetails();
+                }
+                
+            }
+           
         }
 
         public bool CheckRequiredAddCompanyFields()

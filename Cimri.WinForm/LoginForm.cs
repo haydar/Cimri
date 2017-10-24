@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace Cimri.WinForm
 {
-    public partial class LoginForm : MetroForm
+    public partial class LoginForm : BaseForm
     {
         public LoginForm()
         {

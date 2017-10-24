@@ -13,15 +13,23 @@ namespace Cimri.Data.Repository
     {
         public ICollection<CompanyInfoDto.CompanyHeader> FillDataGrid(int userCompanyId)
         {
-            using (CimriContext context = new CimriContext())
+            try
             {
-                return context.CompanyInfos.Where(c => c.UserCompany.UserCompanyId.Equals(userCompanyId)).
-                Select(c => new  CompanyInfoDto.CompanyHeader() {
-                CompanyInfoId = c.CompanyInfoId,
-                Title = c.Title
+                using (CimriContext context = new CimriContext())
+                {
+                    return context.CompanyInfos.Where(c => c.UserCompany.UserCompanyId.Equals(userCompanyId)).
+                    Select(c => new CompanyInfoDto.CompanyHeader()
+                    {
+                        CompanyInfoId = c.CompanyInfoId,
+                        Title = c.Title
 
-            }).ToList();
+                    }).ToList();
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
             }
                
         }
