@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cimri.Entity.DTO;
+using KellermanSoftware.CompareNetObjects;
 
 namespace Cimri.Business
 {
@@ -30,7 +31,15 @@ namespace Cimri.Business
                 error.ErrorMessage = ex.Message;
                 return null;
             }
-           
+        }
+        public bool Compare(CompanyInfo company1, CompanyInfo company2)
+        {
+            CompareLogic compareLogic = new CompareLogic();
+
+            ComparisonResult result = compareLogic.Compare(company1, company2);
+
+            return result.AreEqual;
         }
     }
+  
 }

@@ -25,3 +25,5 @@ C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Debug\Cimri.Busine
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Debug\Cimri.Business.csproj.CoreCompileInputs.cache
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Debug\Cimri.Business.dll
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Debug\Cimri.Business.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml

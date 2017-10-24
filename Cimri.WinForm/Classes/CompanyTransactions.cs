@@ -43,7 +43,7 @@ namespace Cimri.WinForm.Classes
             currentCompany.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
             currentCompany.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
             currentCompany.Tel = mainForm.mtxtDetailTel.Text;
-            currentCompany.Fax = mainForm.mtxtMail.Text;
+            currentCompany.Fax = mainForm.mtxtDetailFax.Text;
             currentCompany.Mail = mainForm.mtxtMail.Text;
             currentCompany.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
             currentCompany.CreateDate = mainForm.mdtimeCreateDate.Value;
@@ -51,10 +51,8 @@ namespace Cimri.WinForm.Classes
             currentCompany.Iban = mainForm.mtxtIban.Text;
             currentCompany.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
             currentCompany.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
-                        
 
-            bool rs = currentCompany== cachedCurrentCompany;
-            return currentCompany.Equals(cachedCurrentCompany);
+            return bCompanyInfo.Compare(cachedCurrentCompany,currentCompany);
             
         }
         public void cacheCompany()
@@ -71,8 +69,8 @@ namespace Cimri.WinForm.Classes
             cachedCurrentCompany.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
             cachedCurrentCompany.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
             cachedCurrentCompany.Tel = mainForm.mtxtDetailTel.Text;
-            cachedCurrentCompany.Fax = mainForm.mtxtMail.Text;
-            cachedCurrentCompany.Mail = mainForm.mtxtDetailFax.Text;
+            cachedCurrentCompany.Fax = mainForm.mtxtDetailFax.Text;
+            cachedCurrentCompany.Mail = mainForm.mtxtMail.Text; 
             cachedCurrentCompany.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
             cachedCurrentCompany.CreateDate = mainForm.mdtimeCreateDate.Value;
             cachedCurrentCompany.IsActive = mainForm.mrdbtnActive.Checked ? true : false;
