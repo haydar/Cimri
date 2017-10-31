@@ -15,6 +15,7 @@ namespace Cimri.WinForm.Classes
     {
         MainForm mainForm;
         AddCompanyForm addCompanyForm;
+        
         public CompanyTransactions()
         {
             mainForm = (MainForm)Application.OpenForms["MainForm"];      
@@ -28,6 +29,50 @@ namespace Cimri.WinForm.Classes
         /*This variable is for permission of showing selected company's details for without change control*/
         bool acceptWithoutUpdateChangesOfCompany=false;
 
+        public void CheckRequiredSearchFields()
+        {
+            
+           
+        }
+        public void Search()
+        {
+            string companyTel = string.Empty;
+            string companyTitle = string.Empty;
+            if (string.IsNullOrEmpty(mainForm.mtxtTitle.Text))
+                companyTitle =string.Empty;
+            else
+            {
+                companyTitle = mainForm.mtxtTitle.Text;
+            }
+            for (int telIndex = 0; telIndex < mainForm.mtxtTel.Text.Length; telIndex++)
+            {
+                if (char.IsDigit(mainForm.mtxtTel.Text[telIndex]))
+                {
+                    companyTel = mainForm.mtxtTel.Text;
+                }
+                else
+                {
+                    companyTel = string.Empty;
+                }
+            }                
+           
+            CompanyInfoDto.Search searchParameters = new CompanyInfoDto.Search();
+            searchParameters.Title = companyTitle;
+            searchParameters.Tel = companyTel;
+            searchParameters.UserCompanyId = mainForm.userCompanyId;
+            searchParameters.IsActive = mainForm.mcboxActive.Checked;
+            searchParameters.IsCustomer = mainForm.mcboxCustomer.Checked;
+            searchParameters.IsSupplier = mainForm.mcboxSupplier.Checked;
+            ICollection<CompanyInfoDto.CompanyHeader> header = bCompanyInfo.Search(searchParameters, out ErrorDto error);
+            if (error.ProcessResult)
+            {
+                mainForm.mdgCompanies.DataSource = header;
+            }
+            else
+            {
+                Error.Show(error);
+            }
+        }
         public bool NoDataHasChangedinCompanyDetails()
         {
             CompanyInfo currentCompany = new CompanyInfo();

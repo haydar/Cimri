@@ -11,27 +11,39 @@ namespace Cimri.Data.Repository
 {
     public class CompanyInfoRepository:BaseRepository<CompanyInfo>
     {
+        CimriContext context = new CimriContext();
         public ICollection<CompanyInfoDto.CompanyHeader> FillDataGrid(int userCompanyId)
         {
-            try
+            using (CimriContext context = new CimriContext())
             {
-                using (CimriContext context = new CimriContext())
-                {
-                    return context.CompanyInfos.Where(c => c.UserCompany.UserCompanyId.Equals(userCompanyId)).
-                    Select(c => new CompanyInfoDto.CompanyHeader()
-                    {
+                return context.CompanyInfos.Where(c => c.UserCompany.UserCompanyId.Equals(userCompanyId)).
+                 Select(c => new CompanyInfoDto.CompanyHeader()
+                 {
                         CompanyInfoId = c.CompanyInfoId,
                         Title = c.Title
 
-                    }).ToList();
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
+                 }).ToList();
             }
                
+        }
+
+        // This is where magic happens
+        public ICollection<CompanyInfoDto.CompanyHeader> Search(CompanyInfoDto.Search searchParameters)
+        {
+            return context.CompanyInfos.Where(c =>
+            c.Title.StartsWith(searchParameters.Title)&&
+            c.Tel.StartsWith(searchParameters.Tel) &&
+            c.IsActive.Equals(searchParameters.IsActive) &&
+            c.IsCustomer.Equals(searchParameters.IsCustomer)&&
+            c.IsSupplier.Equals(searchParameters.IsSupplier)&&
+            c.UserCompany.UserCompanyId.Equals(searchParameters.UserCompanyId)).
+            Select(c => new CompanyInfoDto.CompanyHeader()
+            {
+                CompanyInfoId = c.CompanyInfoId,
+                Title = c.Title
+            }).ToList();
+            
+            
         }
     }
 }

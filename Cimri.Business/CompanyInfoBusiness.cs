@@ -32,13 +32,29 @@ namespace Cimri.Business
                 return null;
             }
         }
-        public bool Compare(CompanyInfo company1, CompanyInfo company2)
+        public bool Compare(CompanyInfo cachedCurrentCompany, CompanyInfo currentCompany)
         {
             CompareLogic compareLogic = new CompareLogic();
-
-            ComparisonResult result = compareLogic.Compare(company1, company2);
+            ComparisonResult result = compareLogic.Compare(cachedCurrentCompany, currentCompany);
 
             return result.AreEqual;
+        }
+
+        public ICollection<CompanyInfoDto.CompanyHeader> Search(CompanyInfoDto.Search searchParameters, out ErrorDto error)
+        {
+            error = new ErrorDto();
+            try
+            {
+                return repo.Search(searchParameters);
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "Firmayı aramaya çalışırken işlem bilinmeyen nedenle yürüyülemedi.";
+                error.ErrorMessage = ex.Message;
+                return null;
+            }
+           
         }
     }
   

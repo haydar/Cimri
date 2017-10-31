@@ -78,5 +78,29 @@ namespace Cimri.WinForm
             CompanyTransactions company = new CompanyTransactions();
             company.ShowCompanyDetails();
         }
+
+        private void btnBringAll_Click(object sender, EventArgs e)
+        {
+            CompanyTransactions company = new CompanyTransactions();
+            company.FillCompaniesToDataGrid(userCompanyId);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            CompanyTransactions company = new CompanyTransactions();
+            company.Search();
+        }
+
+        private void mtxtTitle_TextChanged(object sender, EventArgs e)
+        {
+            CompanyTransactions company = new CompanyTransactions();
+            company.Search();
+        }
+
+        private void mtxtTel_TextChanged(object sender, EventArgs e)
+        {
+            CompanyTransactions company = new CompanyTransactions();
+            company.Search();
+        }
     }
 }

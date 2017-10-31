@@ -102,25 +102,19 @@
             this.tlp_SearchCompany = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tlpSeachCompanyFields = new System.Windows.Forms.TableLayoutPanel();
+            this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
             this.mlblTitle = new MetroFramework.Controls.MetroLabel();
             this.mtlTel = new MetroFramework.Controls.MetroLabel();
             this.mtxtTitle = new MetroFramework.Controls.MetroTextBox();
-            this.mtxtTel = new MetroFramework.Controls.MetroTextBox();
-            this.mlblBalanceStatus = new MetroFramework.Controls.MetroLabel();
             this.mpBalanceStatus = new MetroFramework.Controls.MetroPanel();
-            this.mcboxPayee = new MetroFramework.Controls.MetroCheckBox();
-            this.mcboxBalance = new MetroFramework.Controls.MetroCheckBox();
-            this.mcboxDebtor = new MetroFramework.Controls.MetroCheckBox();
+            this.mpIsActive = new MetroFramework.Controls.MetroPanel();
+            this.mcboxPassive = new MetroFramework.Controls.MetroCheckBox();
+            this.mcboxActive = new MetroFramework.Controls.MetroCheckBox();
             this.mpCompanyType = new MetroFramework.Controls.MetroPanel();
             this.mcboxSupplier = new MetroFramework.Controls.MetroCheckBox();
             this.mcboxCustomer = new MetroFramework.Controls.MetroCheckBox();
             this.mlblCompanyType = new MetroFramework.Controls.MetroLabel();
             this.mlblIsActive = new MetroFramework.Controls.MetroLabel();
-            this.mpIsActive = new MetroFramework.Controls.MetroPanel();
-            this.mcboxPassive = new MetroFramework.Controls.MetroCheckBox();
-            this.mcboxActive = new MetroFramework.Controls.MetroCheckBox();
-            this.mlblCompanyId = new MetroFramework.Controls.MetroLabel();
-            this.mtxtCompanyId = new MetroFramework.Controls.MetroTextBox();
             this.btnBringAll = new System.Windows.Forms.Button();
             this.mtpProducts = new MetroFramework.Controls.MetroTabPage();
             this.mtpInvoice = new MetroFramework.Controls.MetroTabPage();
@@ -146,8 +140,8 @@
             this.tlp_SearchCompany.SuspendLayout();
             this.tlpSeachCompanyFields.SuspendLayout();
             this.mpBalanceStatus.SuspendLayout();
-            this.mpCompanyType.SuspendLayout();
             this.mpIsActive.SuspendLayout();
+            this.mpCompanyType.SuspendLayout();
             this.tlpUsername.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,8 +229,8 @@
             this.tlpCompanies.Location = new System.Drawing.Point(0, 4);
             this.tlpCompanies.Name = "tlpCompanies";
             this.tlpCompanies.RowCount = 2;
-            this.tlpCompanies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.77206F));
-            this.tlpCompanies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.22794F));
+            this.tlpCompanies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.68327F));
+            this.tlpCompanies.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.31673F));
             this.tlpCompanies.Size = new System.Drawing.Size(922, 562);
             this.tlpCompanies.TabIndex = 3;
             // 
@@ -251,12 +245,12 @@
             this.tlpCompanyDetails.Controls.Add(this.gbCompanyDetails, 1, 0);
             this.tlpCompanyDetails.Controls.Add(this.pnlCompanyGrid, 0, 0);
             this.tlpCompanyDetails.Controls.Add(this.tlpButtons, 1, 1);
-            this.tlpCompanyDetails.Location = new System.Drawing.Point(3, 119);
+            this.tlpCompanyDetails.Location = new System.Drawing.Point(3, 107);
             this.tlpCompanyDetails.Name = "tlpCompanyDetails";
             this.tlpCompanyDetails.RowCount = 2;
             this.tlpCompanyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCompanyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tlpCompanyDetails.Size = new System.Drawing.Size(916, 440);
+            this.tlpCompanyDetails.Size = new System.Drawing.Size(916, 452);
             this.tlpCompanyDetails.TabIndex = 6;
             // 
             // gbCompanyDetails
@@ -267,7 +261,7 @@
             this.gbCompanyDetails.Controls.Add(this.tableLayoutPanel1);
             this.gbCompanyDetails.Location = new System.Drawing.Point(262, 3);
             this.gbCompanyDetails.Name = "gbCompanyDetails";
-            this.gbCompanyDetails.Size = new System.Drawing.Size(651, 385);
+            this.gbCompanyDetails.Size = new System.Drawing.Size(651, 397);
             this.gbCompanyDetails.TabIndex = 1;
             this.gbCompanyDetails.TabStop = false;
             this.gbCompanyDetails.Text = "Firma Detayları";
@@ -337,7 +331,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(645, 366);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(645, 378);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // pnlDetailCompanyStates
@@ -345,7 +339,7 @@
             this.pnlDetailCompanyStates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDetailCompanyStates.Controls.Add(this.mrdbtnPassive);
             this.pnlDetailCompanyStates.Controls.Add(this.mrdbtnActive);
-            this.pnlDetailCompanyStates.Location = new System.Drawing.Point(409, 235);
+            this.pnlDetailCompanyStates.Location = new System.Drawing.Point(409, 242);
             this.pnlDetailCompanyStates.Name = "pnlDetailCompanyStates";
             this.pnlDetailCompanyStates.Size = new System.Drawing.Size(233, 25);
             this.pnlDetailCompanyStates.TabIndex = 11;
@@ -374,7 +368,7 @@
             // 
             this.mtxtDetailFax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtDetailFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtDetailFax.Location = new System.Drawing.Point(409, 103);
+            this.mtxtDetailFax.Location = new System.Drawing.Point(409, 107);
             this.mtxtDetailFax.Mask = "(999) 000-0000";
             this.mtxtDetailFax.Name = "mtxtDetailFax";
             this.mtxtDetailFax.Size = new System.Drawing.Size(233, 24);
@@ -394,7 +388,7 @@
             // 
             this.mlblDetailTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblDetailTitle.AutoSize = true;
-            this.mlblDetailTitle.Location = new System.Drawing.Point(3, 40);
+            this.mlblDetailTitle.Location = new System.Drawing.Point(3, 41);
             this.mlblDetailTitle.Name = "mlblDetailTitle";
             this.mlblDetailTitle.Size = new System.Drawing.Size(100, 19);
             this.mlblDetailTitle.TabIndex = 5;
@@ -404,7 +398,7 @@
             // 
             this.mlblAddressCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblAddressCity.AutoSize = true;
-            this.mlblAddressCity.Location = new System.Drawing.Point(3, 73);
+            this.mlblAddressCity.Location = new System.Drawing.Point(3, 75);
             this.mlblAddressCity.Name = "mlblAddressCity";
             this.mlblAddressCity.Size = new System.Drawing.Size(100, 19);
             this.mlblAddressCity.TabIndex = 5;
@@ -414,7 +408,7 @@
             // 
             this.mlblAddressDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblAddressDistrict.AutoSize = true;
-            this.mlblAddressDistrict.Location = new System.Drawing.Point(3, 106);
+            this.mlblAddressDistrict.Location = new System.Drawing.Point(3, 109);
             this.mlblAddressDistrict.Name = "mlblAddressDistrict";
             this.mlblAddressDistrict.Size = new System.Drawing.Size(100, 19);
             this.mlblAddressDistrict.TabIndex = 5;
@@ -424,7 +418,7 @@
             // 
             this.mlblAddressNeighborhood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblAddressNeighborhood.AutoSize = true;
-            this.mlblAddressNeighborhood.Location = new System.Drawing.Point(3, 139);
+            this.mlblAddressNeighborhood.Location = new System.Drawing.Point(3, 143);
             this.mlblAddressNeighborhood.Name = "mlblAddressNeighborhood";
             this.mlblAddressNeighborhood.Size = new System.Drawing.Size(100, 19);
             this.mlblAddressNeighborhood.TabIndex = 5;
@@ -434,7 +428,7 @@
             // 
             this.mlblAddressStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblAddressStreet.AutoSize = true;
-            this.mlblAddressStreet.Location = new System.Drawing.Point(3, 172);
+            this.mlblAddressStreet.Location = new System.Drawing.Point(3, 177);
             this.mlblAddressStreet.Name = "mlblAddressStreet";
             this.mlblAddressStreet.Size = new System.Drawing.Size(100, 19);
             this.mlblAddressStreet.TabIndex = 5;
@@ -444,7 +438,7 @@
             // 
             this.mlblAddressNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblAddressNo.AutoSize = true;
-            this.mlblAddressNo.Location = new System.Drawing.Point(3, 205);
+            this.mlblAddressNo.Location = new System.Drawing.Point(3, 211);
             this.mlblAddressNo.Name = "mlblAddressNo";
             this.mlblAddressNo.Size = new System.Drawing.Size(100, 19);
             this.mlblAddressNo.TabIndex = 5;
@@ -454,7 +448,7 @@
             // 
             this.mlblFloor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblFloor.AutoSize = true;
-            this.mlblFloor.Location = new System.Drawing.Point(3, 238);
+            this.mlblFloor.Location = new System.Drawing.Point(3, 245);
             this.mlblFloor.Name = "mlblFloor";
             this.mlblFloor.Size = new System.Drawing.Size(100, 19);
             this.mlblFloor.TabIndex = 5;
@@ -464,7 +458,7 @@
             // 
             this.mlblTaxNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblTaxNo.AutoSize = true;
-            this.mlblTaxNo.Location = new System.Drawing.Point(3, 271);
+            this.mlblTaxNo.Location = new System.Drawing.Point(3, 279);
             this.mlblTaxNo.Name = "mlblTaxNo";
             this.mlblTaxNo.Size = new System.Drawing.Size(100, 19);
             this.mlblTaxNo.TabIndex = 5;
@@ -474,7 +468,7 @@
             // 
             this.mlblTaxAdministration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblTaxAdministration.AutoSize = true;
-            this.mlblTaxAdministration.Location = new System.Drawing.Point(3, 304);
+            this.mlblTaxAdministration.Location = new System.Drawing.Point(3, 313);
             this.mlblTaxAdministration.Name = "mlblTaxAdministration";
             this.mlblTaxAdministration.Size = new System.Drawing.Size(100, 19);
             this.mlblTaxAdministration.TabIndex = 5;
@@ -494,7 +488,7 @@
             // 
             this.mlblAuthorizedPersonGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblAuthorizedPersonGender.AutoSize = true;
-            this.mlblAuthorizedPersonGender.Location = new System.Drawing.Point(282, 40);
+            this.mlblAuthorizedPersonGender.Location = new System.Drawing.Point(282, 41);
             this.mlblAuthorizedPersonGender.Name = "mlblAuthorizedPersonGender";
             this.mlblAuthorizedPersonGender.Size = new System.Drawing.Size(76, 19);
             this.mlblAuthorizedPersonGender.TabIndex = 5;
@@ -504,7 +498,7 @@
             // 
             this.mlblTel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblTel.AutoSize = true;
-            this.mlblTel.Location = new System.Drawing.Point(282, 73);
+            this.mlblTel.Location = new System.Drawing.Point(282, 75);
             this.mlblTel.Name = "mlblTel";
             this.mlblTel.Size = new System.Drawing.Size(79, 19);
             this.mlblTel.TabIndex = 5;
@@ -514,7 +508,7 @@
             // 
             this.mlblFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblFax.AutoSize = true;
-            this.mlblFax.Location = new System.Drawing.Point(282, 106);
+            this.mlblFax.Location = new System.Drawing.Point(282, 109);
             this.mlblFax.Name = "mlblFax";
             this.mlblFax.Size = new System.Drawing.Size(79, 19);
             this.mlblFax.TabIndex = 5;
@@ -524,7 +518,7 @@
             // 
             this.mlblMail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblMail.AutoSize = true;
-            this.mlblMail.Location = new System.Drawing.Point(282, 139);
+            this.mlblMail.Location = new System.Drawing.Point(282, 143);
             this.mlblMail.Name = "mlblMail";
             this.mlblMail.Size = new System.Drawing.Size(81, 19);
             this.mlblMail.TabIndex = 5;
@@ -534,7 +528,7 @@
             // 
             this.mlblTradeRegistryNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblTradeRegistryNo.AutoSize = true;
-            this.mlblTradeRegistryNo.Location = new System.Drawing.Point(282, 172);
+            this.mlblTradeRegistryNo.Location = new System.Drawing.Point(282, 177);
             this.mlblTradeRegistryNo.Name = "mlblTradeRegistryNo";
             this.mlblTradeRegistryNo.Size = new System.Drawing.Size(107, 19);
             this.mlblTradeRegistryNo.TabIndex = 5;
@@ -544,7 +538,7 @@
             // 
             this.mlblCreateDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblCreateDate.AutoSize = true;
-            this.mlblCreateDate.Location = new System.Drawing.Point(282, 205);
+            this.mlblCreateDate.Location = new System.Drawing.Point(282, 211);
             this.mlblCreateDate.Name = "mlblCreateDate";
             this.mlblCreateDate.Size = new System.Drawing.Size(101, 19);
             this.mlblCreateDate.TabIndex = 5;
@@ -554,7 +548,7 @@
             // 
             this.mlblDetailIsActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblDetailIsActive.AutoSize = true;
-            this.mlblDetailIsActive.Location = new System.Drawing.Point(282, 238);
+            this.mlblDetailIsActive.Location = new System.Drawing.Point(282, 245);
             this.mlblDetailIsActive.Name = "mlblDetailIsActive";
             this.mlblDetailIsActive.Size = new System.Drawing.Size(113, 19);
             this.mlblDetailIsActive.TabIndex = 5;
@@ -564,7 +558,7 @@
             // 
             this.lblIban.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIban.AutoSize = true;
-            this.lblIban.Location = new System.Drawing.Point(282, 271);
+            this.lblIban.Location = new System.Drawing.Point(282, 279);
             this.lblIban.Name = "lblIban";
             this.lblIban.Size = new System.Drawing.Size(103, 19);
             this.lblIban.TabIndex = 5;
@@ -574,7 +568,7 @@
             // 
             this.mlblDetailCompanyStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblDetailCompanyStatus.AutoSize = true;
-            this.mlblDetailCompanyStatus.Location = new System.Drawing.Point(282, 304);
+            this.mlblDetailCompanyStatus.Location = new System.Drawing.Point(282, 313);
             this.mlblDetailCompanyStatus.Name = "mlblDetailCompanyStatus";
             this.mlblDetailCompanyStatus.Size = new System.Drawing.Size(87, 19);
             this.mlblDetailCompanyStatus.TabIndex = 5;
@@ -596,7 +590,7 @@
             this.mtxtDetailTitle.CustomButton.UseSelectable = true;
             this.mtxtDetailTitle.CustomButton.Visible = false;
             this.mtxtDetailTitle.Lines = new string[0];
-            this.mtxtDetailTitle.Location = new System.Drawing.Point(109, 37);
+            this.mtxtDetailTitle.Location = new System.Drawing.Point(109, 38);
             this.mtxtDetailTitle.MaxLength = 32767;
             this.mtxtDetailTitle.Name = "mtxtDetailTitle";
             this.mtxtDetailTitle.PasswordChar = '\0';
@@ -629,7 +623,7 @@
             this.mtxtCity.CustomButton.UseSelectable = true;
             this.mtxtCity.CustomButton.Visible = false;
             this.mtxtCity.Lines = new string[0];
-            this.mtxtCity.Location = new System.Drawing.Point(109, 70);
+            this.mtxtCity.Location = new System.Drawing.Point(109, 72);
             this.mtxtCity.MaxLength = 32767;
             this.mtxtCity.Name = "mtxtCity";
             this.mtxtCity.PasswordChar = '\0';
@@ -662,7 +656,7 @@
             this.mtxtDistrict.CustomButton.UseSelectable = true;
             this.mtxtDistrict.CustomButton.Visible = false;
             this.mtxtDistrict.Lines = new string[0];
-            this.mtxtDistrict.Location = new System.Drawing.Point(109, 103);
+            this.mtxtDistrict.Location = new System.Drawing.Point(109, 106);
             this.mtxtDistrict.MaxLength = 32767;
             this.mtxtDistrict.Name = "mtxtDistrict";
             this.mtxtDistrict.PasswordChar = '\0';
@@ -695,7 +689,7 @@
             this.mtxtNeighborhood.CustomButton.UseSelectable = true;
             this.mtxtNeighborhood.CustomButton.Visible = false;
             this.mtxtNeighborhood.Lines = new string[0];
-            this.mtxtNeighborhood.Location = new System.Drawing.Point(109, 136);
+            this.mtxtNeighborhood.Location = new System.Drawing.Point(109, 140);
             this.mtxtNeighborhood.MaxLength = 32767;
             this.mtxtNeighborhood.Name = "mtxtNeighborhood";
             this.mtxtNeighborhood.PasswordChar = '\0';
@@ -728,7 +722,7 @@
             this.mtxtStreet.CustomButton.UseSelectable = true;
             this.mtxtStreet.CustomButton.Visible = false;
             this.mtxtStreet.Lines = new string[0];
-            this.mtxtStreet.Location = new System.Drawing.Point(109, 169);
+            this.mtxtStreet.Location = new System.Drawing.Point(109, 174);
             this.mtxtStreet.MaxLength = 32767;
             this.mtxtStreet.Name = "mtxtStreet";
             this.mtxtStreet.PasswordChar = '\0';
@@ -761,7 +755,7 @@
             this.mtxtAdressNo.CustomButton.UseSelectable = true;
             this.mtxtAdressNo.CustomButton.Visible = false;
             this.mtxtAdressNo.Lines = new string[0];
-            this.mtxtAdressNo.Location = new System.Drawing.Point(109, 202);
+            this.mtxtAdressNo.Location = new System.Drawing.Point(109, 208);
             this.mtxtAdressNo.MaxLength = 32767;
             this.mtxtAdressNo.Name = "mtxtAdressNo";
             this.mtxtAdressNo.PasswordChar = '\0';
@@ -794,7 +788,7 @@
             this.mtxtFloor.CustomButton.UseSelectable = true;
             this.mtxtFloor.CustomButton.Visible = false;
             this.mtxtFloor.Lines = new string[0];
-            this.mtxtFloor.Location = new System.Drawing.Point(109, 235);
+            this.mtxtFloor.Location = new System.Drawing.Point(109, 242);
             this.mtxtFloor.MaxLength = 32767;
             this.mtxtFloor.Name = "mtxtFloor";
             this.mtxtFloor.PasswordChar = '\0';
@@ -827,7 +821,7 @@
             this.mtxtTaxNo.CustomButton.UseSelectable = true;
             this.mtxtTaxNo.CustomButton.Visible = false;
             this.mtxtTaxNo.Lines = new string[0];
-            this.mtxtTaxNo.Location = new System.Drawing.Point(109, 268);
+            this.mtxtTaxNo.Location = new System.Drawing.Point(109, 276);
             this.mtxtTaxNo.MaxLength = 11;
             this.mtxtTaxNo.Name = "mtxtTaxNo";
             this.mtxtTaxNo.PasswordChar = '\0';
@@ -861,7 +855,7 @@
             this.mtxtTaxAdministration.CustomButton.UseSelectable = true;
             this.mtxtTaxAdministration.CustomButton.Visible = false;
             this.mtxtTaxAdministration.Lines = new string[0];
-            this.mtxtTaxAdministration.Location = new System.Drawing.Point(109, 301);
+            this.mtxtTaxAdministration.Location = new System.Drawing.Point(109, 310);
             this.mtxtTaxAdministration.MaxLength = 32767;
             this.mtxtTaxAdministration.Name = "mtxtTaxAdministration";
             this.mtxtTaxAdministration.PasswordChar = '\0';
@@ -927,7 +921,7 @@
             this.mtxtMail.CustomButton.UseSelectable = true;
             this.mtxtMail.CustomButton.Visible = false;
             this.mtxtMail.Lines = new string[0];
-            this.mtxtMail.Location = new System.Drawing.Point(409, 136);
+            this.mtxtMail.Location = new System.Drawing.Point(409, 140);
             this.mtxtMail.MaxLength = 32767;
             this.mtxtMail.Name = "mtxtMail";
             this.mtxtMail.PasswordChar = '\0';
@@ -960,7 +954,7 @@
             this.mtxtTradeRegistryNo.CustomButton.UseSelectable = true;
             this.mtxtTradeRegistryNo.CustomButton.Visible = false;
             this.mtxtTradeRegistryNo.Lines = new string[0];
-            this.mtxtTradeRegistryNo.Location = new System.Drawing.Point(409, 169);
+            this.mtxtTradeRegistryNo.Location = new System.Drawing.Point(409, 174);
             this.mtxtTradeRegistryNo.MaxLength = 32767;
             this.mtxtTradeRegistryNo.Name = "mtxtTradeRegistryNo";
             this.mtxtTradeRegistryNo.PasswordChar = '\0';
@@ -994,7 +988,7 @@
             this.mtxtIban.CustomButton.UseSelectable = true;
             this.mtxtIban.CustomButton.Visible = false;
             this.mtxtIban.Lines = new string[0];
-            this.mtxtIban.Location = new System.Drawing.Point(409, 268);
+            this.mtxtIban.Location = new System.Drawing.Point(409, 276);
             this.mtxtIban.MaxLength = 32767;
             this.mtxtIban.Name = "mtxtIban";
             this.mtxtIban.PasswordChar = '\0';
@@ -1026,9 +1020,9 @@
             this.pnlAuthorizedPersonGender.Controls.Add(this.mrdbtnFemale);
             this.pnlAuthorizedPersonGender.Controls.Add(this.mrdbtnMale);
             this.pnlAuthorizedPersonGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAuthorizedPersonGender.Location = new System.Drawing.Point(409, 36);
+            this.pnlAuthorizedPersonGender.Location = new System.Drawing.Point(409, 37);
             this.pnlAuthorizedPersonGender.Name = "pnlAuthorizedPersonGender";
-            this.pnlAuthorizedPersonGender.Size = new System.Drawing.Size(233, 27);
+            this.pnlAuthorizedPersonGender.Size = new System.Drawing.Size(233, 28);
             this.pnlAuthorizedPersonGender.TabIndex = 7;
             // 
             // mrdbtnFemale
@@ -1036,7 +1030,7 @@
             this.mrdbtnFemale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mrdbtnFemale.AutoSize = true;
             this.mrdbtnFemale.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mrdbtnFemale.Location = new System.Drawing.Point(95, 8);
+            this.mrdbtnFemale.Location = new System.Drawing.Point(95, 9);
             this.mrdbtnFemale.Name = "mrdbtnFemale";
             this.mrdbtnFemale.Size = new System.Drawing.Size(64, 15);
             this.mrdbtnFemale.TabIndex = 0;
@@ -1049,7 +1043,7 @@
             this.mrdbtnMale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mrdbtnMale.AutoSize = true;
             this.mrdbtnMale.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mrdbtnMale.Location = new System.Drawing.Point(3, 8);
+            this.mrdbtnMale.Location = new System.Drawing.Point(3, 9);
             this.mrdbtnMale.Name = "mrdbtnMale";
             this.mrdbtnMale.Size = new System.Drawing.Size(51, 15);
             this.mrdbtnMale.TabIndex = 0;
@@ -1061,7 +1055,7 @@
             // 
             this.mtxtDetailTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtDetailTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtDetailTel.Location = new System.Drawing.Point(409, 70);
+            this.mtxtDetailTel.Location = new System.Drawing.Point(409, 73);
             this.mtxtDetailTel.Mask = "(999) 000-0000";
             this.mtxtDetailTel.Name = "mtxtDetailTel";
             this.mtxtDetailTel.Size = new System.Drawing.Size(233, 24);
@@ -1070,8 +1064,8 @@
             // mdtimeCreateDate
             // 
             this.mdtimeCreateDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mdtimeCreateDate.Location = new System.Drawing.Point(409, 201);
-            this.mdtimeCreateDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.mdtimeCreateDate.Location = new System.Drawing.Point(409, 207);
+            this.mdtimeCreateDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.mdtimeCreateDate.Name = "mdtimeCreateDate";
             this.mdtimeCreateDate.Size = new System.Drawing.Size(233, 29);
             this.mdtimeCreateDate.TabIndex = 10;
@@ -1086,9 +1080,9 @@
             this.mpDetailCompanyStatus.HorizontalScrollbarBarColor = true;
             this.mpDetailCompanyStatus.HorizontalScrollbarHighlightOnWheel = false;
             this.mpDetailCompanyStatus.HorizontalScrollbarSize = 10;
-            this.mpDetailCompanyStatus.Location = new System.Drawing.Point(409, 300);
+            this.mpDetailCompanyStatus.Location = new System.Drawing.Point(409, 309);
             this.mpDetailCompanyStatus.Name = "mpDetailCompanyStatus";
-            this.mpDetailCompanyStatus.Size = new System.Drawing.Size(233, 27);
+            this.mpDetailCompanyStatus.Size = new System.Drawing.Size(233, 28);
             this.mpDetailCompanyStatus.TabIndex = 12;
             this.mpDetailCompanyStatus.VerticalScrollbarBarColor = true;
             this.mpDetailCompanyStatus.VerticalScrollbarHighlightOnWheel = false;
@@ -1122,7 +1116,7 @@
             // 
             this.mlblBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblBalance.AutoSize = true;
-            this.mlblBalance.Location = new System.Drawing.Point(3, 338);
+            this.mlblBalance.Location = new System.Drawing.Point(3, 349);
             this.mlblBalance.Name = "mlblBalance";
             this.mlblBalance.Size = new System.Drawing.Size(100, 19);
             this.mlblBalance.TabIndex = 4;
@@ -1132,7 +1126,7 @@
             // 
             this.mblGivenBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mblGivenBalance.AutoSize = true;
-            this.mblGivenBalance.Location = new System.Drawing.Point(109, 338);
+            this.mblGivenBalance.Location = new System.Drawing.Point(109, 349);
             this.mblGivenBalance.Name = "mblGivenBalance";
             this.mblGivenBalance.Size = new System.Drawing.Size(167, 19);
             this.mblGivenBalance.TabIndex = 4;
@@ -1145,9 +1139,9 @@
             this.btnGoFinancialTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGoFinancialTransaction.ImageKey = "finance.png";
             this.btnGoFinancialTransaction.ImageList = this.imglIcons;
-            this.btnGoFinancialTransaction.Location = new System.Drawing.Point(433, 333);
+            this.btnGoFinancialTransaction.Location = new System.Drawing.Point(433, 343);
             this.btnGoFinancialTransaction.Name = "btnGoFinancialTransaction";
-            this.btnGoFinancialTransaction.Size = new System.Drawing.Size(184, 30);
+            this.btnGoFinancialTransaction.Size = new System.Drawing.Size(184, 32);
             this.btnGoFinancialTransaction.TabIndex = 13;
             this.btnGoFinancialTransaction.Text = "Mali İşlemlere Git";
             this.btnGoFinancialTransaction.UseVisualStyleBackColor = true;
@@ -1170,7 +1164,7 @@
             this.pnlCompanyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCompanyGrid.Location = new System.Drawing.Point(3, 3);
             this.pnlCompanyGrid.Name = "pnlCompanyGrid";
-            this.pnlCompanyGrid.Size = new System.Drawing.Size(253, 385);
+            this.pnlCompanyGrid.Size = new System.Drawing.Size(253, 397);
             this.pnlCompanyGrid.TabIndex = 2;
             // 
             // btnAddCompany
@@ -1197,7 +1191,7 @@
             this.gbCompanies.Controls.Add(this.mdgCompanies);
             this.gbCompanies.Location = new System.Drawing.Point(0, 48);
             this.gbCompanies.Name = "gbCompanies";
-            this.gbCompanies.Size = new System.Drawing.Size(247, 334);
+            this.gbCompanies.Size = new System.Drawing.Size(247, 346);
             this.gbCompanies.TabIndex = 0;
             this.gbCompanies.TabStop = false;
             this.gbCompanies.Text = "Firmalar";
@@ -1250,7 +1244,7 @@
             this.mdgCompanies.RowHeadersVisible = false;
             this.mdgCompanies.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mdgCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mdgCompanies.Size = new System.Drawing.Size(241, 315);
+            this.mdgCompanies.Size = new System.Drawing.Size(241, 327);
             this.mdgCompanies.TabIndex = 0;
             this.mdgCompanies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mgdCompanies_CellClick);
             this.mdgCompanies.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mdgCompanies_KeyDown);
@@ -1264,7 +1258,7 @@
             this.tlpButtons.Controls.Add(this.btnCancel, 0, 0);
             this.tlpButtons.Controls.Add(this.btnUpdateCompany, 1, 0);
             this.tlpButtons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpButtons.Location = new System.Drawing.Point(262, 394);
+            this.tlpButtons.Location = new System.Drawing.Point(262, 406);
             this.tlpButtons.Name = "tlpButtons";
             this.tlpButtons.RowCount = 1;
             this.tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1314,7 +1308,7 @@
             this.tlp_SearchCompany.Name = "tlp_SearchCompany";
             this.tlp_SearchCompany.RowCount = 1;
             this.tlp_SearchCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp_SearchCompany.Size = new System.Drawing.Size(916, 101);
+            this.tlp_SearchCompany.Size = new System.Drawing.Size(916, 95);
             this.tlp_SearchCompany.TabIndex = 5;
             // 
             // btnSearch
@@ -1329,11 +1323,12 @@
             this.btnSearch.ImageList = this.imglIcons;
             this.btnSearch.Location = new System.Drawing.Point(703, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(99, 95);
+            this.btnSearch.Size = new System.Drawing.Size(99, 89);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Ara";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tlpSeachCompanyFields
             // 
@@ -1341,39 +1336,45 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpSeachCompanyFields.ColumnCount = 4;
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.92982F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.07018F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.74242F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.25758F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tlpSeachCompanyFields.Controls.Add(this.mtxtTel, 0, 1);
             this.tlpSeachCompanyFields.Controls.Add(this.mlblTitle, 0, 0);
             this.tlpSeachCompanyFields.Controls.Add(this.mtlTel, 0, 1);
             this.tlpSeachCompanyFields.Controls.Add(this.mtxtTitle, 1, 0);
-            this.tlpSeachCompanyFields.Controls.Add(this.mtxtTel, 1, 1);
-            this.tlpSeachCompanyFields.Controls.Add(this.mlblBalanceStatus, 2, 0);
-            this.tlpSeachCompanyFields.Controls.Add(this.mpBalanceStatus, 3, 0);
-            this.tlpSeachCompanyFields.Controls.Add(this.mpCompanyType, 3, 1);
-            this.tlpSeachCompanyFields.Controls.Add(this.mlblCompanyType, 2, 1);
-            this.tlpSeachCompanyFields.Controls.Add(this.mlblIsActive, 2, 2);
-            this.tlpSeachCompanyFields.Controls.Add(this.mpIsActive, 3, 2);
-            this.tlpSeachCompanyFields.Controls.Add(this.mlblCompanyId, 0, 2);
-            this.tlpSeachCompanyFields.Controls.Add(this.mtxtCompanyId, 1, 2);
+            this.tlpSeachCompanyFields.Controls.Add(this.mpBalanceStatus, 3, 1);
+            this.tlpSeachCompanyFields.Controls.Add(this.mpCompanyType, 3, 0);
+            this.tlpSeachCompanyFields.Controls.Add(this.mlblCompanyType, 2, 0);
+            this.tlpSeachCompanyFields.Controls.Add(this.mlblIsActive, 2, 1);
             this.tlpSeachCompanyFields.Location = new System.Drawing.Point(3, 3);
             this.tlpSeachCompanyFields.Name = "tlpSeachCompanyFields";
-            this.tlpSeachCompanyFields.RowCount = 3;
-            this.tlpSeachCompanyFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpSeachCompanyFields.RowCount = 2;
             this.tlpSeachCompanyFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpSeachCompanyFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpSeachCompanyFields.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpSeachCompanyFields.Size = new System.Drawing.Size(694, 95);
+            this.tlpSeachCompanyFields.Size = new System.Drawing.Size(694, 89);
             this.tlpSeachCompanyFields.TabIndex = 0;
+            // 
+            // mtxtTel
+            // 
+            this.mtxtTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtxtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTel.Location = new System.Drawing.Point(100, 54);
+            this.mtxtTel.Mask = "(999) 000-0000";
+            this.mtxtTel.Name = "mtxtTel";
+            this.mtxtTel.Size = new System.Drawing.Size(161, 24);
+            this.mtxtTel.TabIndex = 10;
+            this.mtxtTel.TextChanged += new System.EventHandler(this.mtxtTel_TextChanged);
             // 
             // mlblTitle
             // 
             this.mlblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mlblTitle.AutoSize = true;
-            this.mlblTitle.Location = new System.Drawing.Point(3, 6);
+            this.mlblTitle.Location = new System.Drawing.Point(3, 12);
             this.mlblTitle.Name = "mlblTitle";
-            this.mlblTitle.Size = new System.Drawing.Size(80, 19);
+            this.mlblTitle.Size = new System.Drawing.Size(91, 19);
             this.mlblTitle.TabIndex = 3;
             this.mlblTitle.Text = "Ünvan        :";
             // 
@@ -1381,9 +1382,9 @@
             // 
             this.mtlTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mtlTel.AutoSize = true;
-            this.mtlTel.Location = new System.Drawing.Point(3, 37);
+            this.mtlTel.Location = new System.Drawing.Point(3, 57);
             this.mtlTel.Name = "mtlTel";
-            this.mtlTel.Size = new System.Drawing.Size(80, 19);
+            this.mtlTel.Size = new System.Drawing.Size(91, 19);
             this.mtlTel.TabIndex = 3;
             this.mtlTel.Text = "Telefon       :";
             // 
@@ -1394,7 +1395,7 @@
             // 
             // 
             this.mtxtTitle.CustomButton.Image = null;
-            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(155, 1);
+            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(139, 1);
             this.mtxtTitle.CustomButton.Name = "";
             this.mtxtTitle.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtTitle.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1404,7 +1405,7 @@
             this.mtxtTitle.CustomButton.Visible = false;
             this.mtxtTitle.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtTitle.Lines = new string[0];
-            this.mtxtTitle.Location = new System.Drawing.Point(89, 4);
+            this.mtxtTitle.Location = new System.Drawing.Point(100, 10);
             this.mtxtTitle.MaxLength = 32767;
             this.mtxtTitle.Name = "mtxtTitle";
             this.mtxtTitle.PasswordChar = '\0';
@@ -1413,107 +1414,67 @@
             this.mtxtTitle.SelectionLength = 0;
             this.mtxtTitle.SelectionStart = 0;
             this.mtxtTitle.ShortcutsEnabled = true;
-            this.mtxtTitle.Size = new System.Drawing.Size(177, 23);
+            this.mtxtTitle.Size = new System.Drawing.Size(161, 23);
             this.mtxtTitle.TabIndex = 4;
             this.mtxtTitle.UseSelectable = true;
             this.mtxtTitle.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtTitle.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxtTel
-            // 
-            this.mtxtTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.mtxtTel.CustomButton.Image = null;
-            this.mtxtTel.CustomButton.Location = new System.Drawing.Point(155, 1);
-            this.mtxtTel.CustomButton.Name = "";
-            this.mtxtTel.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.mtxtTel.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxtTel.CustomButton.TabIndex = 1;
-            this.mtxtTel.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxtTel.CustomButton.UseSelectable = true;
-            this.mtxtTel.CustomButton.Visible = false;
-            this.mtxtTel.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.mtxtTel.Lines = new string[0];
-            this.mtxtTel.Location = new System.Drawing.Point(89, 35);
-            this.mtxtTel.MaxLength = 32767;
-            this.mtxtTel.Name = "mtxtTel";
-            this.mtxtTel.PasswordChar = '\0';
-            this.mtxtTel.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxtTel.SelectedText = "";
-            this.mtxtTel.SelectionLength = 0;
-            this.mtxtTel.SelectionStart = 0;
-            this.mtxtTel.ShortcutsEnabled = true;
-            this.mtxtTel.Size = new System.Drawing.Size(177, 23);
-            this.mtxtTel.TabIndex = 4;
-            this.mtxtTel.UseSelectable = true;
-            this.mtxtTel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxtTel.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mlblBalanceStatus
-            // 
-            this.mlblBalanceStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.mlblBalanceStatus.AutoSize = true;
-            this.mlblBalanceStatus.Location = new System.Drawing.Point(272, 6);
-            this.mlblBalanceStatus.Name = "mlblBalanceStatus";
-            this.mlblBalanceStatus.Size = new System.Drawing.Size(104, 19);
-            this.mlblBalanceStatus.TabIndex = 3;
-            this.mlblBalanceStatus.Text = "Bakiye Durumu :";
+            this.mtxtTitle.TextChanged += new System.EventHandler(this.mtxtTitle_TextChanged);
             // 
             // mpBalanceStatus
             // 
-            this.mpBalanceStatus.Controls.Add(this.mcboxPayee);
-            this.mpBalanceStatus.Controls.Add(this.mcboxBalance);
-            this.mpBalanceStatus.Controls.Add(this.mcboxDebtor);
+            this.mpBalanceStatus.Controls.Add(this.mpIsActive);
             this.mpBalanceStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mpBalanceStatus.HorizontalScrollbarBarColor = true;
             this.mpBalanceStatus.HorizontalScrollbarHighlightOnWheel = false;
             this.mpBalanceStatus.HorizontalScrollbarSize = 10;
-            this.mpBalanceStatus.Location = new System.Drawing.Point(397, 3);
+            this.mpBalanceStatus.Location = new System.Drawing.Point(391, 47);
             this.mpBalanceStatus.Name = "mpBalanceStatus";
-            this.mpBalanceStatus.Size = new System.Drawing.Size(294, 25);
+            this.mpBalanceStatus.Size = new System.Drawing.Size(300, 39);
             this.mpBalanceStatus.TabIndex = 7;
             this.mpBalanceStatus.VerticalScrollbarBarColor = true;
             this.mpBalanceStatus.VerticalScrollbarHighlightOnWheel = false;
             this.mpBalanceStatus.VerticalScrollbarSize = 10;
             // 
-            // mcboxPayee
+            // mpIsActive
             // 
-            this.mcboxPayee.Checked = true;
-            this.mcboxPayee.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcboxPayee.Dock = System.Windows.Forms.DockStyle.Right;
-            this.mcboxPayee.Location = new System.Drawing.Point(220, 0);
-            this.mcboxPayee.Name = "mcboxPayee";
-            this.mcboxPayee.Size = new System.Drawing.Size(74, 25);
-            this.mcboxPayee.TabIndex = 8;
-            this.mcboxPayee.Text = "Alacaklı";
-            this.mcboxPayee.UseSelectable = true;
+            this.mpIsActive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mpIsActive.Controls.Add(this.mcboxPassive);
+            this.mpIsActive.Controls.Add(this.mcboxActive);
+            this.mpIsActive.HorizontalScrollbarBarColor = true;
+            this.mpIsActive.HorizontalScrollbarHighlightOnWheel = false;
+            this.mpIsActive.HorizontalScrollbarSize = 10;
+            this.mpIsActive.Location = new System.Drawing.Point(0, 3);
+            this.mpIsActive.Name = "mpIsActive";
+            this.mpIsActive.Size = new System.Drawing.Size(300, 41);
+            this.mpIsActive.TabIndex = 10;
+            this.mpIsActive.VerticalScrollbarBarColor = true;
+            this.mpIsActive.VerticalScrollbarHighlightOnWheel = false;
+            this.mpIsActive.VerticalScrollbarSize = 10;
             // 
-            // mcboxBalance
+            // mcboxPassive
             // 
-            this.mcboxBalance.AutoSize = true;
-            this.mcboxBalance.Checked = true;
-            this.mcboxBalance.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcboxBalance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mcboxBalance.Location = new System.Drawing.Point(82, 0);
-            this.mcboxBalance.Name = "mcboxBalance";
-            this.mcboxBalance.Size = new System.Drawing.Size(212, 25);
-            this.mcboxBalance.TabIndex = 7;
-            this.mcboxBalance.Text = "Denge";
-            this.mcboxBalance.UseSelectable = true;
+            this.mcboxPassive.AutoSize = true;
+            this.mcboxPassive.Location = new System.Drawing.Point(107, 7);
+            this.mcboxPassive.Name = "mcboxPassive";
+            this.mcboxPassive.Size = new System.Drawing.Size(48, 15);
+            this.mcboxPassive.TabIndex = 5;
+            this.mcboxPassive.Text = "Pasif";
+            this.mcboxPassive.UseSelectable = true;
             // 
-            // mcboxDebtor
+            // mcboxActive
             // 
-            this.mcboxDebtor.Checked = true;
-            this.mcboxDebtor.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcboxDebtor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mcboxDebtor.Location = new System.Drawing.Point(0, 0);
-            this.mcboxDebtor.Name = "mcboxDebtor";
-            this.mcboxDebtor.Size = new System.Drawing.Size(82, 25);
-            this.mcboxDebtor.TabIndex = 6;
-            this.mcboxDebtor.Text = "Borçlu";
-            this.mcboxDebtor.UseSelectable = true;
+            this.mcboxActive.AutoSize = true;
+            this.mcboxActive.Checked = true;
+            this.mcboxActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mcboxActive.Location = new System.Drawing.Point(0, 7);
+            this.mcboxActive.Name = "mcboxActive";
+            this.mcboxActive.Size = new System.Drawing.Size(48, 15);
+            this.mcboxActive.TabIndex = 5;
+            this.mcboxActive.Text = "Aktif";
+            this.mcboxActive.UseSelectable = true;
             // 
             // mpCompanyType
             // 
@@ -1525,9 +1486,9 @@
             this.mpCompanyType.HorizontalScrollbarBarColor = true;
             this.mpCompanyType.HorizontalScrollbarHighlightOnWheel = false;
             this.mpCompanyType.HorizontalScrollbarSize = 10;
-            this.mpCompanyType.Location = new System.Drawing.Point(397, 34);
+            this.mpCompanyType.Location = new System.Drawing.Point(391, 3);
             this.mpCompanyType.Name = "mpCompanyType";
-            this.mpCompanyType.Size = new System.Drawing.Size(294, 25);
+            this.mpCompanyType.Size = new System.Drawing.Size(300, 38);
             this.mpCompanyType.TabIndex = 8;
             this.mpCompanyType.VerticalScrollbarBarColor = true;
             this.mpCompanyType.VerticalScrollbarHighlightOnWheel = false;
@@ -1561,7 +1522,7 @@
             // 
             this.mlblCompanyType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblCompanyType.AutoSize = true;
-            this.mlblCompanyType.Location = new System.Drawing.Point(272, 37);
+            this.mlblCompanyType.Location = new System.Drawing.Point(267, 12);
             this.mlblCompanyType.Name = "mlblCompanyType";
             this.mlblCompanyType.Size = new System.Drawing.Size(83, 19);
             this.mlblCompanyType.TabIndex = 9;
@@ -1571,95 +1532,11 @@
             // 
             this.mlblIsActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblIsActive.AutoSize = true;
-            this.mlblIsActive.Location = new System.Drawing.Point(272, 69);
+            this.mlblIsActive.Location = new System.Drawing.Point(267, 57);
             this.mlblIsActive.Name = "mlblIsActive";
             this.mlblIsActive.Size = new System.Drawing.Size(109, 19);
             this.mlblIsActive.TabIndex = 9;
             this.mlblIsActive.Text = "Kurum Durumu  :";
-            // 
-            // mpIsActive
-            // 
-            this.mpIsActive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mpIsActive.Controls.Add(this.mcboxPassive);
-            this.mpIsActive.Controls.Add(this.mcboxActive);
-            this.mpIsActive.HorizontalScrollbarBarColor = true;
-            this.mpIsActive.HorizontalScrollbarHighlightOnWheel = false;
-            this.mpIsActive.HorizontalScrollbarSize = 10;
-            this.mpIsActive.Location = new System.Drawing.Point(397, 65);
-            this.mpIsActive.Name = "mpIsActive";
-            this.mpIsActive.Size = new System.Drawing.Size(294, 27);
-            this.mpIsActive.TabIndex = 10;
-            this.mpIsActive.VerticalScrollbarBarColor = true;
-            this.mpIsActive.VerticalScrollbarHighlightOnWheel = false;
-            this.mpIsActive.VerticalScrollbarSize = 10;
-            // 
-            // mcboxPassive
-            // 
-            this.mcboxPassive.AutoSize = true;
-            this.mcboxPassive.Checked = true;
-            this.mcboxPassive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcboxPassive.Location = new System.Drawing.Point(107, 7);
-            this.mcboxPassive.Name = "mcboxPassive";
-            this.mcboxPassive.Size = new System.Drawing.Size(48, 15);
-            this.mcboxPassive.TabIndex = 5;
-            this.mcboxPassive.Text = "Pasif";
-            this.mcboxPassive.UseSelectable = true;
-            // 
-            // mcboxActive
-            // 
-            this.mcboxActive.AutoSize = true;
-            this.mcboxActive.Checked = true;
-            this.mcboxActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcboxActive.Location = new System.Drawing.Point(0, 7);
-            this.mcboxActive.Name = "mcboxActive";
-            this.mcboxActive.Size = new System.Drawing.Size(48, 15);
-            this.mcboxActive.TabIndex = 5;
-            this.mcboxActive.Text = "Aktif";
-            this.mcboxActive.UseSelectable = true;
-            // 
-            // mlblCompanyId
-            // 
-            this.mlblCompanyId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mlblCompanyId.AutoSize = true;
-            this.mlblCompanyId.Location = new System.Drawing.Point(3, 69);
-            this.mlblCompanyId.Name = "mlblCompanyId";
-            this.mlblCompanyId.Size = new System.Drawing.Size(80, 19);
-            this.mlblCompanyId.TabIndex = 3;
-            this.mlblCompanyId.Text = "Kurum No   :";
-            // 
-            // mtxtCompanyId
-            // 
-            this.mtxtCompanyId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.mtxtCompanyId.CustomButton.Image = null;
-            this.mtxtCompanyId.CustomButton.Location = new System.Drawing.Point(155, 1);
-            this.mtxtCompanyId.CustomButton.Name = "";
-            this.mtxtCompanyId.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.mtxtCompanyId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxtCompanyId.CustomButton.TabIndex = 1;
-            this.mtxtCompanyId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxtCompanyId.CustomButton.UseSelectable = true;
-            this.mtxtCompanyId.CustomButton.Visible = false;
-            this.mtxtCompanyId.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.mtxtCompanyId.Lines = new string[0];
-            this.mtxtCompanyId.Location = new System.Drawing.Point(89, 67);
-            this.mtxtCompanyId.MaxLength = 32767;
-            this.mtxtCompanyId.Name = "mtxtCompanyId";
-            this.mtxtCompanyId.PasswordChar = '\0';
-            this.mtxtCompanyId.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxtCompanyId.SelectedText = "";
-            this.mtxtCompanyId.SelectionLength = 0;
-            this.mtxtCompanyId.SelectionStart = 0;
-            this.mtxtCompanyId.ShortcutsEnabled = true;
-            this.mtxtCompanyId.Size = new System.Drawing.Size(177, 23);
-            this.mtxtCompanyId.TabIndex = 4;
-            this.mtxtCompanyId.UseSelectable = true;
-            this.mtxtCompanyId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxtCompanyId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnBringAll
             // 
@@ -1673,11 +1550,12 @@
             this.btnBringAll.ImageList = this.imglIcons;
             this.btnBringAll.Location = new System.Drawing.Point(808, 3);
             this.btnBringAll.Name = "btnBringAll";
-            this.btnBringAll.Size = new System.Drawing.Size(105, 95);
+            this.btnBringAll.Size = new System.Drawing.Size(105, 89);
             this.btnBringAll.TabIndex = 5;
             this.btnBringAll.Text = "Hepsini Getir";
             this.btnBringAll.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBringAll.UseVisualStyleBackColor = true;
+            this.btnBringAll.Click += new System.EventHandler(this.btnBringAll_Click);
             // 
             // mtpProducts
             // 
@@ -1794,11 +1672,10 @@
             this.tlpSeachCompanyFields.ResumeLayout(false);
             this.tlpSeachCompanyFields.PerformLayout();
             this.mpBalanceStatus.ResumeLayout(false);
-            this.mpBalanceStatus.PerformLayout();
-            this.mpCompanyType.ResumeLayout(false);
-            this.mpCompanyType.PerformLayout();
             this.mpIsActive.ResumeLayout(false);
             this.mpIsActive.PerformLayout();
+            this.mpCompanyType.ResumeLayout(false);
+            this.mpCompanyType.PerformLayout();
             this.tlpUsername.ResumeLayout(false);
             this.tlpUsername.PerformLayout();
             this.ResumeLayout(false);
@@ -1827,20 +1704,13 @@
         public System.Windows.Forms.TableLayoutPanel tlpSeachCompanyFields;
         public MetroFramework.Controls.MetroLabel mtlTel;
         public MetroFramework.Controls.MetroTextBox mtxtTitle;
-        public MetroFramework.Controls.MetroTextBox mtxtTel;
-        public MetroFramework.Controls.MetroLabel mlblBalanceStatus;
         public MetroFramework.Controls.MetroPanel mpBalanceStatus;
-        public MetroFramework.Controls.MetroCheckBox mcboxPayee;
-        public MetroFramework.Controls.MetroCheckBox mcboxBalance;
-        public MetroFramework.Controls.MetroCheckBox mcboxDebtor;
         public MetroFramework.Controls.MetroLabel mlblCompanyType;
         public MetroFramework.Controls.MetroPanel mpCompanyType;
         public MetroFramework.Controls.MetroCheckBox mcboxSupplier;
         public MetroFramework.Controls.MetroCheckBox mcboxCustomer;
         public MetroFramework.Controls.MetroLabel mlblIsActive;
         public MetroFramework.Controls.MetroPanel mpIsActive;
-        public MetroFramework.Controls.MetroLabel mlblCompanyId;
-        public MetroFramework.Controls.MetroTextBox mtxtCompanyId;
         public System.Windows.Forms.Button btnSearch;
         public System.Windows.Forms.Button btnBringAll;
         public MetroFramework.Controls.MetroCheckBox mcboxPassive;
@@ -1902,5 +1772,6 @@
         public MetroFramework.Controls.MetroLabel mblGivenBalance;
         public System.Windows.Forms.Button btnGoFinancialTransaction;
         public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.MaskedTextBox mtxtTel;
     }
 }
