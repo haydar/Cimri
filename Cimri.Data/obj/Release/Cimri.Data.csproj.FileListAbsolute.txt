@@ -14,3 +14,31 @@ C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Relea
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.csproj.GenerateResource.Cache
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.dll
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Data\obj\Release\Cimri.Data.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Data.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Data.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Data.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Entity.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\EntityFramework.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Entity.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\Cimri.Entity.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\EntityFramework.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.csprojResolveAssemblyReference.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.CreateDB.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.Add_AdressDistrict.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.iban_is_added.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.ibanChanged.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.Customers_suplliers_are_added.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.fix_some_fields.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.fixCloumnsFields.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.fixFields.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.datetime2BugFixed.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.keyFix.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.keyFix2.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.addCompanyFixed.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.Migrations.stock_and_product_redesinged.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.csproj.GenerateResource.Cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.csproj.CoreCompileInputs.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Release\Cimri.Data.pdb

@@ -1,1 +1,17 @@
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Business\obj\Release\Cimri.Business.csprojResolveAssemblyReference.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Business.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Business.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Data.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Entity.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\EntityFramework.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Data.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Data.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Entity.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\Cimri.Entity.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\KellermanSoftware.Compare-NET-Objects.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\bin\Release\EntityFramework.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Release\Cimri.Business.csprojResolveAssemblyReference.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Release\Cimri.Business.csproj.CoreCompileInputs.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Release\Cimri.Business.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Business\obj\Release\Cimri.Business.pdb

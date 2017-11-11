@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.mtcMain = new MetroFramework.Controls.MetroTabControl();
             this.mtpMain = new MetroFramework.Controls.MetroTabPage();
@@ -97,10 +100,10 @@
             this.gbCompanies = new System.Windows.Forms.GroupBox();
             this.mdgCompanies = new MetroFramework.Controls.MetroGrid();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnPrintCachedCompanyInfo = new System.Windows.Forms.Button();
             this.btnUpdateCompany = new System.Windows.Forms.Button();
             this.tlp_SearchCompany = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearchCompany = new System.Windows.Forms.Button();
             this.tlpSeachCompanyFields = new System.Windows.Forms.TableLayoutPanel();
             this.mtxtTel = new System.Windows.Forms.MaskedTextBox();
             this.mlblTitle = new MetroFramework.Controls.MetroLabel();
@@ -115,8 +118,28 @@
             this.mcboxCustomer = new MetroFramework.Controls.MetroCheckBox();
             this.mlblCompanyType = new MetroFramework.Controls.MetroLabel();
             this.mlblIsActive = new MetroFramework.Controls.MetroLabel();
-            this.btnBringAll = new System.Windows.Forms.Button();
+            this.btnBringAllCompany = new System.Windows.Forms.Button();
             this.mtpProducts = new MetroFramework.Controls.MetroTabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.gbProduct = new System.Windows.Forms.GroupBox();
+            this.mdgProducts = new MetroFramework.Controls.MetroGrid();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.mtxtSearchProductName = new MetroFramework.Controls.MetroTextBox();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.metroCheckBox3 = new MetroFramework.Controls.MetroCheckBox();
+            this.mcbSearchRunOut = new MetroFramework.Controls.MetroCheckBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.mtpInvoice = new MetroFramework.Controls.MetroTabPage();
             this.mtpFinancialOperations = new MetroFramework.Controls.MetroTabPage();
             this.mtpServices = new MetroFramework.Controls.MetroTabPage();
@@ -142,6 +165,16 @@
             this.mpBalanceStatus.SuspendLayout();
             this.mpIsActive.SuspendLayout();
             this.mpCompanyType.SuspendLayout();
+            this.mtpProducts.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.gbProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mdgProducts)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
             this.tlpUsername.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,7 +205,7 @@
             this.mtcMain.HotTrack = true;
             this.mtcMain.Location = new System.Drawing.Point(3, 3);
             this.mtcMain.Name = "mtcMain";
-            this.mtcMain.SelectedIndex = 1;
+            this.mtcMain.SelectedIndex = 2;
             this.mtcMain.Size = new System.Drawing.Size(930, 609);
             this.mtcMain.TabIndex = 3;
             this.mtcMain.UseSelectable = true;
@@ -1065,7 +1098,7 @@
             // 
             this.mdtimeCreateDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mdtimeCreateDate.Location = new System.Drawing.Point(409, 207);
-            this.mdtimeCreateDate.MinimumSize = new System.Drawing.Size(4, 29);
+            this.mdtimeCreateDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.mdtimeCreateDate.Name = "mdtimeCreateDate";
             this.mdtimeCreateDate.Size = new System.Drawing.Size(233, 29);
             this.mdtimeCreateDate.TabIndex = 10;
@@ -1210,22 +1243,22 @@
             this.mdgCompanies.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mdgCompanies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.mdgCompanies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mdgCompanies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mdgCompanies.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgCompanies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgCompanies.DefaultCellStyle = dataGridViewCellStyle8;
             this.mdgCompanies.EnableHeadersVisualStyles = false;
             this.mdgCompanies.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mdgCompanies.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1233,14 +1266,14 @@
             this.mdgCompanies.Name = "mdgCompanies";
             this.mdgCompanies.ReadOnly = true;
             this.mdgCompanies.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mdgCompanies.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgCompanies.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.mdgCompanies.RowHeadersVisible = false;
             this.mdgCompanies.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mdgCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1255,7 +1288,7 @@
             this.tlpButtons.ColumnCount = 2;
             this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpButtons.Controls.Add(this.btnCancel, 0, 0);
+            this.tlpButtons.Controls.Add(this.btnPrintCachedCompanyInfo, 0, 0);
             this.tlpButtons.Controls.Add(this.btnUpdateCompany, 1, 0);
             this.tlpButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpButtons.Location = new System.Drawing.Point(262, 406);
@@ -1265,19 +1298,20 @@
             this.tlpButtons.Size = new System.Drawing.Size(651, 43);
             this.tlpButtons.TabIndex = 14;
             // 
-            // btnCancel
+            // btnPrintCachedCompanyInfo
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.ImageKey = "cancel.png";
-            this.btnCancel.ImageList = this.imglIcons;
-            this.btnCancel.Location = new System.Drawing.Point(70, 3);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(184, 37);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "İptal";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnPrintCachedCompanyInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnPrintCachedCompanyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintCachedCompanyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintCachedCompanyInfo.ImageKey = "cancel.png";
+            this.btnPrintCachedCompanyInfo.ImageList = this.imglIcons;
+            this.btnPrintCachedCompanyInfo.Location = new System.Drawing.Point(70, 3);
+            this.btnPrintCachedCompanyInfo.Name = "btnPrintCachedCompanyInfo";
+            this.btnPrintCachedCompanyInfo.Size = new System.Drawing.Size(184, 37);
+            this.btnPrintCachedCompanyInfo.TabIndex = 13;
+            this.btnPrintCachedCompanyInfo.Text = "Değişikliği Yok Say";
+            this.btnPrintCachedCompanyInfo.UseVisualStyleBackColor = true;
+            this.btnPrintCachedCompanyInfo.Click += new System.EventHandler(this.btnPrintCachedCompanyInfo_Click);
             // 
             // btnUpdateCompany
             // 
@@ -1300,9 +1334,9 @@
             this.tlp_SearchCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.4977F));
             this.tlp_SearchCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.52074F));
             this.tlp_SearchCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.98157F));
-            this.tlp_SearchCompany.Controls.Add(this.btnSearch, 1, 0);
+            this.tlp_SearchCompany.Controls.Add(this.btnSearchCompany, 1, 0);
             this.tlp_SearchCompany.Controls.Add(this.tlpSeachCompanyFields, 0, 0);
-            this.tlp_SearchCompany.Controls.Add(this.btnBringAll, 2, 0);
+            this.tlp_SearchCompany.Controls.Add(this.btnBringAllCompany, 2, 0);
             this.tlp_SearchCompany.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlp_SearchCompany.Location = new System.Drawing.Point(3, 3);
             this.tlp_SearchCompany.Name = "tlp_SearchCompany";
@@ -1311,24 +1345,24 @@
             this.tlp_SearchCompany.Size = new System.Drawing.Size(916, 95);
             this.tlp_SearchCompany.TabIndex = 5;
             // 
-            // btnSearch
+            // btnSearchCompany
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSearchCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSearch.ImageIndex = 0;
-            this.btnSearch.ImageList = this.imglIcons;
-            this.btnSearch.Location = new System.Drawing.Point(703, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(99, 89);
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Ara";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearchCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCompany.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSearchCompany.ImageIndex = 0;
+            this.btnSearchCompany.ImageList = this.imglIcons;
+            this.btnSearchCompany.Location = new System.Drawing.Point(703, 3);
+            this.btnSearchCompany.Name = "btnSearchCompany";
+            this.btnSearchCompany.Size = new System.Drawing.Size(99, 89);
+            this.btnSearchCompany.TabIndex = 5;
+            this.btnSearchCompany.Text = "Ara";
+            this.btnSearchCompany.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSearchCompany.UseVisualStyleBackColor = true;
+            this.btnSearchCompany.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tlpSeachCompanyFields
             // 
@@ -1336,10 +1370,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpSeachCompanyFields.ColumnCount = 4;
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.74242F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.25758F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.36207F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.63793F));
             this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 337F));
             this.tlpSeachCompanyFields.Controls.Add(this.mtxtTel, 0, 1);
             this.tlpSeachCompanyFields.Controls.Add(this.mlblTitle, 0, 0);
             this.tlpSeachCompanyFields.Controls.Add(this.mtlTel, 0, 1);
@@ -1361,10 +1395,10 @@
             // 
             this.mtxtTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTel.Location = new System.Drawing.Point(100, 54);
+            this.mtxtTel.Location = new System.Drawing.Point(92, 54);
             this.mtxtTel.Mask = "(999) 000-0000";
             this.mtxtTel.Name = "mtxtTel";
-            this.mtxtTel.Size = new System.Drawing.Size(161, 24);
+            this.mtxtTel.Size = new System.Drawing.Size(137, 24);
             this.mtxtTel.TabIndex = 10;
             this.mtxtTel.TextChanged += new System.EventHandler(this.mtxtTel_TextChanged);
             // 
@@ -1374,7 +1408,7 @@
             this.mlblTitle.AutoSize = true;
             this.mlblTitle.Location = new System.Drawing.Point(3, 12);
             this.mlblTitle.Name = "mlblTitle";
-            this.mlblTitle.Size = new System.Drawing.Size(91, 19);
+            this.mlblTitle.Size = new System.Drawing.Size(83, 19);
             this.mlblTitle.TabIndex = 3;
             this.mlblTitle.Text = "Ünvan        :";
             // 
@@ -1384,7 +1418,7 @@
             this.mtlTel.AutoSize = true;
             this.mtlTel.Location = new System.Drawing.Point(3, 57);
             this.mtlTel.Name = "mtlTel";
-            this.mtlTel.Size = new System.Drawing.Size(91, 19);
+            this.mtlTel.Size = new System.Drawing.Size(83, 19);
             this.mtlTel.TabIndex = 3;
             this.mtlTel.Text = "Telefon       :";
             // 
@@ -1395,7 +1429,7 @@
             // 
             // 
             this.mtxtTitle.CustomButton.Image = null;
-            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(115, 1);
             this.mtxtTitle.CustomButton.Name = "";
             this.mtxtTitle.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtTitle.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1405,7 +1439,7 @@
             this.mtxtTitle.CustomButton.Visible = false;
             this.mtxtTitle.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtTitle.Lines = new string[0];
-            this.mtxtTitle.Location = new System.Drawing.Point(100, 10);
+            this.mtxtTitle.Location = new System.Drawing.Point(92, 10);
             this.mtxtTitle.MaxLength = 32767;
             this.mtxtTitle.Name = "mtxtTitle";
             this.mtxtTitle.PasswordChar = '\0';
@@ -1414,7 +1448,7 @@
             this.mtxtTitle.SelectionLength = 0;
             this.mtxtTitle.SelectionStart = 0;
             this.mtxtTitle.ShortcutsEnabled = true;
-            this.mtxtTitle.Size = new System.Drawing.Size(161, 23);
+            this.mtxtTitle.Size = new System.Drawing.Size(137, 23);
             this.mtxtTitle.TabIndex = 4;
             this.mtxtTitle.UseSelectable = true;
             this.mtxtTitle.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1428,9 +1462,9 @@
             this.mpBalanceStatus.HorizontalScrollbarBarColor = true;
             this.mpBalanceStatus.HorizontalScrollbarHighlightOnWheel = false;
             this.mpBalanceStatus.HorizontalScrollbarSize = 10;
-            this.mpBalanceStatus.Location = new System.Drawing.Point(391, 47);
+            this.mpBalanceStatus.Location = new System.Drawing.Point(359, 47);
             this.mpBalanceStatus.Name = "mpBalanceStatus";
-            this.mpBalanceStatus.Size = new System.Drawing.Size(300, 39);
+            this.mpBalanceStatus.Size = new System.Drawing.Size(332, 39);
             this.mpBalanceStatus.TabIndex = 7;
             this.mpBalanceStatus.VerticalScrollbarBarColor = true;
             this.mpBalanceStatus.VerticalScrollbarHighlightOnWheel = false;
@@ -1448,7 +1482,7 @@
             this.mpIsActive.HorizontalScrollbarSize = 10;
             this.mpIsActive.Location = new System.Drawing.Point(0, 3);
             this.mpIsActive.Name = "mpIsActive";
-            this.mpIsActive.Size = new System.Drawing.Size(300, 41);
+            this.mpIsActive.Size = new System.Drawing.Size(332, 41);
             this.mpIsActive.TabIndex = 10;
             this.mpIsActive.VerticalScrollbarBarColor = true;
             this.mpIsActive.VerticalScrollbarHighlightOnWheel = false;
@@ -1463,6 +1497,7 @@
             this.mcboxPassive.TabIndex = 5;
             this.mcboxPassive.Text = "Pasif";
             this.mcboxPassive.UseSelectable = true;
+            this.mcboxPassive.CheckedChanged += new System.EventHandler(this.mcboxPassive_CheckedChanged);
             // 
             // mcboxActive
             // 
@@ -1475,6 +1510,7 @@
             this.mcboxActive.TabIndex = 5;
             this.mcboxActive.Text = "Aktif";
             this.mcboxActive.UseSelectable = true;
+            this.mcboxActive.CheckedChanged += new System.EventHandler(this.mcboxActive_CheckedChanged);
             // 
             // mpCompanyType
             // 
@@ -1486,9 +1522,9 @@
             this.mpCompanyType.HorizontalScrollbarBarColor = true;
             this.mpCompanyType.HorizontalScrollbarHighlightOnWheel = false;
             this.mpCompanyType.HorizontalScrollbarSize = 10;
-            this.mpCompanyType.Location = new System.Drawing.Point(391, 3);
+            this.mpCompanyType.Location = new System.Drawing.Point(359, 3);
             this.mpCompanyType.Name = "mpCompanyType";
-            this.mpCompanyType.Size = new System.Drawing.Size(300, 38);
+            this.mpCompanyType.Size = new System.Drawing.Size(332, 38);
             this.mpCompanyType.TabIndex = 8;
             this.mpCompanyType.VerticalScrollbarBarColor = true;
             this.mpCompanyType.VerticalScrollbarHighlightOnWheel = false;
@@ -1505,6 +1541,7 @@
             this.mcboxSupplier.TabIndex = 5;
             this.mcboxSupplier.Text = "Tedarikçi";
             this.mcboxSupplier.UseSelectable = true;
+            this.mcboxSupplier.CheckedChanged += new System.EventHandler(this.mcboxSupplier_CheckedChanged);
             // 
             // mcboxCustomer
             // 
@@ -1517,12 +1554,13 @@
             this.mcboxCustomer.TabIndex = 5;
             this.mcboxCustomer.Text = "Müşteri";
             this.mcboxCustomer.UseSelectable = true;
+            this.mcboxCustomer.CheckedChanged += new System.EventHandler(this.mcboxCustomer_CheckedChanged);
             // 
             // mlblCompanyType
             // 
             this.mlblCompanyType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblCompanyType.AutoSize = true;
-            this.mlblCompanyType.Location = new System.Drawing.Point(267, 12);
+            this.mlblCompanyType.Location = new System.Drawing.Point(235, 12);
             this.mlblCompanyType.Name = "mlblCompanyType";
             this.mlblCompanyType.Size = new System.Drawing.Size(83, 19);
             this.mlblCompanyType.TabIndex = 9;
@@ -1532,33 +1570,34 @@
             // 
             this.mlblIsActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblIsActive.AutoSize = true;
-            this.mlblIsActive.Location = new System.Drawing.Point(267, 57);
+            this.mlblIsActive.Location = new System.Drawing.Point(235, 57);
             this.mlblIsActive.Name = "mlblIsActive";
             this.mlblIsActive.Size = new System.Drawing.Size(109, 19);
             this.mlblIsActive.TabIndex = 9;
             this.mlblIsActive.Text = "Kurum Durumu  :";
             // 
-            // btnBringAll
+            // btnBringAllCompany
             // 
-            this.btnBringAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnBringAllCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBringAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBringAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBringAll.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBringAll.ImageIndex = 1;
-            this.btnBringAll.ImageList = this.imglIcons;
-            this.btnBringAll.Location = new System.Drawing.Point(808, 3);
-            this.btnBringAll.Name = "btnBringAll";
-            this.btnBringAll.Size = new System.Drawing.Size(105, 89);
-            this.btnBringAll.TabIndex = 5;
-            this.btnBringAll.Text = "Hepsini Getir";
-            this.btnBringAll.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBringAll.UseVisualStyleBackColor = true;
-            this.btnBringAll.Click += new System.EventHandler(this.btnBringAll_Click);
+            this.btnBringAllCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBringAllCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBringAllCompany.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBringAllCompany.ImageIndex = 1;
+            this.btnBringAllCompany.ImageList = this.imglIcons;
+            this.btnBringAllCompany.Location = new System.Drawing.Point(808, 3);
+            this.btnBringAllCompany.Name = "btnBringAllCompany";
+            this.btnBringAllCompany.Size = new System.Drawing.Size(105, 89);
+            this.btnBringAllCompany.TabIndex = 5;
+            this.btnBringAllCompany.Text = "Hepsini Getir";
+            this.btnBringAllCompany.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBringAllCompany.UseVisualStyleBackColor = true;
+            this.btnBringAllCompany.Click += new System.EventHandler(this.btnBringAll_Click);
             // 
             // mtpProducts
             // 
+            this.mtpProducts.Controls.Add(this.tableLayoutPanel2);
             this.mtpProducts.HorizontalScrollbarBarColor = true;
             this.mtpProducts.HorizontalScrollbarHighlightOnWheel = false;
             this.mtpProducts.HorizontalScrollbarSize = 10;
@@ -1572,6 +1611,354 @@
             this.mtpProducts.VerticalScrollbarHighlightOnWheel = false;
             this.mtpProducts.VerticalScrollbarSize = 10;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.53473F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.16726F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.83274F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(922, 562);
+            this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.34101F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.65899F));
+            this.tableLayoutPanel3.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.groupBox1, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 77);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(916, 482);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAddProduct);
+            this.panel3.Controls.Add(this.gbProduct);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 427);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProduct.ImageIndex = 2;
+            this.btnAddProduct.ImageList = this.imglIcons;
+            this.btnAddProduct.Location = new System.Drawing.Point(0, 0);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(253, 42);
+            this.btnAddProduct.TabIndex = 6;
+            this.btnAddProduct.Text = "Stok Ekle";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            // 
+            // gbProduct
+            // 
+            this.gbProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbProduct.Controls.Add(this.mdgProducts);
+            this.gbProduct.Location = new System.Drawing.Point(0, 48);
+            this.gbProduct.Name = "gbProduct";
+            this.gbProduct.Size = new System.Drawing.Size(247, 376);
+            this.gbProduct.TabIndex = 0;
+            this.gbProduct.TabStop = false;
+            this.gbProduct.Text = "Ürünler";
+            // 
+            // mdgProducts
+            // 
+            this.mdgProducts.AllowUserToAddRows = false;
+            this.mdgProducts.AllowUserToDeleteRows = false;
+            this.mdgProducts.AllowUserToResizeRows = false;
+            this.mdgProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mdgProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mdgProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.mdgProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mdgProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mdgProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.mdgProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgProducts.DefaultCellStyle = dataGridViewCellStyle11;
+            this.mdgProducts.EnableHeadersVisualStyles = false;
+            this.mdgProducts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mdgProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mdgProducts.Location = new System.Drawing.Point(3, 16);
+            this.mdgProducts.Name = "mdgProducts";
+            this.mdgProducts.ReadOnly = true;
+            this.mdgProducts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mdgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.mdgProducts.RowHeadersVisible = false;
+            this.mdgProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.mdgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mdgProducts.Size = new System.Drawing.Size(241, 357);
+            this.mdgProducts.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button4, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(262, 436);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(651, 43);
+            this.tableLayoutPanel5.TabIndex = 14;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.ImageKey = "cancel.png";
+            this.button3.ImageList = this.imglIcons;
+            this.button3.Location = new System.Drawing.Point(70, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(184, 37);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "İptal";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.ImageKey = "update.png";
+            this.button4.ImageList = this.imglIcons;
+            this.button4.Location = new System.Drawing.Point(396, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(184, 37);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Güncelle";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Location = new System.Drawing.Point(262, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(651, 427);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Firma Detayları";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.92139F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.28384F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.90393F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button5, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button6, 2, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(916, 67);
+            this.tableLayoutPanel6.TabIndex = 5;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.19008F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.80992F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
+            this.tableLayoutPanel4.Controls.Add(this.metroLabel2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.mtxtSearchProductName, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.metroPanel3, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.metroLabel4, 2, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(606, 61);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 21);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(88, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "Ürün Adı     :";
+            // 
+            // mtxtSearchProductName
+            // 
+            this.mtxtSearchProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.mtxtSearchProductName.CustomButton.Image = null;
+            this.mtxtSearchProductName.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.mtxtSearchProductName.CustomButton.Name = "";
+            this.mtxtSearchProductName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtxtSearchProductName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtxtSearchProductName.CustomButton.TabIndex = 1;
+            this.mtxtSearchProductName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtxtSearchProductName.CustomButton.UseSelectable = true;
+            this.mtxtSearchProductName.CustomButton.Visible = false;
+            this.mtxtSearchProductName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.mtxtSearchProductName.Lines = new string[0];
+            this.mtxtSearchProductName.Location = new System.Drawing.Point(97, 19);
+            this.mtxtSearchProductName.MaxLength = 32767;
+            this.mtxtSearchProductName.Name = "mtxtSearchProductName";
+            this.mtxtSearchProductName.PasswordChar = '\0';
+            this.mtxtSearchProductName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtxtSearchProductName.SelectedText = "";
+            this.mtxtSearchProductName.SelectionLength = 0;
+            this.mtxtSearchProductName.SelectionStart = 0;
+            this.mtxtSearchProductName.ShortcutsEnabled = true;
+            this.mtxtSearchProductName.Size = new System.Drawing.Size(152, 23);
+            this.mtxtSearchProductName.TabIndex = 4;
+            this.mtxtSearchProductName.UseSelectable = true;
+            this.mtxtSearchProductName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtxtSearchProductName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel3.Controls.Add(this.metroCheckBox3);
+            this.metroPanel3.Controls.Add(this.mcbSearchRunOut);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(356, 3);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(247, 55);
+            this.metroPanel3.TabIndex = 8;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // metroCheckBox3
+            // 
+            this.metroCheckBox3.AutoSize = true;
+            this.metroCheckBox3.Checked = true;
+            this.metroCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.metroCheckBox3.Location = new System.Drawing.Point(118, 24);
+            this.metroCheckBox3.Name = "metroCheckBox3";
+            this.metroCheckBox3.Size = new System.Drawing.Size(70, 15);
+            this.metroCheckBox3.TabIndex = 5;
+            this.metroCheckBox3.Text = "Tedarikçi";
+            this.metroCheckBox3.UseSelectable = true;
+            // 
+            // mcbSearchRunOut
+            // 
+            this.mcbSearchRunOut.AutoSize = true;
+            this.mcbSearchRunOut.Checked = true;
+            this.mcbSearchRunOut.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mcbSearchRunOut.Location = new System.Drawing.Point(12, 22);
+            this.mcbSearchRunOut.Name = "mcbSearchRunOut";
+            this.mcbSearchRunOut.Size = new System.Drawing.Size(63, 15);
+            this.mcbSearchRunOut.TabIndex = 5;
+            this.mcbSearchRunOut.Text = "Müşteri";
+            this.mcbSearchRunOut.UseSelectable = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(255, 21);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel4.TabIndex = 9;
+            this.metroLabel4.Text = "Kurum Tipi  :";
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.ImageIndex = 0;
+            this.button5.ImageList = this.imglIcons;
+            this.button5.Location = new System.Drawing.Point(615, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(133, 61);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Ara";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.ImageIndex = 1;
+            this.button6.ImageList = this.imglIcons;
+            this.button6.Location = new System.Drawing.Point(754, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(159, 61);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Hepsini\r\nGetir";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // mtpInvoice
             // 
             this.mtpInvoice.HorizontalScrollbarBarColor = true;
@@ -1582,6 +1969,7 @@
             this.mtpInvoice.Size = new System.Drawing.Size(922, 567);
             this.mtpInvoice.TabIndex = 3;
             this.mtpInvoice.Text = "Fatura";
+            this.mtpInvoice.UseWaitCursor = true;
             this.mtpInvoice.VerticalScrollbarBarColor = true;
             this.mtpInvoice.VerticalScrollbarHighlightOnWheel = false;
             this.mtpInvoice.VerticalScrollbarSize = 10;
@@ -1676,6 +2064,18 @@
             this.mpIsActive.PerformLayout();
             this.mpCompanyType.ResumeLayout(false);
             this.mpCompanyType.PerformLayout();
+            this.mtpProducts.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.gbProduct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mdgProducts)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.metroPanel3.ResumeLayout(false);
+            this.metroPanel3.PerformLayout();
             this.tlpUsername.ResumeLayout(false);
             this.tlpUsername.PerformLayout();
             this.ResumeLayout(false);
@@ -1711,8 +2111,8 @@
         public MetroFramework.Controls.MetroCheckBox mcboxCustomer;
         public MetroFramework.Controls.MetroLabel mlblIsActive;
         public MetroFramework.Controls.MetroPanel mpIsActive;
-        public System.Windows.Forms.Button btnSearch;
-        public System.Windows.Forms.Button btnBringAll;
+        public System.Windows.Forms.Button btnSearchCompany;
+        public System.Windows.Forms.Button btnBringAllCompany;
         public MetroFramework.Controls.MetroCheckBox mcboxPassive;
         public MetroFramework.Controls.MetroCheckBox mcboxActive;
         public System.Windows.Forms.TableLayoutPanel tlpCompanyDetails;
@@ -1771,7 +2171,27 @@
         public MetroFramework.Controls.MetroLabel mlblBalance;
         public MetroFramework.Controls.MetroLabel mblGivenBalance;
         public System.Windows.Forms.Button btnGoFinancialTransaction;
-        public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.Button btnPrintCachedCompanyInfo;
         public System.Windows.Forms.MaskedTextBox mtxtTel;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button btnAddProduct;
+        public System.Windows.Forms.GroupBox gbProduct;
+        public MetroFramework.Controls.MetroGrid mdgProducts;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        public MetroFramework.Controls.MetroLabel metroLabel2;
+        public MetroFramework.Controls.MetroTextBox mtxtSearchProductName;
+        public MetroFramework.Controls.MetroPanel metroPanel3;
+        public MetroFramework.Controls.MetroCheckBox metroCheckBox3;
+        public MetroFramework.Controls.MetroCheckBox mcbSearchRunOut;
+        public MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

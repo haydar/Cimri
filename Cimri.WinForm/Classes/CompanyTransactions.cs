@@ -29,10 +29,28 @@ namespace Cimri.WinForm.Classes
         /*This variable is for permission of showing selected company's details for without change control*/
         bool acceptWithoutUpdateChangesOfCompany=false;
 
-        public void CheckRequiredSearchFields()
+        public  void PrintCachedCompanyInfo()
         {
-            
-           
+            mainForm.mtxtDetailTitle.Text = cachedCurrentCompany.Title;
+            mainForm.mtxtCity.Text = cachedCurrentCompany.AddressCity;
+            mainForm.mtxtDistrict.Text = cachedCurrentCompany.AddressDistrict;
+            mainForm.mtxtNeighborhood.Text = cachedCurrentCompany.AddressNeighborhood;
+            mainForm.mtxtStreet.Text = cachedCurrentCompany.AddressStreet;
+            mainForm.mtxtAdressNo.Text = cachedCurrentCompany.AddressNo;
+            mainForm.mtxtFloor.Text = cachedCurrentCompany.AddressFloor;
+            mainForm.mtxtTaxNo.Text = cachedCurrentCompany.TaxNo;
+            mainForm.mtxtTaxAdministration.Text = cachedCurrentCompany.TaxAdministration;
+            mainForm.mtxtAuthorizedPerson.Text = cachedCurrentCompany.AuthorizedPerson;
+            mainForm.mrdbtnMale.Checked = cachedCurrentCompany.AuthorizedPersonGender ? true : false;
+            mainForm.mtxtDetailTel.Text = cachedCurrentCompany.Tel;
+            mainForm.mtxtDetailFax.Text = cachedCurrentCompany.Fax;
+            mainForm.mtxtMail.Text = cachedCurrentCompany.Mail;
+            mainForm.mtxtTradeRegistryNo.Text = cachedCurrentCompany.TradeRegistryNo;
+            mainForm.mdtimeCreateDate.Value = cachedCurrentCompany.CreateDate;
+            mainForm.mrdbtnActive.Checked = cachedCurrentCompany.IsActive ? true : false;
+            mainForm.mtxtIban.Text = cachedCurrentCompany.Iban;
+            mainForm.mcboxSupplier.Checked = cachedCurrentCompany.IsSupplier ? true : false;
+            mainForm.mcboxCustomer.Checked= cachedCurrentCompany.IsCustomer  ? true : false;
         }
         public void Search()
         {
@@ -173,8 +191,7 @@ namespace Cimri.WinForm.Classes
         public void UpdateCompany()
         {
             int companyId = int.Parse(mainForm.mlblGivenCompanyId.Text);
-            CompanyInfo company = new CompanyInfo();
-            company = bCompanyInfo.BringById(companyId);
+            CompanyInfo company = bCompanyInfo.BringById(companyId);
             if (CheckRequiredUpdateCompanyFields())
             {
                 company.Title = mainForm.mtxtDetailTitle.Text;
@@ -231,7 +248,7 @@ namespace Cimri.WinForm.Classes
                 mainForm.mrdbtnPassive.Checked = _companyInfo.IsActive ? false : true;
                 mainForm.mtxtIban.Text = _companyInfo.Iban;
                 mainForm.mcboxSupplier.Checked = _companyInfo.IsSupplier ? true : false;
-                mainForm.mcboxCustomer.Checked = _companyInfo.IsActive ? true : false;
+                mainForm.mcboxDetailCustomer.Checked = _companyInfo.IsActive ? true : false;
                 cacheCompany();
                 acceptWithoutUpdateChangesOfCompany = false;
                 mainForm.firstRunned = false;

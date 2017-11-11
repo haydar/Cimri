@@ -27,11 +27,14 @@ namespace Cimri.WinForm
         public int companyId;
         public int userCompanyId=1;
         public bool firstRunned=true;
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            mtpCompanies.Show();
             CompanyTransactions company = new CompanyTransactions();
             company.FillCompaniesToDataGrid(userCompanyId);
-            companyId=Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
+            
+            companyId =Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
             company.ShowCompanyDetails();
             //mlbl_Username.Text ="Sayın, "+ Form.userRealName.ToString(); 
             firstRunned = false;
@@ -101,6 +104,49 @@ namespace Cimri.WinForm
         {
             CompanyTransactions company = new CompanyTransactions();
             company.Search();
+        }
+
+        private void mcboxCustomer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!firstRunned)
+            {
+                CompanyTransactions company = new CompanyTransactions();
+                company.Search();
+            }
+          
+        }
+
+        private void mcboxSupplier_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!firstRunned)
+            {
+                CompanyTransactions company = new CompanyTransactions();
+                company.Search();
+            }
+        }
+
+        private void mcboxActive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!firstRunned)
+            {
+                CompanyTransactions company = new CompanyTransactions();
+                company.Search();
+            }
+        }
+
+        private void mcboxPassive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!firstRunned)
+            {
+                CompanyTransactions company = new CompanyTransactions();
+                company.Search();
+            }
+        }
+
+        private void btnPrintCachedCompanyInfo_Click(object sender, EventArgs e)
+        {
+            CompanyTransactions company = new CompanyTransactions();
+            company.PrintCachedCompanyInfo();
         }
     }
 }

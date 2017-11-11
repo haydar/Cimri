@@ -27,23 +27,22 @@ namespace Cimri.Data.Repository
                
         }
 
-        // This is where magic happens
         public ICollection<CompanyInfoDto.CompanyHeader> Search(CompanyInfoDto.Search searchParameters)
         {
             return context.CompanyInfos.Where(c =>
-            c.Title.StartsWith(searchParameters.Title)&&
-            c.Tel.StartsWith(searchParameters.Tel) &&
-            c.IsActive.Equals(searchParameters.IsActive) &&
-            c.IsCustomer.Equals(searchParameters.IsCustomer)&&
-            c.IsSupplier.Equals(searchParameters.IsSupplier)&&
-            c.UserCompany.UserCompanyId.Equals(searchParameters.UserCompanyId)).
-            Select(c => new CompanyInfoDto.CompanyHeader()
-            {
-                CompanyInfoId = c.CompanyInfoId,
-                Title = c.Title
-            }).ToList();
-            
-            
+             c.Title.StartsWith(searchParameters.Title) &&
+             c.Tel.StartsWith(searchParameters.Tel) &&
+             c.IsActive.Equals(searchParameters.IsActive) &&
+             c.IsCustomer.Equals(searchParameters.IsCustomer) &&
+             c.IsSupplier.Equals(searchParameters.IsSupplier) &&
+             c.UserCompany.UserCompanyId.Equals(searchParameters.UserCompanyId)).
+             Select(c => new CompanyInfoDto.CompanyHeader()
+             {
+                 CompanyInfoId = c.CompanyInfoId,
+                 Title = c.Title
+             }).ToList();
+
+
         }
     }
 }

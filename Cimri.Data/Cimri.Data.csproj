@@ -96,17 +96,21 @@
     <Compile Include="Migrations\201710121925217_addCompanyFixed.Designer.cs">
       <DependentUpon>201710121925217_addCompanyFixed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711091950498_stock_and_product_redesinged.cs" />
+    <Compile Include="Migrations\201711091950498_stock_and_product_redesinged.Designer.cs">
+      <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\FinancialTransactionRepository.cs" />
-    <Compile Include="Repository\InvoiceDetailProductRepository.cs" />
-    <Compile Include="Repository\InvoiceDetailServiceRepository.cs" />
     <Compile Include="Repository\InvoiceRepository.cs" />
     <Compile Include="Repository\PeriodicServiceHistoryRepository.cs" />
     <Compile Include="Repository\PeriodicServiceRepository.cs" />
+    <Compile Include="Repository\ProductTransactionRepository.cs" />
     <Compile Include="Repository\ProgramUserRepository.cs" />
     <Compile Include="Repository\ServiceRepository.cs" />
+    <Compile Include="Repository\ServiceTransactionRepository.cs" />
     <Compile Include="Repository\StockRepository.cs" />
     <Compile Include="Repository\UserCompanyRepository.cs" />
     <Compile Include="Repository\_BaseRepository.cs" />
@@ -158,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710121925217_addCompanyFixed.resx">
       <DependentUpon>201710121925217_addCompanyFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711091950498_stock_and_product_redesinged.resx">
+      <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

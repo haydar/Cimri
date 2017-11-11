@@ -7,3 +7,13 @@ C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Rel
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.dll
 C:\Users\HAYDAR\documents\visual studio 2017\Projects\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.dll.config
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\Cimri.Entity.pdb
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\EntityFramework.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\EntityFramework.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.dll
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Entity\obj\Release\Cimri.Entity.pdb

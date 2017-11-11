@@ -15,22 +15,21 @@ namespace Cimri.Entity
         [Column(TypeName = "datetime2")]
         public DateTime InvoiceDate { get; set; }
 
-        [ForeignKey("InvoiceDetailProduct")]
-        public int? InvoiceDetailProductId{ get; set; }
+        [ForeignKey("ProductTransactions")]
+        public int? ProductTransactionId { get; set; }
        
-        [ForeignKey("InvoiceDetailService")]
-        public int? InvoiceDetailServiceId { get; set; }
+        [ForeignKey("ServiceTransactions")]
+        public int? ServiceTransactionId { get; set; }
         
-
         //Navigation Property
         public virtual UserCompany UserCompany { get; set; }
         public virtual CompanyInfo CompanyInfo { get; set; }
-        public virtual ICollection< InvoiceDetailProduct> InvoiceDetailProduct { get; set; }
-        public virtual ICollection< InvoiceDetailService> InvoiceDetailService { get; set; }
-
+        public virtual ICollection<ProductTransaction> ProductTransactions { get; set; }
+        public virtual ICollection<ServiceTransaction> ServiceTransactions { get; set; }
         public Invoice()
         {
-           
+            ProductTransactions = new HashSet<ProductTransaction>();
+            ServiceTransactions = new HashSet<ServiceTransaction>();
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,19 @@ namespace Cimri.Entity
     {
         public int StockId { get; set; }
         public string StockName { get; set; }
-        public string StockUnit { get; set; }
-        public int StockNumber { get; set; }
-        public int Price { get; set; }
+        public int CurrentUnitPrice { get; set; }
         public string Description { get; set; }
+
+        [ForeignKey("UserCompany")]
+        public int UserCompanyId { get; set; }
 
         //Navigation Property
         public virtual UserCompany UserCompany { get; set; }
+        public virtual ICollection<ProductTransaction> ProductTransactions { get; set; }
 
         public Stock()
         {
-
+            ProductTransactions = new HashSet<ProductTransaction>();
         }
     }
 }

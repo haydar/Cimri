@@ -17,11 +17,13 @@ namespace Cimri.Entity
         public string Note { get; set; }
         public double Debt { get; set; }
         public double Paid { get; set; }
+        [ForeignKey("Invoice")]
+        public int? InvoiceId { get; set; }
 
         //Navigation Property
         public virtual UserCompany UserCompany { get; set; }
         public virtual CompanyInfo CompanyInfo { get; set; }
-
+        public virtual Invoice Invoice { get; set; }
         public FinancialTransaction()
         {
             

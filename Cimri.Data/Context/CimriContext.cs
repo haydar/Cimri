@@ -19,12 +19,12 @@ namespace Cimri.Data.Context
         public virtual DbSet<CompanyInfo> CompanyInfos { get; set; }
         public virtual DbSet<FinancialTransaction> FinancialTransactions { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
-        public virtual DbSet<InvoiceDetailProduct> InvoiceDetailProducts { get; set; }
-        public virtual DbSet<InvoiceDetailService> InvoiceDetailServices { get; set; }
         public virtual DbSet<PeriodicService> PeriodicServices { get; set; }
         public virtual DbSet<PeriodicServiceHistory> PeriodicServiceHistories { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<ServiceTransaction> ServiceTransactions { get; set; }
         public virtual DbSet<Stock> Stocks { get; set; }
+        public virtual DbSet<ProductTransaction> ProductTransactions { get; set; }
         public virtual DbSet<UserCompany> UserCompanies { get; set; }
 
     }
