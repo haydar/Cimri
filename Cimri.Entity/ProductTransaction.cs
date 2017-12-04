@@ -19,8 +19,16 @@ namespace Cimri.Entity
         public string Description { get; set; }
         [ForeignKey("FinancialTransaction")]
         public int? FinancialTransactionId { get; set; }
-        
+
+        [ForeignKey("Stock")]
+        public int? StockId { get; set; }
+
         public virtual FinancialTransaction FinancialTransaction { get; set; }
-        public virtual Stock Product { get; set; }
+        public virtual Stock Stock { get; set; }
+        public virtual UserCompany UserCompany { get; set; }
+        public ProductTransaction()
+        {
+            
+        }
     }
 }

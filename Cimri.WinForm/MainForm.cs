@@ -22,6 +22,7 @@ namespace Cimri.WinForm
             InitializeComponent();
         }
         CompanyTransactions company = new CompanyTransactions();
+        ProductTransactions product = new ProductTransactions();
         LoginForm Form = (LoginForm)Application.OpenForms["LoginForm"];
         CompanyInfoBusiness BCompanyInfo = new CompanyInfoBusiness();
         public int companyId;
@@ -33,8 +34,8 @@ namespace Cimri.WinForm
             mtpCompanies.Show();
             CompanyTransactions company = new CompanyTransactions();
             company.FillCompaniesToDataGrid(userCompanyId);
-            
-            companyId =Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
+            product.FillProductsToDataGrid(userCompanyId);
+            companyId = Convert.ToInt32(mdgCompanies[0, mdgCompanies.CurrentCell.RowIndex].Value);
             company.ShowCompanyDetails();
             //mlbl_Username.Text ="Sayın, "+ Form.userRealName.ToString(); 
             firstRunned = false;

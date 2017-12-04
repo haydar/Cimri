@@ -100,6 +100,14 @@
     <Compile Include="Migrations\201711091950498_stock_and_product_redesinged.Designer.cs">
       <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711120013498_Minor_Changes.cs" />
+    <Compile Include="Migrations\201711120013498_Minor_Changes.Designer.cs">
+      <DependentUpon>201711120013498_Minor_Changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712011953304_stockIdEdit.cs" />
+    <Compile Include="Migrations\201712011953304_stockIdEdit.Designer.cs">
+      <DependentUpon>201712011953304_stockIdEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -165,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711091950498_stock_and_product_redesinged.resx">
       <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711120013498_Minor_Changes.resx">
+      <DependentUpon>201711120013498_Minor_Changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712011953304_stockIdEdit.resx">
+      <DependentUpon>201712011953304_stockIdEdit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

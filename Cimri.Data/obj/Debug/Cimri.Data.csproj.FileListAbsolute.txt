@@ -48,3 +48,5 @@ C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migra
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.keyFix2.resources
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.addCompanyFixed.resources
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.stock_and_product_redesinged.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.Minor_Changes.resources
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.stockIdEdit.resources

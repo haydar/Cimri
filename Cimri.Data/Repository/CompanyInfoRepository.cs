@@ -14,17 +14,13 @@ namespace Cimri.Data.Repository
         CimriContext context = new CimriContext();
         public ICollection<CompanyInfoDto.CompanyHeader> FillDataGrid(int userCompanyId)
         {
-            using (CimriContext context = new CimriContext())
-            {
-                return context.CompanyInfos.Where(c => c.UserCompany.UserCompanyId.Equals(userCompanyId)).
+            return context.CompanyInfos.Where(c => 
+            c.UserCompany.UserCompanyId.Equals(userCompanyId)).
                  Select(c => new CompanyInfoDto.CompanyHeader()
                  {
                         CompanyInfoId = c.CompanyInfoId,
                         Title = c.Title
-
                  }).ToList();
-            }
-               
         }
 
         public ICollection<CompanyInfoDto.CompanyHeader> Search(CompanyInfoDto.Search searchParameters)
@@ -41,8 +37,6 @@ namespace Cimri.Data.Repository
                  CompanyInfoId = c.CompanyInfoId,
                  Title = c.Title
              }).ToList();
-
-
         }
     }
 }

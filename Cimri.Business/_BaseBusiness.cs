@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cimri.Data.Repository;
+using Cimri.Entity.DTO;
 
 namespace Cimri.Business
 {
@@ -13,29 +14,89 @@ namespace Cimri.Business
 
         // Add, Update, Delete, BringAll and BringByID with generic type.
 
-        public void Add(Tentity data)
+        public void Add(Tentity data, out ErrorDto error)
         {
-            repo.Add(data);
+            error = new ErrorDto();
+
+            try
+            {
+                repo.Add(data);
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "İşlem başarısız. Beklenmedik Hata. \n";
+                error.ErrorMessage = ex.Message;
+            }         
         }
 
-        public void Update(Tentity data)
+        public void Update(Tentity data, out ErrorDto error)
         {
-            repo.Update(data);
+            error = new ErrorDto();
+
+            try
+            {
+                repo.Update(data);
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "İşlem başarısız. Beklenmedik Hata. \n";
+                error.ErrorMessage = ex.Message;
+            }
+          
         }
 
-        public void Delete(Tentity data)
+        public void Delete(Tentity data, out ErrorDto error)
         {
-            repo.Delete(data);
+            error = new ErrorDto();
+
+            try
+            {
+                repo.Delete(data);
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "İşlem başarısız. Beklenmedik Hata. \n";
+                error.ErrorMessage = ex.Message;
+            }
         }
 
-        public List<Tentity> BringAll()
+        public List<Tentity> BringAll(out ErrorDto error)
         {
-           return repo.BringAll();
+            error = new ErrorDto();
+
+            try
+            {
+                return repo.BringAll();
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "İşlem başarısız. Beklenmedik Hata. \n";
+                error.ErrorMessage = ex.Message;
+                return null;
+            }
+            
         }
 
-        public Tentity BringById(int id)
+        public Tentity BringById(int id, out ErrorDto error)
         {
-            return repo.BringById(id);
+            error = new ErrorDto();
+
+            try
+            {
+                return repo.BringById(id);
+            }
+            catch (Exception ex)
+            {
+                error.ProcessResult = false;
+                error.Description = "İşlem başarısız. Beklenmedik Hata. \n";
+                error.ErrorMessage = ex.Message;
+                return null;
+            }
+           
         }
     }
 }

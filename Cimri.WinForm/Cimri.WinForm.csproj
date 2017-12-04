@@ -76,6 +76,7 @@
     <Compile Include="Classes\CompanyTransactions.cs" />
     <Compile Include="Classes\Error.cs" />
     <Compile Include="Classes\LoginTransactions.cs" />
+    <Compile Include="Classes\ProductTransactions.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
