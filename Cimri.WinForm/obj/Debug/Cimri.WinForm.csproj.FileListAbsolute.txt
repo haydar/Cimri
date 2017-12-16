@@ -55,3 +55,4 @@ C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.pd
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\Cimri.Data.dll.config
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.WinForm\obj\Debug\Cimri.WinForm.AddStockForm.resources

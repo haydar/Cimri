@@ -26,7 +26,8 @@ namespace Cimri.WinForm.Classes
         UserCompanyBusiness bUserCompany=new UserCompanyBusiness();
         public static CompanyInfo cachedCurrentCompany = new CompanyInfo();
 
-        /*This variable is for permission of showing selected company's details for without change control*/
+        /*This variable is for permission of showing selected 
+         * company's details for without change control*/
         bool acceptWithoutUpdateChangesOfCompany=false;
 
         public  void PrintCachedCompanyInfo()
@@ -115,8 +116,8 @@ namespace Cimri.WinForm.Classes
             currentCompany.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
             currentCompany.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
 
-            return bCompanyInfo.Compare(cachedCurrentCompany,currentCompany);
-            
+            bool b= bCompanyInfo.Compare(cachedCurrentCompany,currentCompany);
+            return b;
         }
         public void cacheCompany()
         {
@@ -169,10 +170,19 @@ namespace Cimri.WinForm.Classes
 
                 newCompany.UserCompanyId = mainForm.userCompanyId;
 
-                bCompanyInfo.Add(newCompany);
-                addCompanyForm.Hide();
-                MessageBox.Show("Firma Ekleme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FillCompaniesToDataGrid(mainForm.userCompanyId);
+                bCompanyInfo.Add(newCompany, out ErrorDto error);
+
+                if (error.ProcessResult)
+                {
+                    addCompanyForm.Hide();
+                    MessageBox.Show("Firma Ekleme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillCompaniesToDataGrid(mainForm.userCompanyId);
+                }
+                else
+                {
+                    Error.Show(error);
+                }
+                
             }
         }    
         public void FillCompaniesToDataGrid(int userCompanyId)
@@ -191,67 +201,96 @@ namespace Cimri.WinForm.Classes
         public void UpdateCompany()
         {
             int companyId = int.Parse(mainForm.mlblGivenCompanyId.Text);
-            CompanyInfo company = bCompanyInfo.BringById(companyId);
-            if (CheckRequiredUpdateCompanyFields())
+            CompanyInfo company = bCompanyInfo.BringById(companyId, out ErrorDto error);
+            if (error.ProcessResult)
             {
-                company.Title = mainForm.mtxtDetailTitle.Text;
-                company.AddressCity = mainForm.mtxtCity.Text;
-                company.AddressDistrict = mainForm.mtxtDistrict.Text;
-                company.AddressNeighborhood = mainForm.mtxtNeighborhood.Text;
-                company.AddressStreet = mainForm.mtxtStreet.Text;
-                company.AddressNo = mainForm.mtxtAdressNo.Text;
-                company.AddressFloor = mainForm.mtxtFloor.Text;
-                company.TaxNo = mainForm.mtxtTaxNo.Text;
-                company.TaxAdministration = mainForm.mtxtTaxAdministration.Text;
-                company.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
-                company.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
-                company.Tel = mainForm.mtxtDetailTel.Text;
-                company.Fax = mainForm.mtxtDetailFax.Text;
-                company.Mail = mainForm.mtxtMail.Text;
-                company.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
-                company.CreateDate = mainForm.mdtimeCreateDate.Value;
-                company.IsActive = mainForm.mrdbtnActive.Checked ? true : false;
-                company.Iban = mainForm.mtxtIban.Text;
-                company.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
-                company.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
-                bCompanyInfo.Update(company);
-                FillCompaniesToDataGrid(mainForm.userCompanyId);
-                MessageBox.Show("Firma Güncelleştirme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cacheCompany();
-            }            
+                if (CheckRequiredUpdateCompanyFields())
+                {
+                    company.Title = mainForm.mtxtDetailTitle.Text;
+                    company.AddressCity = mainForm.mtxtCity.Text;
+                    company.AddressDistrict = mainForm.mtxtDistrict.Text;
+                    company.AddressNeighborhood = mainForm.mtxtNeighborhood.Text;
+                    company.AddressStreet = mainForm.mtxtStreet.Text;
+                    company.AddressNo = mainForm.mtxtAdressNo.Text;
+                    company.AddressFloor = mainForm.mtxtFloor.Text;
+                    company.TaxNo = mainForm.mtxtTaxNo.Text;
+                    company.TaxAdministration = mainForm.mtxtTaxAdministration.Text;
+                    company.AuthorizedPerson = mainForm.mtxtAuthorizedPerson.Text;
+                    company.AuthorizedPersonGender = mainForm.mrdbtnMale.Checked ? true : false;
+                    company.Tel = mainForm.mtxtDetailTel.Text;
+                    company.Fax = mainForm.mtxtDetailFax.Text;
+                    company.Mail = mainForm.mtxtMail.Text;
+                    company.TradeRegistryNo = mainForm.mtxtTradeRegistryNo.Text;
+                    company.CreateDate = mainForm.mdtimeCreateDate.Value;
+                    company.IsActive = mainForm.mrdbtnActive.Checked ? true : false;
+                    company.Iban = mainForm.mtxtIban.Text;
+                    company.IsSupplier = mainForm.mcboxSupplier.Checked ? true : false;
+                    company.IsCustomer = mainForm.mcboxCustomer.Checked ? true : false;
+
+                    bCompanyInfo.Update(company, out ErrorDto errorUpdate);
+
+                    if (errorUpdate.ProcessResult)
+                    {
+                        FillCompaniesToDataGrid(mainForm.userCompanyId);
+                        MessageBox.Show("Firma Güncelleştirme Başarılı.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cacheCompany();
+                    }
+                    else
+                    {
+                        Error.Show(errorUpdate);
+                    }                   
+                }
+                else
+                {
+                    Error.Show(error);
+                }
+            }
+            
         }
 
         public void ShowCompanyDetails()
         {    
             if (NoDataHasChangedinCompanyDetails()||acceptWithoutUpdateChangesOfCompany||mainForm.firstRunned)
             {
-                CompanyInfo _companyInfo = bCompanyInfo.BringById(mainForm.companyId);
-                mainForm.mlblGivenCompanyId.Text = _companyInfo.CompanyInfoId.ToString();
-                mainForm.mtxtDetailTitle.Text = _companyInfo.Title;
-                mainForm.mtxtCity.Text = _companyInfo.AddressCity;
-                mainForm.mtxtDistrict.Text = _companyInfo.AddressDistrict;
-                mainForm.mtxtNeighborhood.Text = _companyInfo.AddressNeighborhood;
-                mainForm.mtxtStreet.Text = _companyInfo.AddressStreet;
-                mainForm.mtxtAdressNo.Text = _companyInfo.AddressNo;
-                mainForm.mtxtFloor.Text = _companyInfo.AddressFloor;
-                mainForm.mtxtTaxNo.Text = _companyInfo.TaxNo;
-                mainForm.mtxtTaxAdministration.Text = _companyInfo.TaxAdministration;
-                mainForm.mtxtAuthorizedPerson.Text = _companyInfo.AuthorizedPerson;
-                mainForm.mrdbtnMale.Checked = _companyInfo.AuthorizedPersonGender ? true : false;
-                mainForm.mrdbtnFemale.Checked = _companyInfo.AuthorizedPersonGender ? false : true;
-                mainForm.mtxtDetailTel.Text = _companyInfo.Tel;
-                mainForm.mtxtDetailFax.Text = _companyInfo.Fax;
-                mainForm.mtxtMail.Text = _companyInfo.Mail;
-                mainForm.mtxtTradeRegistryNo.Text = _companyInfo.TradeRegistryNo;
-                mainForm.mdtimeCreateDate.Value = _companyInfo.CreateDate;
-                mainForm.mrdbtnActive.Checked = _companyInfo.IsActive ? true : false;
-                mainForm.mrdbtnPassive.Checked = _companyInfo.IsActive ? false : true;
-                mainForm.mtxtIban.Text = _companyInfo.Iban;
-                mainForm.mcboxSupplier.Checked = _companyInfo.IsSupplier ? true : false;
-                mainForm.mcboxDetailCustomer.Checked = _companyInfo.IsActive ? true : false;
-                cacheCompany();
-                acceptWithoutUpdateChangesOfCompany = false;
-                mainForm.firstRunned = false;
+                CompanyInfo _companyInfo = bCompanyInfo.BringById(mainForm.companyId, out ErrorDto error);
+
+                if (error.ProcessResult)
+                {
+
+                    mainForm.mlblGivenCompanyId.Text = _companyInfo.CompanyInfoId.ToString();
+                    mainForm.mtxtDetailTitle.Text = _companyInfo.Title;
+                    mainForm.mtxtCity.Text = _companyInfo.AddressCity;
+                    mainForm.mtxtDistrict.Text = _companyInfo.AddressDistrict;
+                    mainForm.mtxtNeighborhood.Text = _companyInfo.AddressNeighborhood;
+                    mainForm.mtxtStreet.Text = _companyInfo.AddressStreet;
+                    mainForm.mtxtAdressNo.Text = _companyInfo.AddressNo;
+                    mainForm.mtxtFloor.Text = _companyInfo.AddressFloor;
+                    mainForm.mtxtTaxNo.Text = _companyInfo.TaxNo;
+                    mainForm.mtxtTaxAdministration.Text = _companyInfo.TaxAdministration;
+                    mainForm.mtxtAuthorizedPerson.Text = _companyInfo.AuthorizedPerson;
+                    mainForm.mrdbtnMale.Checked = _companyInfo.AuthorizedPersonGender ? true : false;
+                    mainForm.mrdbtnFemale.Checked = _companyInfo.AuthorizedPersonGender ? false : true;
+                    mainForm.mtxtDetailTel.Text = _companyInfo.Tel;
+                    mainForm.mtxtDetailFax.Text = _companyInfo.Fax;
+                    mainForm.mtxtMail.Text = _companyInfo.Mail;
+                    mainForm.mtxtTradeRegistryNo.Text = _companyInfo.TradeRegistryNo;
+                    mainForm.mdtimeCreateDate.Value = _companyInfo.CreateDate;
+                    mainForm.mrdbtnActive.Checked = _companyInfo.IsActive ? true : false;
+                    mainForm.mrdbtnPassive.Checked = _companyInfo.IsActive ? false : true;
+                    mainForm.mtxtIban.Text = _companyInfo.Iban;
+                    mainForm.mcboxSupplier.Checked = _companyInfo.IsSupplier ? true : false;
+                    mainForm.mcboxDetailCustomer.Checked = _companyInfo.IsActive ? true : false;
+
+                    cacheCompany();
+
+                    acceptWithoutUpdateChangesOfCompany = false;
+                    mainForm.firstRunned = false;
+                }
+                else
+                {
+                    Error.Show(error);
+                }
+               
             }
             else
             {
@@ -270,43 +309,43 @@ namespace Cimri.WinForm.Classes
 
         public bool CheckRequiredAddCompanyFields()
         {
-            string emptyfields = string.Empty;
+            string emptyFields = string.Empty;
             if (string.IsNullOrEmpty(addCompanyForm.mtxtDetailTitle.Text))
-                emptyfields += "- Ünvan\n";
+                emptyFields += "- Ünvan\n";
             if (string.IsNullOrEmpty(addCompanyForm.mlblAddressCity.Text))
-                emptyfields += "- İl\n";
+                emptyFields += "- İl\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtDistrict.Text))
-                emptyfields += "- İlçe\n";
+                emptyFields += "- İlçe\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtNeighborhood.Text))
-                emptyfields += "- Mahalle\n";
+                emptyFields += "- Mahalle\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtStreet.Text))
-                emptyfields += "- Sokak\n";
+                emptyFields += "- Sokak\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtAdressNo.Text))
-                emptyfields += "- Kapı No\n";
+                emptyFields += "- Kapı No\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtFloor.Text))
-                emptyfields += "- Kat\n";
+                emptyFields += "- Kat\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtTaxNo.Text))
-                emptyfields += "- Vergi No\n";
+                emptyFields += "- Vergi No\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtTaxAdministration.Text))
-                emptyfields += "- Vergi Dairesi\n";
+                emptyFields += "- Vergi Dairesi\n";
             if (string.IsNullOrEmpty(addCompanyForm.mtxtAuthorizedPerson.Text))
-                emptyfields += "- Yetkili Kişi\n";
+                emptyFields += "- Yetkili Kişi\n";
             if (addCompanyForm.mrdbtnMale.Checked == false &&
                 addCompanyForm.mrdbtnFemale.Checked == false)
-                emptyfields += "- Cinsiyet\n";
+                emptyFields += "- Cinsiyet\n";
             if (!mainForm.mtxtDetailTel.MaskFull)
-                emptyfields += "- Telefon Numarası";
+                emptyFields += "- Telefon Numarası";
             if (addCompanyForm.mcboxDetailCustomer.Checked == false &&
                 addCompanyForm.mcboxDetailSupplier.Checked == false)
-                emptyfields += "- Kurum Tipi\n";
+                emptyFields += "- Kurum Tipi\n";
 
-            if (string.IsNullOrEmpty(emptyfields))
+            if (string.IsNullOrEmpty(emptyFields))
             {
                 return true;
             }
             else
             {
-                MessageBox.Show("Aşağıdaki alanlar boş geçilemezler. \n"+emptyfields,"Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Aşağıdaki alanlar boş geçilemezler. \n"+emptyFields,"Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return false;
             }
         }

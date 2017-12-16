@@ -30,7 +30,7 @@ namespace Cimri.WinForm
         private void LoginForm_Load(object sender, EventArgs e)
         {
             #region FillcomboBox_UserCompany
-            foreach (var item in bUserCompany.BringAll())
+            foreach (var item in bUserCompany.BringAll(out ErrorDto error))
             {
                 mcbxUserCompany.Items.Add(item.UserCompanyId + "- " + item.Title);
             }

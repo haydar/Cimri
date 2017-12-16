@@ -149,5 +149,17 @@ namespace Cimri.WinForm
             CompanyTransactions company = new CompanyTransactions();
             company.PrintCachedCompanyInfo();
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddStockForm addStockForm = new AddStockForm();
+            addStockForm.ShowDialog();
+        }
+
+        private void btnBringAllStock_Click(object sender, EventArgs e)
+        {
+            ProductTransactions productTransactions = new ProductTransactions();
+            productTransactions.FillProductsToDataGrid(userCompanyId);
+        }
     }
 }

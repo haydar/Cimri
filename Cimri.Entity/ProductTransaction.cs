@@ -13,8 +13,8 @@ namespace Cimri.Entity
         public int ProductNumber { get; set; }
         [Column(TypeName ="datetime2")]
         public DateTime Date { get; set; }
-        public int TakenBy { get; set; }
-        public int GivenBy { get; set; }
+        public int? TakenBy { get; set; }
+        public int? GivenBy { get; set; }
         public double UnitPrice { get; set; }
         public string Description { get; set; }
         [ForeignKey("FinancialTransaction")]

@@ -48,65 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\CimriContext.cs" />
-    <Compile Include="Migrations\201708262034000_CreateDB.cs" />
-    <Compile Include="Migrations\201708262034000_CreateDB.Designer.cs">
-      <DependentUpon>201708262034000_CreateDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708301600053_Add_AdressDistrict.cs" />
-    <Compile Include="Migrations\201708301600053_Add_AdressDistrict.Designer.cs">
-      <DependentUpon>201708301600053_Add_AdressDistrict.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709071811230_iban_is_added.cs" />
-    <Compile Include="Migrations\201709071811230_iban_is_added.Designer.cs">
-      <DependentUpon>201709071811230_iban_is_added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709091333438_ibanChanged.cs" />
-    <Compile Include="Migrations\201709091333438_ibanChanged.Designer.cs">
-      <DependentUpon>201709091333438_ibanChanged.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709091352486_Customers_suplliers_are_added.cs" />
-    <Compile Include="Migrations\201709091352486_Customers_suplliers_are_added.Designer.cs">
-      <DependentUpon>201709091352486_Customers_suplliers_are_added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709091412328_fix_some_fields.cs" />
-    <Compile Include="Migrations\201709091412328_fix_some_fields.Designer.cs">
-      <DependentUpon>201709091412328_fix_some_fields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709140929529_fixCloumnsFields.cs" />
-    <Compile Include="Migrations\201709140929529_fixCloumnsFields.Designer.cs">
-      <DependentUpon>201709140929529_fixCloumnsFields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709151206205_fixFields.cs" />
-    <Compile Include="Migrations\201709151206205_fixFields.Designer.cs">
-      <DependentUpon>201709151206205_fixFields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710061538569_datetime2BugFixed.cs" />
-    <Compile Include="Migrations\201710061538569_datetime2BugFixed.Designer.cs">
-      <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710112115595_keyFix.cs" />
-    <Compile Include="Migrations\201710112115595_keyFix.Designer.cs">
-      <DependentUpon>201710112115595_keyFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710112130476_keyFix2.cs" />
-    <Compile Include="Migrations\201710112130476_keyFix2.Designer.cs">
-      <DependentUpon>201710112130476_keyFix2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710121925217_addCompanyFixed.cs" />
-    <Compile Include="Migrations\201710121925217_addCompanyFixed.Designer.cs">
-      <DependentUpon>201710121925217_addCompanyFixed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711091950498_stock_and_product_redesinged.cs" />
-    <Compile Include="Migrations\201711091950498_stock_and_product_redesinged.Designer.cs">
-      <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711120013498_Minor_Changes.cs" />
-    <Compile Include="Migrations\201711120013498_Minor_Changes.Designer.cs">
-      <DependentUpon>201711120013498_Minor_Changes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712011953304_stockIdEdit.cs" />
-    <Compile Include="Migrations\201712011953304_stockIdEdit.Designer.cs">
-      <DependentUpon>201712011953304_stockIdEdit.cs</DependentUpon>
+    <Compile Include="Migrations\201712062330433_cl.cs" />
+    <Compile Include="Migrations\201712062330433_cl.Designer.cs">
+      <DependentUpon>201712062330433_cl.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -123,7 +67,6 @@
     <Compile Include="Repository\UserCompanyRepository.cs" />
     <Compile Include="Repository\_BaseRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -135,50 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708262034000_CreateDB.resx">
-      <DependentUpon>201708262034000_CreateDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708301600053_Add_AdressDistrict.resx">
-      <DependentUpon>201708301600053_Add_AdressDistrict.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709071811230_iban_is_added.resx">
-      <DependentUpon>201709071811230_iban_is_added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709091333438_ibanChanged.resx">
-      <DependentUpon>201709091333438_ibanChanged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709091352486_Customers_suplliers_are_added.resx">
-      <DependentUpon>201709091352486_Customers_suplliers_are_added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709091412328_fix_some_fields.resx">
-      <DependentUpon>201709091412328_fix_some_fields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709140929529_fixCloumnsFields.resx">
-      <DependentUpon>201709140929529_fixCloumnsFields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709151206205_fixFields.resx">
-      <DependentUpon>201709151206205_fixFields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710061538569_datetime2BugFixed.resx">
-      <DependentUpon>201710061538569_datetime2BugFixed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710112115595_keyFix.resx">
-      <DependentUpon>201710112115595_keyFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710112130476_keyFix2.resx">
-      <DependentUpon>201710112130476_keyFix2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710121925217_addCompanyFixed.resx">
-      <DependentUpon>201710121925217_addCompanyFixed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711091950498_stock_and_product_redesinged.resx">
-      <DependentUpon>201711091950498_stock_and_product_redesinged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711120013498_Minor_Changes.resx">
-      <DependentUpon>201711120013498_Minor_Changes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712011953304_stockIdEdit.resx">
-      <DependentUpon>201712011953304_stockIdEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712062330433_cl.resx">
+      <DependentUpon>201712062330433_cl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

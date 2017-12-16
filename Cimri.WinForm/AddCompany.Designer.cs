@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCompanyForm));
             this.gbCompanyDetails = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpAddCompany = new System.Windows.Forms.TableLayoutPanel();
             this.mlblAddressCity = new MetroFramework.Controls.MetroLabel();
             this.mlblAddressDistrict = new MetroFramework.Controls.MetroLabel();
             this.mlblAddressNeighborhood = new MetroFramework.Controls.MetroLabel();
@@ -73,14 +73,14 @@
             this.btnAddCompany = new System.Windows.Forms.Button();
             this.imglAddCompany = new System.Windows.Forms.ImageList(this.components);
             this.gbCompanyDetails.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpAddCompany.SuspendLayout();
             this.mpDetailCompanyStatus.SuspendLayout();
             this.pnlAuthorizedPersonGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCompanyDetails
             // 
-            this.gbCompanyDetails.Controls.Add(this.tableLayoutPanel1);
+            this.gbCompanyDetails.Controls.Add(this.tlpAddCompany);
             this.gbCompanyDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbCompanyDetails.Location = new System.Drawing.Point(20, 60);
             this.gbCompanyDetails.Name = "gbCompanyDetails";
@@ -89,65 +89,65 @@
             this.gbCompanyDetails.TabStop = false;
             this.gbCompanyDetails.Text = "Yeni Firma Bilgileri";
             // 
-            // tableLayoutPanel1
+            // tlpAddCompany
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.49719F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85127F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71163F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.93991F));
-            this.tableLayoutPanel1.Controls.Add(this.mlblAddressCity, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAddressDistrict, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAddressNeighborhood, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAddressStreet, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAddressNo, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.mlblFloor, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.mlblTaxNo, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.mlblTaxAdministration, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtDetailTitle, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtCity, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtDistrict, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtNeighborhood, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtStreet, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtAdressNo, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtFloor, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtTaxNo, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtTaxAdministration, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.mlblDetailTitle, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.mpDetailCompanyStatus, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.mlblDetailCompanyStatus, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lblIban, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtIban, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.mlblTradeRegistryNo, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtTradeRegistryNo, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtMail, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.mlblMail, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.mlblFax, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtDetailFax, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtDetailTel, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.mlblTel, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAuthorizedPersonGender, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pnlAuthorizedPersonGender, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.mlblAuthorizedPerson, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.mtxtAuthorizedPerson, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddCompany, 3, 10);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 11;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(627, 387);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tlpAddCompany.ColumnCount = 4;
+            this.tlpAddCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.49719F));
+            this.tlpAddCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85127F));
+            this.tlpAddCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71163F));
+            this.tlpAddCompany.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.93991F));
+            this.tlpAddCompany.Controls.Add(this.mlblAddressCity, 0, 1);
+            this.tlpAddCompany.Controls.Add(this.mlblAddressDistrict, 0, 2);
+            this.tlpAddCompany.Controls.Add(this.mlblAddressNeighborhood, 0, 3);
+            this.tlpAddCompany.Controls.Add(this.mlblAddressStreet, 0, 4);
+            this.tlpAddCompany.Controls.Add(this.mlblAddressNo, 0, 5);
+            this.tlpAddCompany.Controls.Add(this.mlblFloor, 0, 6);
+            this.tlpAddCompany.Controls.Add(this.mlblTaxNo, 0, 7);
+            this.tlpAddCompany.Controls.Add(this.mlblTaxAdministration, 0, 8);
+            this.tlpAddCompany.Controls.Add(this.mtxtDetailTitle, 1, 0);
+            this.tlpAddCompany.Controls.Add(this.mtxtCity, 1, 1);
+            this.tlpAddCompany.Controls.Add(this.mtxtDistrict, 1, 2);
+            this.tlpAddCompany.Controls.Add(this.mtxtNeighborhood, 1, 3);
+            this.tlpAddCompany.Controls.Add(this.mtxtStreet, 1, 4);
+            this.tlpAddCompany.Controls.Add(this.mtxtAdressNo, 1, 5);
+            this.tlpAddCompany.Controls.Add(this.mtxtFloor, 1, 6);
+            this.tlpAddCompany.Controls.Add(this.mtxtTaxNo, 1, 7);
+            this.tlpAddCompany.Controls.Add(this.mtxtTaxAdministration, 1, 8);
+            this.tlpAddCompany.Controls.Add(this.mlblDetailTitle, 0, 0);
+            this.tlpAddCompany.Controls.Add(this.mpDetailCompanyStatus, 3, 7);
+            this.tlpAddCompany.Controls.Add(this.mlblDetailCompanyStatus, 2, 7);
+            this.tlpAddCompany.Controls.Add(this.lblIban, 2, 6);
+            this.tlpAddCompany.Controls.Add(this.mtxtIban, 3, 6);
+            this.tlpAddCompany.Controls.Add(this.mlblTradeRegistryNo, 2, 5);
+            this.tlpAddCompany.Controls.Add(this.mtxtTradeRegistryNo, 3, 5);
+            this.tlpAddCompany.Controls.Add(this.mtxtMail, 3, 4);
+            this.tlpAddCompany.Controls.Add(this.mlblMail, 2, 4);
+            this.tlpAddCompany.Controls.Add(this.mlblFax, 2, 3);
+            this.tlpAddCompany.Controls.Add(this.mtxtDetailFax, 3, 3);
+            this.tlpAddCompany.Controls.Add(this.mtxtDetailTel, 3, 2);
+            this.tlpAddCompany.Controls.Add(this.mlblTel, 2, 2);
+            this.tlpAddCompany.Controls.Add(this.mlblAuthorizedPersonGender, 2, 1);
+            this.tlpAddCompany.Controls.Add(this.pnlAuthorizedPersonGender, 3, 1);
+            this.tlpAddCompany.Controls.Add(this.mlblAuthorizedPerson, 2, 0);
+            this.tlpAddCompany.Controls.Add(this.mtxtAuthorizedPerson, 3, 0);
+            this.tlpAddCompany.Controls.Add(this.btnAddCompany, 3, 10);
+            this.tlpAddCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpAddCompany.Location = new System.Drawing.Point(3, 16);
+            this.tlpAddCompany.Name = "tlpAddCompany";
+            this.tlpAddCompany.RowCount = 11;
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tlpAddCompany.Size = new System.Drawing.Size(627, 387);
+            this.tlpAddCompany.TabIndex = 2;
             // 
             // mlblAddressCity
             // 
@@ -875,14 +875,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 486);
             this.Controls.Add(this.gbCompanyDetails);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "AddCompanyForm";
-            this.Text = "Firma Ekle";
+            this.Text = "Yeni Firma";
             this.Load += new System.EventHandler(this.AddCompany_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AddCompanyForm_KeyUp);
             this.Resize += new System.EventHandler(this.AddCompany_Resize);
             this.gbCompanyDetails.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpAddCompany.ResumeLayout(false);
+            this.tlpAddCompany.PerformLayout();
             this.mpDetailCompanyStatus.ResumeLayout(false);
             this.mpDetailCompanyStatus.PerformLayout();
             this.pnlAuthorizedPersonGender.ResumeLayout(false);
@@ -894,7 +896,7 @@
         #endregion
 
         public System.Windows.Forms.GroupBox gbCompanyDetails;
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.TableLayoutPanel tlpAddCompany;
         public System.Windows.Forms.MaskedTextBox mtxtDetailFax;
         public MetroFramework.Controls.MetroLabel mlblAddressCity;
         public MetroFramework.Controls.MetroLabel mlblAddressDistrict;

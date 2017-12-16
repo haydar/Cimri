@@ -35,8 +35,7 @@ namespace Cimri.WinForm
         private void btnAddCompany_Click(object sender, EventArgs e)
         {
             CompanyTransactions company = new CompanyTransactions();
-            company.AddCompany();
-            
+            company.AddCompany();            
         }
 
         private void mtxtTaxNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -47,6 +46,12 @@ namespace Cimri.WinForm
         private void mtxtTradeRegistryNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void AddCompanyForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
         }
     }
 }

@@ -7,13 +7,13 @@ namespace Cimri.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class fix_some_fields : IMigrationMetadata
+    public sealed partial class cl : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fix_some_fields));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cl));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709091412328_fix_some_fields"; }
+            get { return "201712062330433_cl"; }
         }
         
         string IMigrationMetadata.Source

@@ -11,7 +11,7 @@ namespace Cimri.Entity
     {
         public int StockId { get; set; }
         public string StockName { get; set; }
-        public int CurrentUnitPrice { get; set; }
+        public double CurrentUnitPrice { get; set; }
         public string Description { get; set; }
 
         [ForeignKey("UserCompany")]
