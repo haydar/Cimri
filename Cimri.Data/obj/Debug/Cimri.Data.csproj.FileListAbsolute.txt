@@ -36,3 +36,4 @@ C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.dll
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.pdb
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.cl.resources
 C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.csproj.GenerateResource.Cache
+C:\Users\Haydar ŞAHİN\Source\Repos\Cimri\Cimri.Data\obj\Debug\Cimri.Data.Migrations.stock_active.resources

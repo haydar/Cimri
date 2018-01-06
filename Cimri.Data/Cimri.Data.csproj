@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201712062330433_cl.Designer.cs">
       <DependentUpon>201712062330433_cl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801040816219_stock_active.cs" />
+    <Compile Include="Migrations\201801040816219_stock_active.Designer.cs">
+      <DependentUpon>201801040816219_stock_active.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CompanyInfoRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712062330433_cl.resx">
       <DependentUpon>201712062330433_cl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801040816219_stock_active.resx">
+      <DependentUpon>201801040816219_stock_active.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

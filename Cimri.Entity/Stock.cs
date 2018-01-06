@@ -14,6 +14,8 @@ namespace Cimri.Entity
         public double CurrentUnitPrice { get; set; }
         public string Description { get; set; }
 
+        public bool isActive { get; set; }
+
         [ForeignKey("UserCompany")]
         public int UserCompanyId { get; set; }
 

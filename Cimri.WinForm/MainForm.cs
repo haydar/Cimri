@@ -161,5 +161,6 @@ namespace Cimri.WinForm
             ProductTransactions productTransactions = new ProductTransactions();
             productTransactions.FillProductsToDataGrid(userCompanyId);
         }
+
     }
 }

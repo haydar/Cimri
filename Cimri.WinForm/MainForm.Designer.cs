@@ -36,6 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.mtcMain = new MetroFramework.Controls.MetroTabControl();
             this.mtpMain = new MetroFramework.Controls.MetroTabPage();
@@ -122,22 +125,24 @@
             this.mtpProducts = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.mlbl_NoProductRecord = new MetroFramework.Controls.MetroLabel();
             this.pnlStock = new System.Windows.Forms.Panel();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.gbProduct = new System.Windows.Forms.GroupBox();
             this.mdgProducts = new MetroFramework.Controls.MetroGrid();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tlp_ProductControl = new System.Windows.Forms.TableLayoutPanel();
+            this.btn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.grb_ProductDetails = new System.Windows.Forms.GroupBox();
+            this.mgrdProductTransaction = new MetroFramework.Controls.MetroGrid();
+            this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.mtxtSearchProductName = new MetroFramework.Controls.MetroTextBox();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroCheckBox3 = new MetroFramework.Controls.MetroCheckBox();
-            this.mcbSearchRunOut = new MetroFramework.Controls.MetroCheckBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.mrbtnStockPassive = new MetroFramework.Controls.MetroRadioButton();
+            this.mrbtnStockActive = new MetroFramework.Controls.MetroRadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.btnBringAllStock = new System.Windows.Forms.Button();
             this.mtpInvoice = new MetroFramework.Controls.MetroTabPage();
@@ -171,10 +176,12 @@
             this.pnlStock.SuspendLayout();
             this.gbProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mdgProducts)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.tlp_ProductControl.SuspendLayout();
+            this.grb_ProductDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mgrdProductTransaction)).BeginInit();
+            this.tlp.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.metroPanel3.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             this.tlpUsername.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,10 +209,12 @@
             this.mtcMain.Controls.Add(this.mtpFinancialOperations);
             this.mtcMain.Controls.Add(this.mtpServices);
             this.mtcMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtcMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.mtcMain.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.mtcMain.HotTrack = true;
             this.mtcMain.Location = new System.Drawing.Point(3, 3);
             this.mtcMain.Name = "mtcMain";
-            this.mtcMain.SelectedIndex = 1;
+            this.mtcMain.SelectedIndex = 2;
             this.mtcMain.Size = new System.Drawing.Size(930, 609);
             this.mtcMain.TabIndex = 3;
             this.mtcMain.UseSelectable = true;
@@ -1287,8 +1296,9 @@
             // tlpButtons
             // 
             this.tlpButtons.ColumnCount = 2;
-            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpButtons.Controls.Add(this.btnPrintCachedCompanyInfo, 0, 0);
             this.tlpButtons.Controls.Add(this.btnUpdateCompany, 1, 0);
             this.tlpButtons.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1321,9 +1331,9 @@
             this.btnUpdateCompany.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateCompany.ImageKey = "update.png";
             this.btnUpdateCompany.ImageList = this.imglIcons;
-            this.btnUpdateCompany.Location = new System.Drawing.Point(396, 3);
+            this.btnUpdateCompany.Location = new System.Drawing.Point(407, 3);
             this.btnUpdateCompany.Name = "btnUpdateCompany";
-            this.btnUpdateCompany.Size = new System.Drawing.Size(184, 37);
+            this.btnUpdateCompany.Size = new System.Drawing.Size(162, 37);
             this.btnUpdateCompany.TabIndex = 13;
             this.btnUpdateCompany.Text = "Güncelle";
             this.btnUpdateCompany.UseVisualStyleBackColor = true;
@@ -1371,10 +1381,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpSeachCompanyFields.ColumnCount = 4;
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.36207F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.63793F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 359F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.28571F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.71429F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tlpSeachCompanyFields.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 323F));
             this.tlpSeachCompanyFields.Controls.Add(this.mtxtTel, 0, 1);
             this.tlpSeachCompanyFields.Controls.Add(this.mlblTitle, 0, 0);
             this.tlpSeachCompanyFields.Controls.Add(this.mtlTel, 0, 1);
@@ -1396,10 +1406,10 @@
             // 
             this.mtxtTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.mtxtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTel.Location = new System.Drawing.Point(86, 54);
+            this.mtxtTel.Location = new System.Drawing.Point(89, 54);
             this.mtxtTel.Mask = "(999) 000-0000";
             this.mtxtTel.Name = "mtxtTel";
-            this.mtxtTel.Size = new System.Drawing.Size(127, 24);
+            this.mtxtTel.Size = new System.Drawing.Size(158, 24);
             this.mtxtTel.TabIndex = 10;
             this.mtxtTel.TextChanged += new System.EventHandler(this.mtxtTel_TextChanged);
             // 
@@ -1409,7 +1419,7 @@
             this.mlblTitle.AutoSize = true;
             this.mlblTitle.Location = new System.Drawing.Point(3, 12);
             this.mlblTitle.Name = "mlblTitle";
-            this.mlblTitle.Size = new System.Drawing.Size(77, 19);
+            this.mlblTitle.Size = new System.Drawing.Size(80, 19);
             this.mlblTitle.TabIndex = 3;
             this.mlblTitle.Text = "Ünvan        :";
             // 
@@ -1419,7 +1429,7 @@
             this.mtlTel.AutoSize = true;
             this.mtlTel.Location = new System.Drawing.Point(3, 57);
             this.mtlTel.Name = "mtlTel";
-            this.mtlTel.Size = new System.Drawing.Size(77, 19);
+            this.mtlTel.Size = new System.Drawing.Size(80, 19);
             this.mtlTel.TabIndex = 3;
             this.mtlTel.Text = "Telefon       :";
             // 
@@ -1430,7 +1440,7 @@
             // 
             // 
             this.mtxtTitle.CustomButton.Image = null;
-            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.mtxtTitle.CustomButton.Location = new System.Drawing.Point(136, 1);
             this.mtxtTitle.CustomButton.Name = "";
             this.mtxtTitle.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtTitle.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1440,7 +1450,7 @@
             this.mtxtTitle.CustomButton.Visible = false;
             this.mtxtTitle.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtTitle.Lines = new string[0];
-            this.mtxtTitle.Location = new System.Drawing.Point(86, 10);
+            this.mtxtTitle.Location = new System.Drawing.Point(89, 10);
             this.mtxtTitle.MaxLength = 32767;
             this.mtxtTitle.Name = "mtxtTitle";
             this.mtxtTitle.PasswordChar = '\0';
@@ -1449,7 +1459,7 @@
             this.mtxtTitle.SelectionLength = 0;
             this.mtxtTitle.SelectionStart = 0;
             this.mtxtTitle.ShortcutsEnabled = true;
-            this.mtxtTitle.Size = new System.Drawing.Size(127, 23);
+            this.mtxtTitle.Size = new System.Drawing.Size(158, 23);
             this.mtxtTitle.TabIndex = 4;
             this.mtxtTitle.UseSelectable = true;
             this.mtxtTitle.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1463,9 +1473,9 @@
             this.mpBalanceStatus.HorizontalScrollbarBarColor = true;
             this.mpBalanceStatus.HorizontalScrollbarHighlightOnWheel = false;
             this.mpBalanceStatus.HorizontalScrollbarSize = 10;
-            this.mpBalanceStatus.Location = new System.Drawing.Point(337, 47);
+            this.mpBalanceStatus.Location = new System.Drawing.Point(373, 47);
             this.mpBalanceStatus.Name = "mpBalanceStatus";
-            this.mpBalanceStatus.Size = new System.Drawing.Size(354, 39);
+            this.mpBalanceStatus.Size = new System.Drawing.Size(318, 39);
             this.mpBalanceStatus.TabIndex = 7;
             this.mpBalanceStatus.VerticalScrollbarBarColor = true;
             this.mpBalanceStatus.VerticalScrollbarHighlightOnWheel = false;
@@ -1483,7 +1493,7 @@
             this.mpIsActive.HorizontalScrollbarSize = 10;
             this.mpIsActive.Location = new System.Drawing.Point(0, 3);
             this.mpIsActive.Name = "mpIsActive";
-            this.mpIsActive.Size = new System.Drawing.Size(354, 41);
+            this.mpIsActive.Size = new System.Drawing.Size(318, 41);
             this.mpIsActive.TabIndex = 10;
             this.mpIsActive.VerticalScrollbarBarColor = true;
             this.mpIsActive.VerticalScrollbarHighlightOnWheel = false;
@@ -1523,9 +1533,9 @@
             this.mpCompanyType.HorizontalScrollbarBarColor = true;
             this.mpCompanyType.HorizontalScrollbarHighlightOnWheel = false;
             this.mpCompanyType.HorizontalScrollbarSize = 10;
-            this.mpCompanyType.Location = new System.Drawing.Point(337, 3);
+            this.mpCompanyType.Location = new System.Drawing.Point(373, 3);
             this.mpCompanyType.Name = "mpCompanyType";
-            this.mpCompanyType.Size = new System.Drawing.Size(354, 38);
+            this.mpCompanyType.Size = new System.Drawing.Size(318, 38);
             this.mpCompanyType.TabIndex = 8;
             this.mpCompanyType.VerticalScrollbarBarColor = true;
             this.mpCompanyType.VerticalScrollbarHighlightOnWheel = false;
@@ -1561,7 +1571,7 @@
             // 
             this.mlblCompanyType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblCompanyType.AutoSize = true;
-            this.mlblCompanyType.Location = new System.Drawing.Point(219, 12);
+            this.mlblCompanyType.Location = new System.Drawing.Point(253, 12);
             this.mlblCompanyType.Name = "mlblCompanyType";
             this.mlblCompanyType.Size = new System.Drawing.Size(83, 19);
             this.mlblCompanyType.TabIndex = 9;
@@ -1571,7 +1581,7 @@
             // 
             this.mlblIsActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mlblIsActive.AutoSize = true;
-            this.mlblIsActive.Location = new System.Drawing.Point(219, 57);
+            this.mlblIsActive.Location = new System.Drawing.Point(253, 57);
             this.mlblIsActive.Name = "mlblIsActive";
             this.mlblIsActive.Size = new System.Drawing.Size(109, 19);
             this.mlblIsActive.TabIndex = 9;
@@ -1621,7 +1631,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.53473F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tlp, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -1638,9 +1648,10 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.0917F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.90829F));
+            this.tableLayoutPanel3.Controls.Add(this.mlbl_NoProductRecord, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.pnlStock, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.groupBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tlp_ProductControl, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.grb_ProductDetails, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 77);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -1648,6 +1659,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(916, 482);
             this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // mlbl_NoProductRecord
+            // 
+            this.mlbl_NoProductRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mlbl_NoProductRecord.AutoSize = true;
+            this.mlbl_NoProductRecord.Location = new System.Drawing.Point(3, 448);
+            this.mlbl_NoProductRecord.Name = "mlbl_NoProductRecord";
+            this.mlbl_NoProductRecord.Size = new System.Drawing.Size(233, 19);
+            this.mlbl_NoProductRecord.TabIndex = 15;
+            this.mlbl_NoProductRecord.Text = "Henüz bir ürün kaydınız yok.";
+            this.mlbl_NoProductRecord.Visible = false;
             // 
             // pnlStock
             // 
@@ -1740,34 +1762,35 @@
             this.mdgProducts.Size = new System.Drawing.Size(221, 357);
             this.mdgProducts.TabIndex = 0;
             // 
-            // tableLayoutPanel5
+            // tlp_ProductControl
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.button3, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button4, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(242, 436);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(671, 43);
-            this.tableLayoutPanel5.TabIndex = 14;
+            this.tlp_ProductControl.ColumnCount = 2;
+            this.tlp_ProductControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_ProductControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_ProductControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp_ProductControl.Controls.Add(this.btn, 0, 0);
+            this.tlp_ProductControl.Controls.Add(this.button4, 1, 0);
+            this.tlp_ProductControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp_ProductControl.Location = new System.Drawing.Point(242, 436);
+            this.tlp_ProductControl.Name = "tlp_ProductControl";
+            this.tlp_ProductControl.RowCount = 1;
+            this.tlp_ProductControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp_ProductControl.Size = new System.Drawing.Size(671, 43);
+            this.tlp_ProductControl.TabIndex = 14;
             // 
-            // button3
+            // btn
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageKey = "cancel.png";
-            this.button3.ImageList = this.imglIcons;
-            this.button3.Location = new System.Drawing.Point(75, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 37);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "İptal";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn.ImageKey = "cancel.png";
+            this.btn.ImageList = this.imglIcons;
+            this.btn.Location = new System.Drawing.Point(75, 3);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(184, 37);
+            this.btn.TabIndex = 13;
+            this.btn.Text = "İptal";
+            this.btn.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -1783,34 +1806,78 @@
             this.button4.Text = "Güncelle";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grb_ProductDetails
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grb_ProductDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Location = new System.Drawing.Point(242, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(671, 427);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Firma Detayları";
+            this.grb_ProductDetails.Controls.Add(this.mgrdProductTransaction);
+            this.grb_ProductDetails.Location = new System.Drawing.Point(242, 3);
+            this.grb_ProductDetails.Name = "grb_ProductDetails";
+            this.grb_ProductDetails.Size = new System.Drawing.Size(671, 427);
+            this.grb_ProductDetails.TabIndex = 1;
+            this.grb_ProductDetails.TabStop = false;
+            this.grb_ProductDetails.Text = "Ürün Detayları";
             // 
-            // tableLayoutPanel6
+            // mgrdProductTransaction
             // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.92139F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.28384F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.90393F));
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button5, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btnBringAllStock, 2, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(916, 67);
-            this.tableLayoutPanel6.TabIndex = 5;
+            this.mgrdProductTransaction.AllowUserToResizeRows = false;
+            this.mgrdProductTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mgrdProductTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mgrdProductTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.mgrdProductTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mgrdProductTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.mgrdProductTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mgrdProductTransaction.DefaultCellStyle = dataGridViewCellStyle8;
+            this.mgrdProductTransaction.EnableHeadersVisualStyles = false;
+            this.mgrdProductTransaction.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mgrdProductTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mgrdProductTransaction.Location = new System.Drawing.Point(6, 29);
+            this.mgrdProductTransaction.Name = "mgrdProductTransaction";
+            this.mgrdProductTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mgrdProductTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.mgrdProductTransaction.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.mgrdProductTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mgrdProductTransaction.Size = new System.Drawing.Size(659, 260);
+            this.mgrdProductTransaction.TabIndex = 0;
+            // 
+            // tlp
+            // 
+            this.tlp.ColumnCount = 3;
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.92139F));
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.28384F));
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.90393F));
+            this.tlp.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tlp.Controls.Add(this.button5, 1, 0);
+            this.tlp.Controls.Add(this.btnBringAllStock, 2, 0);
+            this.tlp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlp.Location = new System.Drawing.Point(3, 3);
+            this.tlp.Name = "tlp";
+            this.tlp.RowCount = 1;
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp.Size = new System.Drawing.Size(916, 67);
+            this.tlp.TabIndex = 5;
             // 
             // tableLayoutPanel4
             // 
@@ -1818,21 +1885,30 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.30131F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.69869F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.98831F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.96487F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.02108F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel4.Controls.Add(this.metroLabel4, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.metroLabel2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.mtxtSearchProductName, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.metroPanel3, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.metroLabel4, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.metroPanel1, 3, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(606, 61);
             this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(252, 21);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel4.TabIndex = 9;
+            this.metroLabel4.Text = "Kurum Tipi  :";
             // 
             // metroLabel2
             // 
@@ -1840,7 +1916,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(3, 21);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(76, 19);
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Ürün Adı     :";
             // 
@@ -1851,7 +1927,7 @@
             // 
             // 
             this.mtxtSearchProductName.CustomButton.Image = null;
-            this.mtxtSearchProductName.CustomButton.Location = new System.Drawing.Point(107, 1);
+            this.mtxtSearchProductName.CustomButton.Location = new System.Drawing.Point(139, 1);
             this.mtxtSearchProductName.CustomButton.Name = "";
             this.mtxtSearchProductName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtSearchProductName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1861,7 +1937,7 @@
             this.mtxtSearchProductName.CustomButton.Visible = false;
             this.mtxtSearchProductName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.mtxtSearchProductName.Lines = new string[0];
-            this.mtxtSearchProductName.Location = new System.Drawing.Point(90, 19);
+            this.mtxtSearchProductName.Location = new System.Drawing.Point(85, 19);
             this.mtxtSearchProductName.MaxLength = 32767;
             this.mtxtSearchProductName.Name = "mtxtSearchProductName";
             this.mtxtSearchProductName.PasswordChar = '\0';
@@ -1870,63 +1946,49 @@
             this.mtxtSearchProductName.SelectionLength = 0;
             this.mtxtSearchProductName.SelectionStart = 0;
             this.mtxtSearchProductName.ShortcutsEnabled = true;
-            this.mtxtSearchProductName.Size = new System.Drawing.Size(129, 23);
+            this.mtxtSearchProductName.Size = new System.Drawing.Size(161, 23);
             this.mtxtSearchProductName.TabIndex = 4;
             this.mtxtSearchProductName.UseSelectable = true;
             this.mtxtSearchProductName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxtSearchProductName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroPanel3
+            // metroPanel1
             // 
-            this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel3.Controls.Add(this.metroCheckBox3);
-            this.metroPanel3.Controls.Add(this.mcbSearchRunOut);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(318, 3);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(285, 55);
-            this.metroPanel3.TabIndex = 8;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.Controls.Add(this.mrbtnStockPassive);
+            this.metroPanel1.Controls.Add(this.mrbtnStockActive);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(375, 3);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(228, 55);
+            this.metroPanel1.TabIndex = 10;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroCheckBox3
+            // mrbtnStockPassive
             // 
-            this.metroCheckBox3.AutoSize = true;
-            this.metroCheckBox3.Checked = true;
-            this.metroCheckBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroCheckBox3.Location = new System.Drawing.Point(118, 24);
-            this.metroCheckBox3.Name = "metroCheckBox3";
-            this.metroCheckBox3.Size = new System.Drawing.Size(70, 15);
-            this.metroCheckBox3.TabIndex = 5;
-            this.metroCheckBox3.Text = "Tedarikçi";
-            this.metroCheckBox3.UseSelectable = true;
+            this.mrbtnStockPassive.AutoSize = true;
+            this.mrbtnStockPassive.Location = new System.Drawing.Point(112, 24);
+            this.mrbtnStockPassive.Name = "mrbtnStockPassive";
+            this.mrbtnStockPassive.Size = new System.Drawing.Size(48, 15);
+            this.mrbtnStockPassive.TabIndex = 0;
+            this.mrbtnStockPassive.Text = "Pasif";
+            this.mrbtnStockPassive.UseSelectable = true;
             // 
-            // mcbSearchRunOut
+            // mrbtnStockActive
             // 
-            this.mcbSearchRunOut.AutoSize = true;
-            this.mcbSearchRunOut.Checked = true;
-            this.mcbSearchRunOut.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mcbSearchRunOut.Location = new System.Drawing.Point(12, 22);
-            this.mcbSearchRunOut.Name = "mcbSearchRunOut";
-            this.mcbSearchRunOut.Size = new System.Drawing.Size(63, 15);
-            this.mcbSearchRunOut.TabIndex = 5;
-            this.mcbSearchRunOut.Text = "Müşteri";
-            this.mcbSearchRunOut.UseSelectable = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(225, 21);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel4.TabIndex = 9;
-            this.metroLabel4.Text = "Kurum Tipi  :";
+            this.mrbtnStockActive.AutoSize = true;
+            this.mrbtnStockActive.Checked = true;
+            this.mrbtnStockActive.Location = new System.Drawing.Point(3, 22);
+            this.mrbtnStockActive.Name = "mrbtnStockActive";
+            this.mrbtnStockActive.Size = new System.Drawing.Size(48, 15);
+            this.mrbtnStockActive.TabIndex = 0;
+            this.mrbtnStockActive.TabStop = true;
+            this.mrbtnStockActive.Text = "Aktif";
+            this.mrbtnStockActive.UseSelectable = true;
             // 
             // button5
             // 
@@ -2071,15 +2133,18 @@
             this.mtpProducts.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.pnlStock.ResumeLayout(false);
             this.gbProduct.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mdgProducts)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tlp_ProductControl.ResumeLayout(false);
+            this.grb_ProductDetails.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mgrdProductTransaction)).EndInit();
+            this.tlp.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.metroPanel3.ResumeLayout(false);
-            this.metroPanel3.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             this.tlpUsername.ResumeLayout(false);
             this.tlpUsername.PerformLayout();
             this.ResumeLayout(false);
@@ -2095,7 +2160,6 @@
         public MetroFramework.Controls.MetroTabControl mtcMain;
         public MetroFramework.Controls.MetroTabPage mtpFinancialOperations;
         public MetroFramework.Controls.MetroTabPage mtpMain;
-        public MetroFramework.Controls.MetroLabel metroLabel1;
         public MetroFramework.Controls.MetroTabPage mtpInvoice;
         public MetroFramework.Controls.MetroTabPage mtpProducts;
         public MetroFramework.Controls.MetroTabPage mtpServices;
@@ -2179,23 +2243,26 @@
         public System.Windows.Forms.MaskedTextBox mtxtTel;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox grb_ProductDetails;
         public System.Windows.Forms.Panel pnlStock;
         public System.Windows.Forms.Button btnAddProduct;
         public System.Windows.Forms.GroupBox gbProduct;
         public MetroFramework.Controls.MetroGrid mdgProducts;
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TableLayoutPanel tlp_ProductControl;
+        public System.Windows.Forms.Button btn;
         public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.TableLayoutPanel tlp;
         public System.Windows.Forms.Button btnBringAllStock;
+        public MetroFramework.Controls.MetroLabel mlbl_NoProductRecord;
+        public MetroFramework.Controls.MetroLabel metroLabel1;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         public MetroFramework.Controls.MetroLabel metroLabel2;
         public MetroFramework.Controls.MetroTextBox mtxtSearchProductName;
-        public MetroFramework.Controls.MetroPanel metroPanel3;
-        public MetroFramework.Controls.MetroCheckBox metroCheckBox3;
-        public MetroFramework.Controls.MetroCheckBox mcbSearchRunOut;
         public MetroFramework.Controls.MetroLabel metroLabel4;
+        public System.Windows.Forms.Button button5;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroGrid mgrdProductTransaction;
+        private MetroFramework.Controls.MetroRadioButton mrbtnStockPassive;
+        private MetroFramework.Controls.MetroRadioButton mrbtnStockActive;
     }
 }

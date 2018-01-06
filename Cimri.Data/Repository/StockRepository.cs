@@ -15,6 +15,7 @@ namespace Cimri.Data.Repository
         public ICollection<StockDto.StockHeader> FillDataGrid(int userCompanyId)
         {
             var query = from stocks in context.Stocks
+                        where stocks.isActive==true
                         select new StockDto.StockHeader()
                         {
                             StockId = stocks.StockId,

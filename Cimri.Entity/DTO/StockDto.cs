@@ -12,25 +12,7 @@ namespace Cimri.Entity.DTO
         {
             public int StockId { get; set; }
             public string StockName { get; set; }
-            public int? Quantity { get; set; }
-
-            /* public int? Quantity
-             {  
-                 get
-                 {
-                     if (this.Quantity == null)
-                     {
-                         Quantity = 0;
-                     }
-                     else { Quantity = this.Quantity; }
-                     return this.Quantity;
-                 }
-                 set
-                 {
-
-                 }
-             }*/
-
+            public int? Quantity { get; set; }            
         }
     }
 }
